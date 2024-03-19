@@ -8,8 +8,8 @@ logo: 'assets/images/kroad_white.png'
 current: about
 ---
 
-This is a demo blog for Ghost, it contains dummy content which allows you to click around and see what a Ghost blog running the default theme looks like.
+한국기술교육대학교의 자율주행차연구회 K-ROAD입니다.
+Perception, Plannin, Control의 세 가지 연구분야로 나뉘어 연구를 진행하고 있습니다.
 
-We use this for testing and for reference!
-
-If you'd like to set up your own blog, head on over to [https://ghost.org](https://ghost.org) and sign up.
+연구회에 관한 문의사항은 아래 연락처로 연락 주시길 바랍니다.
+email:
