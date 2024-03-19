@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>KOREATECH-KROAD.github.io/</title>
+   
+   <link>https://KOREATECH-KROAD.github.io/</link>
+   <description>KOREATECH 자율주행차연구회</description>
+   <language>ko</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>test post</title>
+	  <link>https://KOREATECH-KROAD.github.io//test-post</link>
+	  <author></author>
+	  <pubDate>2024-02-05T10:18:00+09:00</pubDate>
+	  <guid>https://KOREATECH-KROAD.github.io//test-post</guid>
+	  <description><![CDATA[
+	     <h1 id="2024-02-05">2024-02-05</h1>
+<h2 id="테스트를-합시다">테스트를 합시다</h2>
+<h3 id="yeah">YEAH</h3>
+
+<p>뭘 써야 할까…</p>
+
+<p>이건 마크다운으로 작성한 글입니다.</p>
+
+<p>아래 참조</p>
+
+<p><a href="https://gist.github.com/ihoneymon/652be052a0727ad59601">Markdown 문법 정리</a></p>
+
+<p>HTML로도 작성 가능</p>
+
+<p>오 코드도 작성되네</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BootSpringBootApplication</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello world"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
