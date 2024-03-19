@@ -1,0 +1,145 @@
+# 글 작성자 정보를 추가하려면 아래와 같이 작성하세요.
+
+# 김가람
+garamkim:                                                     # 이름+성, 소문자
+  username: garamkim                                          # 이름+성, 소문자
+  name: 김가람                                                  # 성+이름, 한글
+  generation: 5                                               # 기수
+  part: perception                                            # 담당 파트
+  team: KORUS                                                 # 소속 팀
+  email: garamk83@gmail.com                                   # 자주 사용하는 이메일 주소
+  github_url_full: https://github.com/garamkim83/             # 깃허브 주소(https 포함)
+  github_url: github.com/garamkim83                           # 깃허브 주소(간략)
+  bio: 한국기술교육대학교 자율주행차연구회 K-ROAD의 기술 담당 운영진입니다. # 자기소개
+  assets: assets/images/id/garamkim.png                       # 프로필 사진 - assets/images/id/경로에 영문이름.format으로 저장할 것
+
+# 김민석
+minseokkim:
+  username: minseokkim
+  name: 김민석
+  generation: 5
+  part: perception
+  team: K-BUB
+  email: ping5432121@gmail.com
+  github_url_full: https://github.com/minseok1217
+  github_url: github.com/minseok1217
+  bio: 안녕하세요. 컴퓨터 비전을 연구하고있는 김민석입니다. 
+  assets: assets/images/id/minseokkim.png
+
+# 유재민
+jaeminyu:
+  username: jaeminyu
+  name: 유재민
+  generation: 5
+  part: perception
+  team: KORUS
+  email: jaeminyu2356@gmail.com
+  github_url_full: https://github.com/jaeminyu2356
+  github_url: github.com/jaeminyu2356
+  bio: slam에 활용되는 zeroshot-learning을 연구하는 유재민입니다.
+  assets: assets/images/id/jaeminyu.png
+
+# 조윤서
+yunseocho:
+  username: yunseocho
+  name: 조윤서
+  generation: 5
+  part: planning
+  team: KORUS
+  email: choyunseo375@gmail.com
+  github_url_full: https://github.com/yuuun03
+  github_url: github.com/yuuun03
+  bio: 한국기술교육대학교 컴퓨터공학부 22학번 KROAD 판단 파트 담당입니다.
+  assets: assets/images/id/yunseocho.png
+
+# 최현성
+hyunsungchoi:
+  username: hyunsungchoi
+  name: 최현성
+  generation: 5
+  part: control
+  team: K-BUB
+  email: qb5773@naver.com
+  github_url_full: https://github.com/HyunSung-Choi-0716/Choi
+  github_url: github.com/HyunSung-Choi-0716/Choi
+  bio: 예, 접니다.
+  assets: assets/images/id/hyunsungchoi.png
+
+# 한겸
+gyeomhan:
+  username: gyeomhan
+  name: 한겸
+  generation: 5
+  part: control
+  team: KORUS
+  email: dhfodh1@naver.com
+  github_url_full: https://github.com/dhfodh1
+  github_url: github.com/dhfodh1
+  bio: 한국기술교육대학교 자율주행차 연구회 K-ROAD의 홍보담당 운영진입니다.
+  assets: assets/images/id/gyeomhan.png
+
+# 한수아
+suahan:
+  username: suahan
+  name: 한수아
+  generation: 5
+  part: perception
+  team: K-BUB
+  email: soooa.han@gmail.com
+  github_url_full: https://github.com/soooa
+  github_url: github.com/soooa
+  bio: 자율주행 연구회 K-ROAD에서 인지파트를 담당하고 있는 3학년 한수아입니다. 새로운 도전에서 즐거움을 찾고, 실패는 소중한 기회로 받아들이는 개발자로 성장하고 싶습니다.
+  assets: assets/images/id/suahan.jpeg
+
+
+
+casper:
+  username: casper
+  name: Casper McFadden
+  # location: Maine, USA
+  email: example@example.com
+  url_full: http://jekyllt.github.io/jasper/
+  url: jekyllt.github.io/jasper
+  bio: A paranormal expert and his daughter bunk in an abandoned house populated by 3 mischievous ghosts and a friendly one, Casper.
+  assets: assets/images/casper.png
+
+lewis:
+  username: lewis
+  name: Lewis Carroll
+  # location: Cheshire, England
+  email: example@example.com
+  url_full: http://jekyllt.github.io/jasper/
+  url: jekyllt.github.io/jasper
+  bio: My real name is Charles Lutwidge Dodgson, but people call me Lewis. I'm an English writer, mathematician, logician, Anglican deacon and photographer. People know me best for writing about Alice.
+  assets: assets/images/lewis.jpeg
+
+abraham:
+  username: abraham
+  name: Abraham Lincoln
+  # location: Kentucky, USA
+  email: example@example.com
+  url_full: http://jekyllt.github.io/jasper/
+  url: jekyllt.github.io/jasper
+  bio: I was the 16th president of the USA until I was assassinated in April of 1963. I led the US through its Civil War - its bloodiest and greatest moral, constitutional and political crisis.
+  assets: assets/images/abraham.jpg
+
+edgar:
+  username: edgar
+  name: Edgar Rice Burroughs
+  # location: Chicago, Illinois
+  email: example@example.com
+  url_full: http://jekyllt.github.io/jasper/
+  url: jekyllt.github.io/jasper
+  bio: I'm an American novelist, best known for my work writing about a brave jungle hero called Tarzan and his muse, Jane.
+  assets: assets/images/edgar.gif
+
+martin:
+  username: martin
+  name: Martin Luther King
+  # location: Memphis, Tennessee
+  email: example@example.com
+  url_full: http://jekyllt.github.io/jasper/
+  url: jekyllt.github.io/jasper
+  bio: An American pastor, activist, humanitarian. People know me for leading the African-American Civil Rights movement using nonviolent civil disobedience.
+  assets: assets/images/martin.jpg
+

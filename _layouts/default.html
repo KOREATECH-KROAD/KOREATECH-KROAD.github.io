@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Page Meta -->
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+    <meta name="description"
+        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+
+    <!-- Mobile Meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Brand icon -->
+    <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico">
+
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css"
+        href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/css/syntax.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+
+    <!-- 왜 아이콘이 안 뜰까... -->
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .hljs {
+            background: none;
+        }
+    </style>
+
+    <!-- Ghost outputs important style and meta data with this tag -->
+    {% include head.html %}
+
+</head>
+
+<body
+    class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %} nav-closed">
+
+    <!-- The blog navigation links -->
+    {% include navigation.html %}
+
+    <div class="site-wrapper">
+
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        {{ content }}
+
+        <!-- The tiny footer at the very bottom -->
+        <footer class="site-footer clearfix">
+            <!-- <section class="copyright"><a href="{{ site.baseurl }}">{{ site.name }}</a> &copy; {{ site.time | date: '%Y'}} -->
+                <section class="copyright"><a href="{{ site.baseurl }}">{{ site.name }}</a>&copy;2020
+                <a class="footer-icon" href="{{ site.github_url }}"><i class="fab fa-github"></i></a>
+                <a class="footer-icon" href="{{ site.instagram_url }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="footer-icon" href="{{site.youtube_url}}" target="_blank"><i class="fab fa-youtube"></i></a>
+            </section>
+            <!-- <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a
+                    href="https://github.com/jekyllt/jasper">Jasper</a></section> -->
+        </footer>
+    </div>
+    <!-- highlight.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Ghost outputs important scripts and data with this tag -->
+    <!-- {{ghost_foot}} -->
+    <!-- Add Google Analytics  -->
+    {% include analytics.html %}
+    <!-- Fitvids makes video embeds responsive and awesome -->
+    <script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery.fitvids.js"></script>
+    <!-- The main JavaScript file for Casper -->
+    <script type="text/javascript" src="{{ site.baseurl }}assets/js/index.js"></script>
+
+</body>
+
+</html>

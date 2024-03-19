@@ -1,0 +1,79 @@
+# Jekyll configuration
+#markdown: redcarpet
+#highlighter: pygments
+markdown: kramdown
+highlighter: rouge
+paginate: 5
+# language: 'en-US'
+language: 'ko'
+# timezone: Asia/Seoul
+
+# Website info
+name: 'K-ROAD'
+description: "KOREATECH 자율주행차연구회"
+
+short_url: 'KOREATECH-KROAD.github.io/'
+# google_analytics: UA-69281367-1   # 구글 애널리틱스
+# disqus: garamkim83                # 댓글 기능, disqus 계정 만들어야 함, 유료
+
+# edit baseurl to simply '/' if using as your personal page (instead of a project page)
+# baseurl: /
+baseurl: https://KOREATECH-KROAD.github.io/
+url: https://KOREATECH-KROAD.github.io/
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:username
+# permalink: /tag/:tag
+
+# gems and other configs
+plugins: [jekyll-paginate]
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author's page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post's page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+
+# Settings for builing master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV['GIT_NAME'] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
+safe: false
+lsi: false
+username: KOREATECH-KROAD
+repo: KOREATECH-KROAD.github.io
+branch: master
+relative_source: https://KOREATECH-KROAD.github.io/
+destination: ./_site/
+production_url:  https://KOREATECH-KROAD.github.io/
+source_url:  https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/
+
+blog_logo: assets/images/kroad_white.png
+logo: assets/images/kroad_white.png
+
+# Social media links
+github_url: https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/
+instagram_url: https://www.instagram.com/kroad_2020?igsh=d3R4cWNlYXI3bXk3/
+youtube_url: https://www.youtube.com/watch?v=6hWPmb7_xOA/
+
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
+  - node_modules
+  - .git
