@@ -8,7 +8,7 @@
 
 ## Link
 
-[test page](https://garamkim83.github.io/test-site-2/)
+[test page](https://KOREATECH-KROAD.github.io/)
 
 ## 공지
 
@@ -16,11 +16,11 @@
 2. 임의로 main branch에 merge 하지 말 것
 3. 다른 사람의 글을 허락 없이 수정하지 말 것 (기록 남음)
 4. 
-
+<!-- 
 ## Screenshots
 
 **Home page**
-![home page](https://raw.githubusercontent.com/jekyllt/jasper/master/assets/images/jasper_screen1.png)
+![home page](https://raw.githubusercontent.com/jekyllt/jasper/master/assets/images/jasper_screen1.png) -->
 
 <!-- **Post page**
 ![post page](https://raw.githubusercontent.com/jekyllt/jasper/master/assets/images/jasper_screen2.png)
