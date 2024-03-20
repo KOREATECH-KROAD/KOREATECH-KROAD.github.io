@@ -18,7 +18,9 @@
 	  <pubDate>2024-03-19T18:00:00+09:00</pubDate>
 	  <guid>https://KOREATECH-KROAD.github.io//K-ROAD-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4%EC%9D%98-%EC%9D%98%EC%9D%98</guid>
 	  <description><![CDATA[
-	     <h3 id="안녕하세요-k-road-대표-유재민입니다">안녕하세요. K-ROAD 대표 유재민입니다.</h3>
+
+<p>안녕하세요. K-ROAD 대표 유재민입니다.</p>
+
 
 <p>K-ROAD 기술 블로그가 개설되었습니다. 이에 따라 대표로서 연구 내용 블로그 포스팅의 포문을 열게 되었습니다.
 처음 대표로 K-ROAD 5기의 운영을 맞게 되었을 때 K-ROAD의 기술적 능력을 알리는 웹 페이지를 제작하자고 의견을 꺼내었고 그 이유는 다음과 같습니다.</p>
@@ -80,7 +82,6 @@ K-ROAD뿐만 아니라 많은 대학생 로보틱스 팀의 학생들이 자율�
 <h2 id="테스트를-합시다">테스트를 합시다</h2>
 <h3 id="test">TEST</h3>
 
-<p>뭘 써야 할까…</p>
 
 <p>이건 마크다운으로 작성한 글입니다.</p>
 
@@ -88,9 +89,13 @@ K-ROAD뿐만 아니라 많은 대학생 로보틱스 팀의 학생들이 자율�
 
 <p><a href="https://gist.github.com/ihoneymon/652be052a0727ad59601">Markdown 문법 정리</a></p>
 
-<p>HTML로도 작성 가능</p>
 
-<p>오 코드도 작성되네</p>
+<blockquote>
+  <p>HTML로도 작성 가능</p>
+</blockquote>
+
+<p>코드 작성 테스트</p>
+
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BootSpringBootApplication</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
@@ -109,7 +114,12 @@ K-ROAD뿐만 아니라 많은 대학생 로보틱스 팀의 학생들이 자율�
 	  <pubDate>2014-09-27T19:18:00+09:00</pubDate>
 	  <guid>https://KOREATECH-KROAD.github.io//a-full-and-comprehensive-style-test</guid>
 	  <description><![CDATA[
-	     <p>This is just an <em>ipsis verbis</em> copy of the first example running on the <a href="http://demo.ghost.io">Ghost
+
+	     <p>이건 HTML 테스트 페이지입니다. 페이지를 아름답게 꾸밀 수 있는 예시들이 있습니다.</p>
+<p>이 페이지는 참고용으로 남겨두었고, 추후 삭제될 예정입니다.</p>
+
+<p>This is just an <em>ipsis verbis</em> copy of the first example running on the <a href="http://demo.ghost.io">Ghost
+
     Demo</a>. This shows how you can use html styling to achieve your hopes.</p>
 
 

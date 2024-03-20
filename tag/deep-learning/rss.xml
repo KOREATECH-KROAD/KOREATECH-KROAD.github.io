@@ -18,7 +18,9 @@
 	  <pubDate>2024-03-20T19:18:00+09:00</pubDate>
 	  <guid>https://KOREATECH-KROAD.github.io//Posenet</guid>
 	  <description><![CDATA[
-	     <h3 id="안녕하세요-k-road-대표-유재민입니다">안녕하세요. K-ROAD 대표 유재민입니다.</h3>
+
+	     <p>안녕하세요. K-ROAD 대표 유재민입니다.</p>
+
 
 <p>첫 기술 관련 글이니 가볍고 흥미를 불러 일으킬만한 논문을 가져왔습니다.
 형식은 paper review 형식으로 진행하려고 합니다.</p>
@@ -35,9 +37,13 @@
 
 <hr />
 
-<h1 id="intro">Intro</h1>
-<h2 id="title">Title</h2>
-<p>PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization</p>
+
+<blockquote>
+  <h1 id="intro">Intro</h1>
+  <h2 id="title">Title</h2>
+  <p>PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization</p>
+</blockquote>
+
 
 <h2 id="authors">Authors</h2>
 <p>Alex Kendall, Matthew Grimes, Roberto Cipolla</p>
@@ -115,7 +121,11 @@
 
 <hr />
 
-<h1 id="background-knowledge">Background knowledge</h1>
+
+<blockquote>
+  <h1 id="background-knowledge">Background knowledge</h1>
+</blockquote>
+
 
 <p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/4.png" alt="6 DOF 설명" /></p>
 
@@ -181,8 +191,6 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 - transfer learning이 가능하다.(뒤에서 추가 설명을 드리도록 하겠습니다.)
 </code></pre></div></div>
 
-<p>&lt;/aside&gt;</p>
-
 <p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/7.png" alt="sfm로컬" /></p>
 
 <p>위 사진은 제가 실제로 local 환경(개인 pc)에서 SfM을 진행한 화면을 발췌한 것인데요.</p>
@@ -191,7 +199,9 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <hr />
 
-<h1 id="methodology">Methodology</h1>
+<blockquote>
+  <h1 id="methodology">Methodology</h1>
+</blockquote>
 
 <p>방법론은 굉장히 심플합니다.</p>
 
@@ -259,7 +269,10 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <hr />
 
-<h1 id="experiment">Experiment</h1>
+<blockquote>
+  <h1 id="experiment">Experiment</h1>
+</blockquote>
+
 
 <p>실험 결과입니다.</p>
 
@@ -305,7 +318,10 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <hr />
 
-<h1 id="conclusion">Conclusion</h1>
+<blockquote>
+  <h1 id="conclusion">Conclusion</h1>
+</blockquote>
+
 
 <p>긴 글 읽으시느라 고생 많으셨습니다.</p>
 

@@ -8,8 +8,7 @@
         <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}about">About</a></li>
         <ul style="padding: 0%; padding-left: 5%; width: 95%;">
                 <!-- <li class="nav-tag {% if page.url contains 'tag' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag">Tags</a></li> -->
-            <!-- <a href="{{ site.baseurl }}tag">Tags</a> -->
-            <h4>Tags</h4>
+            <a href="{{ site.baseurl }}tag">Tags</a>
             <!-- tech는 최상단, 나머지는 알파벳 순서 -->
             <li class="nav-tech {% if page.url contains 'tech' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/tech">Tech</a></li>
             <li class="nav-tech {% if page.url contains 'camera-pose-extraction' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/camera-pose-extraction">Camera Pose Extraction</a></li>
@@ -22,8 +21,7 @@
             
         </ul>
         <ul style="padding: 0%; padding-left: 5%; width: 95%;">
-            <!-- <a href="{{ site.baseurl }}author">Authors</a> -->
-            <h4>Authors</h4>
+            <a href="{{ site.baseurl }}author">Authors</a>
             <!-- 철자 순서대로 정렬함 -->
             <!-- 추후 기수가 늘어나면 기수별로 모으는 것을 추천 -->
             <li class="nav-author {% if page.url contains 'garamkim' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}author/garamkim">김가람</a></li>
