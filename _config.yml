@@ -17,9 +17,9 @@ short_url: 'KOREATECH-KROAD.github.io/'
 # disqus: garamkim83                # 댓글 기능, disqus 계정 만들어야 함, 유료
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /
-# baseurl: https://KOREATECH-KROAD.github.io/
-# url: https://KOREATECH-KROAD.github.io/
+# baseurl: /
+baseurl: https://KOREATECH-KROAD.github.io/
+url: https://KOREATECH-KROAD.github.io/
 
 # Permalinks
 permalink: /:title
