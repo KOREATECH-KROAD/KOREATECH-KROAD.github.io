@@ -997,7 +997,7 @@ body.nav-opened .nav {
 .post {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    max-width: 1000px;
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
@@ -1175,7 +1175,8 @@ body.page-template .post-title {
    text column to break out. */
 .post-content img {
     display: block;
-    max-width: 126%;
+    /* max-width: 126%; */
+    max-width: 95%;
     height: auto;
     padding: 0.6em 0;
     /* Centers an image by (1) pushing its left edge to the
