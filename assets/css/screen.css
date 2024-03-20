@@ -543,7 +543,8 @@ button {
 .inner {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    /* max-width: 710px; */
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -1580,7 +1581,8 @@ body.page-template .post-title {
 .pagination {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    /* max-width: 710px; */
+    max-width: 1000px;
     margin: 4rem auto;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
@@ -2093,7 +2095,9 @@ body.page-template .post-title {
         padding: 0;
         width: calc(100% + 32px); /* expand with to image + margins */
         min-width: 0;
-        max-width: 112%; /* fallback when calc doesn't work */
+        /* max-width: 112%; fallback when calc doesn't work */
+        max-width: 95%; /* fallback when calc doesn't work */
+
     }
 
     .post-meta {
