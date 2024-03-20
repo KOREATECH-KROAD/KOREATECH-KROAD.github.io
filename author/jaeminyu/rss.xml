@@ -12,64 +12,16 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
-	  <title>웹페이지 개설 의도를 곁들인 Posenet</title>
-	  <link>https://KOREATECH-KROAD.github.io//%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%9C%EC%84%A4-%EC%9D%98%EB%8F%84%EB%A5%BC-%EA%B3%81%EB%93%A4%EC%9D%B8-Posenet</link>
+	  <title>Posenet</title>
+	  <link>https://KOREATECH-KROAD.github.io//Posenet</link>
 	  <author></author>
-	  <pubDate>2024-03-19T10:18:00+09:00</pubDate>
-	  <guid>https://KOREATECH-KROAD.github.io//%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%9C%EC%84%A4-%EC%9D%98%EB%8F%84%EB%A5%BC-%EA%B3%81%EB%93%A4%EC%9D%B8-Posenet</guid>
+	  <pubDate>2024-03-20T19:18:00+09:00</pubDate>
+	  <guid>https://KOREATECH-KROAD.github.io//Posenet</guid>
 	  <description><![CDATA[
-	     <h1 id="웹페이지-개설-의도를-곁들인-posenet">웹페이지 개설 의도를 곁들인 Posenet</h1>
+	     <h3 id="안녕하세요-k-road-대표-유재민입니다">안녕하세요. K-ROAD 대표 유재민입니다.</h3>
 
-<h3 id="안녕하세요-대표-유재민입니다">안녕하세요 대표 유재민입니다.</h3>
-
-<p>케이로드 웹 페이지 개설과 함께 연구 내용 블로그 포스팅의 포문을 열게 되었습니다.</p>
-
-<p>처음 대표로 케이로드를 운영을 맞게 되었을때 케이로드 웹을 제작하자고 의견을 
-꺼내었고 그 이유는 다음과 같습니다.</p>
-
-<aside>
-💡 ***로보틱스라는 분야의 진입장벽이 너무 높다.***
-
-- 제 주변 지인들만 보더라도 로보틱스라는 분야에 대해 관심이 있고 공부 해보고 싶은 학우들 다수가 저에게 “*어떻게 공부하는게 좋냐? “*라고 많이들 질문을 하였습니다.
-케이로드 대표로써 활동하게 된 이후로 그 질문의 빈도는 더 늘었죠.
-- 저 또한 이런 질문을 받을때 항상 난감하곤 했습니다. 
-로보틱스라는 분야는 *하드웨어와 소프트웨어결합의 결정체* 중 하나이며 어느 하나의 지식의 모자람을 느낀다면 벽에 막히기 마련이기 때문이죠. 저 또한 현재 계속 그 벽을 허물려 노력하고 있는
-로보틱스 연구자 중 하나이지만 그 방법 또한 모르던 저를 생각해보면 참 애석하다라고 많이 느꼈습니다.
-- 또한 로보틱스라는 분야의 특성상 *학습해야될 양이 상당히 방대*합니다. 
-대기업들 또한 로보틱스 개발자들 가뭄에 시달리고 있는것을 보면 그 이유가 명확하죠.
-이에 따라 일종의 커리큘럼을 제공하거나 세계적인 연구 동향들에 대해서도 흐름을 잡는 역할 또한 겸하고자 합니다.
-- 이에 따라  정보 공유의 장이자, 로보틱스 칼럼의 일환으로써 저희가 공부한 내용을 공유함으로 인하여 로보틱스 연구 희망자들(딥러닝, 매니퓰레이터, 컴퓨터 비전, slam, 차량 제어, 등등)이 발을 돌리지 않고 *로보틱스라는 분야에 더욱 깊히 발을 담굴 수 있는 pool*을 만드는것이 제 의도 중 하나였습니다.
-
-### ***너가 뭘 하고 싶은데?***
-
-- 제가 다른 학우들보다 먼저 발을 담군 입장에서 두번째로 많이 들었던 질문입니다.
-*”너 로보틱스팀에서 딥러닝도 같이 하지 않냐? 나도 딥러닝 하고싶어!”* 
-라는 질문을 많이 들었습니다. 저는 여기서 역질문을 합니다.
-*”딥러닝으로 뭘 하고 싶은데?”*
-라고 질문했을때 대답한 학우가 한명도 없습니다. 딥러닝을 활용하는 입장에서 
-딥러닝 또한 일종의 툴 이기 때문에 그 툴로써 바라봐야되는데 그 껍데기에 많이 집중하는 행태를 많이 보았습니다.
-- 코딩도 비슷한 맥락입니다. 이 이야기는 저희 케이로드 회원들에게도 전하고 싶은 말인데요. 
-케이로드나 자율주행 또는 로보틱스라는 분야를 공부하기 위해 다들 
-코딩에만 너무 집중하는 모습을 보입니다. 물론 중요합니다. 빠질 수 없는 요소지요.
-하지만 코딩도 *우리가 생각한 메소드를 구현하기 위한 일종의 툴*이지 그 이상 그 이하도 아닙니다.
-- 이러한 인사이트을 항상 미래의 로보틱스 연구자들 또는 로린이(어린이 로보틱스 연구자)들에게 
-전하고 싶은것이 제 두번째 의도 입니다.
-
-### ***케이로드의 홍보***
-
-- 마지막 의도입니다. 저희 케이로드가 다른 기업들에서 많이들 언급되고 있다는 소식을 대표가 된 
-이후로 많이 듣고 있습니다. 이에 발 맞춰 저희의 수준을 조금 더 어필할 수 있는 영역을 만들고
-회원들이 지속적으로 학습을 할 수 있도록 하는데 그 목적이 있습니다.
-- ***이로써 저희 케이로드를 더 외부에 알릴 수 있고 더 많은 로보틱스 연구자들을 배출해 내고자 하는것이
-제 목표이자 저희 케이로드의 목표입니다.***
-</aside>
-
-<hr />
-
-<p>각설하고 본론으로 돌아가겠습니다.</p>
-
-<p>형식은 paper review형식으로 진행하겠고 처음이니만큼 
-가볍고 흥미를 불러 일으킬만한 논문을 가져왔습니다.</p>
+<p>첫 기술 관련 글이니 가볍고 흥미를 불러 일으킬만한 논문을 가져왔습니다.
+형식은 paper review 형식으로 진행하려고 합니다.</p>
 
 <ul>
   <li>Intro</li>
@@ -83,53 +35,34 @@
 
 <hr />
 
-<h1 id="intro"><strong>Intro</strong></h1>
+<h1 id="intro">Intro</h1>
+<h2 id="title">Title</h2>
+<p>PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization</p>
 
-<aside>
-💡
+<h2 id="authors">Authors</h2>
+<p>Alex Kendall, Matthew Grimes, Roberto Cipolla</p>
 
----
+<h2 id="conference">Conference</h2>
+<p>Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2015</p>
 
-## Title
+<h2 id="citation">Citation</h2>
+<p>2469</p>
 
-- PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization
-
-## Authors
-
-- Alex Kendall, Matthew Grimes, Roberto Cipolla
-
-## **Conference**
-
-- Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2015
-
-## Citation
-
-- 2469
-
----
-
-</aside>
+<hr />
 
 <blockquote>
-  <p><strong><em>당시 급격히 발전하던 딥러닝을 camera pose estimation에 활용하였다!</em></strong></p>
-
+  <p><em>당시 급격히 발전하던 딥러닝을 <strong>camera pose estimation</strong>에 활용하였다!</em></p>
 </blockquote>
 
 <p>이 논문의 주요 contribution입니다.</p>
 
-<p>논문을 읽을때 당시의 배경을 생각하면서 읽으면 더욱 흥미롭는데요.</p>
+<p>논문을 읽을 때 당시의 배경을 생각하면서 읽으면 더욱 흥미롭습니다.</p>
 
-<p>  </p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/1.png" alt="딥러닝동향" /></p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/딥러닝동향.png" alt="Untitled" /></p>
+<p>연도별로 이미지 classfication 대회에서 SOTA(state of the art, 당시 최고 성능을 의미)를 찍었던 딥러닝 모델과 accuracy를 시각화 한 자료입니다.</p>
 
-<p>각년도별로 이미지 classfication 대회에서 SOTA(state of the art, 당시 최고 성능을 의미)를 찍었던</p>
-
-<p>딥러닝 모델과 accuracy를 시각화 한 자료입니다.</p>
-
-<p>사람의 이미지 classification의 error가 8~9 정도 되는것으로 보아</p>
-
-<p>2014년도부터 VGG가 사람의 이미지 분류 능력을 능가함으로써 딥러닝에 대한 관심도가 상당히 올라갔습니다.</p>
+<p>사람의 이미지 classification의 error가 8~9 정도 되는것으로 보아 2014년도부터 VGG가 사람의 이미지 분류 능력을 능가함으로써 딥러닝에 대한 관심도가 상당히 올라갔습니다.</p>
 
 <p>당시 로보틱스 분야에서는 모바일 로보틱스에 대한 관심도가 급증하고 있었습니다.</p>
 
@@ -146,7 +79,6 @@
 
 <blockquote>
   <p><strong><em>Simultaneous Localization and mapping</em></strong></p>
-
 </blockquote>
 
 <p>의 약자입니다. 한글로 번역하자면 Localization과 mapping을 동시에 진행하겠다는겁니다.</p>
@@ -159,43 +91,39 @@
 
 <p>다음은 저희 학교(한국기술교육대학교) 텔동을 mapping한 결과입니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/텔동_슬램.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/2.png" alt="텔동 SLAm" /></p>
 
 <p>다음은 저희 학교 인문경영관을 mapping한 결과이죠.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/인경관_슬램.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/3.png" alt="인문경영관 SLAM" /></p>
 
 <blockquote>
   <p>HDL-graph-slam(High Density Lidar) 활용</p>
-
 </blockquote>
 
 <p>그렇다면 slam기술의 성능을 어떻게 평가할까요?</p>
 
 <p>두가지 방법이 주를 이룹니다.</p>
 
-<ol>
-  <li>Localization 성능 평가</li>
-  <li>정성 평가(눈으로 봤을 때 잘 나왔는가?)</li>
-</ol>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Localization 성능 평가
+2. 정성 평가(눈으로 봤을 때 잘 나왔는가?)
+</code></pre></div></div>
 
 <p>mapping은 localization하는데 있어서 시각화하는 자료의 느낌이 강하죠.</p>
 
-<p>이처럼 localization 성능에서 posenet이 높은 정확도를 보였기 때문에 높은 피인용수를 
-달성할 수 있던 이유 중 하나입니다.</p>
+<p>이처럼 localization 성능에서 posenet이 높은 정확도를 보였기 때문에 높은 피인용수를 달성할 수 있던 이유 중 하나입니다.</p>
 
 <hr />
 
 <h1 id="background-knowledge">Background knowledge</h1>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/6_dof.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/4.png" alt="6 DOF 설명" /></p>
 
 <p>논문 제목에도 나와있는 용어인데요. 6-DOF라 함은 6개의 자유도를 가진 pose를 의미합니다.</p>
 
 <p>이때 벡터의 형태로 나타나게 되는데요. 
 우측 상단 수식에서의 x 는 camera가 촬영한 시점의 x,y,z좌표를 의미하게 됩니다.
-q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠. 이때 현실 세계는 3차원 공간으로 
-표현되므로 3개의 값을 가짐을 알 수 있습니다.</p>
+q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠. 이때 현실 세계는 3차원 공간으로 표현되므로 3개의 값을 가짐을 알 수 있습니다.</p>
 
 <p>즉, camera의 position과 orientation을 output으로 내뱉는 딥러닝 네트워크를 의미합니다.</p>
 
@@ -205,23 +133,20 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>이떄 데이터셋은 다음을 포함해야합니다.</p>
 
-<ul>
-  <li>촬영한 이미지</li>
-  <li>촬영한 이미지의 pose</li>
-</ul>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  - 촬영한 이미지
+  - 촬영한 이미지의 pose
+</code></pre></div></div>
 
 <p>이때 다음과 같은 기술을 사용하였습니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/SfM.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/5.png" alt="SfM(Structure from Motion)" /></p>
 
-<p>한 시점에서 카메라의 포즈를 추정하기 위해서는 
-<strong>한 물체를 바라본 최소 두 개의 시점 이상</strong>이 필요합니다.</p>
+<p>한 시점에서 카메라의 포즈를 추정하기 위해서는 <strong>한 물체를 바라본 최소 두 개의 시점 이상</strong>이 필요합니다.</p>
 
 <p>이 점이 굉장히 중요한데요. 이는 에피폴라 기하학에서 기인 할 수 있습니다.</p>
 
-<ul>
-  <li>에피폴라 선: 왼쪽 시점의 픽셀이 바라보는 3D 점을 오른쪽 시점도 바라고 있다면, 오른쪽 시점에서는 그 3D 점이 에피폴라 선 위에 맺힐 것이다.</li>
-</ul>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>에피폴라 선: 왼쪽 시점의 픽셀이 바라보는 3D 점을 오른쪽 시점도 바라고 있다면, 오른쪽 시점에서는 그 3D 점이 에피폴라 선 위에 맺힐 것이다.
+</code></pre></div></div>
 
 <p>라는 가정에서 에피폴라 기하학은 시작됩니다.</p>
 
@@ -231,39 +156,36 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p><a href="https://www.notion.so/5c47f6cfd28c4944b4de43e7296a2978?pvs=21">에피폴라 기하학</a></p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/에피폴라.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/6.png" alt="에피폴라 기하학" /></p>
 
 <p>SfM의 이름에 맞게 2D video를 활용해 일정 frame단위로 이미지를 만들고 이를 에피폴라 기하학에 의거하여 3차원 구조물과 camera parameter를 생성하겠다는 의미입니다.</p>
 
-<p>요약하면 에피폴라 기하학에 의거하여 삼각층량법이 유효하게 되고,
-이에 따라 SIFT, FAST알고리즘 등을 활용하여 SfM(Structure from Motion)이라는 
-기술이 생기게 됩니다.</p>
+<p>요약하면 에피폴라 기하학에 의거하여 삼각층량법이 유효하게 되고, 이에 따라 SIFT, FAST알고리즘 등을 활용하여 SfM(Structure from Motion)이라는 기술이 생기게 됩니다.</p>
 
 <p>풀어서 이야기 하자면, 고전적 방법으로 feature를 추출하고 이를 GT(ground truth)로 삼겠다 입니다.</p>
 
 <p>그러면 왜 이리 좋은 기술을 놔두고 posenet이라는것 만들었는데?라는 의문이 드실겁니다.</p>
 
-<aside>
-💡
+<h3 id="sfm의-한계">SfM의 한계</h3>
 
-SfM의 한계는 다음과 같습니다.
-
-- real-time processing이 불가능하다.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- real-time processing이 불가능하다.
 - overhead가 너무 크다.(연산 비용, 메모리 비용 등등)
 - 강건하지 않다.
+</code></pre></div></div>
 
-이쯤에서 논문에서 주장하는 Posenet의 차별점을 말씀 드리겠습니다.
+<p>이쯤에서 논문에서 주장하는 Posenet의 차별점을 말씀 드리겠습니다.</p>
 
-- real-time
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- real-time
 - 단 하나의 이미지만 있어도 pose추정이 가능하다.
 - 강건하다.
 - transfer learning이 가능하다.(뒤에서 추가 설명을 드리도록 하겠습니다.)
+</code></pre></div></div>
 
-</aside>
+<p>&lt;/aside&gt;</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/sfm로컬.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/7.png" alt="sfm로컬" /></p>
 
-<p>위 사진은 제가 실제로 local  환경(개인 pc)에서 SfM을 진행한 화면을 발췌한것인데요.</p>
+<p>위 사진은 제가 실제로 local 환경(개인 pc)에서 SfM을 진행한 화면을 발췌한 것인데요.</p>
 
 <p>100여장 정도의 사진밖에 없었지만 output을 내뱉기까지 10여분 이상 소요됨을 확인하였습니다.</p>
 
@@ -273,47 +195,38 @@ SfM의 한계는 다음과 같습니다.
 
 <p>방법론은 굉장히 심플합니다.</p>
 
-<p>![Untitled](https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/오버뷰.png</p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/8.png" alt="오버뷰" /></p>
 
 <p>224*224 이미지를 Posenet에 넣으면 camera pose가 나오게 됩니다.</p>
 
 <p>이때 posenet의 아키텍쳐는 당시 SOTA이던 GoogLenet을 활용하였다고 기재되어 있습니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/googlenet.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/9.png" alt="googlenet" /></p>
 
-<p>약간의 아키텍쳐 수정이 필요했는데 이때 빨간 상자의 부분은 기존에 이미지 classification을 위한</p>
-
-<p>softmax 레이어였으나 카메라의 pose를 아웃풋으로 내뱉기 위헤 Affine regressors 레이어로</p>
-
-<p>바꾸었습니다.</p>
+<p>약간의 아키텍쳐 수정이 필요했는데 이때 빨간 상자의 부분은 기존에 이미지 classification을 위한 softmax 레이어였으나 카메라의 pose를 아웃풋으로 내뱉기 위헤 Affine regressors 레이어로 바꾸었습니다.</p>
 
 <p>약간의 아키텍쳐 설명을 드리면 왜 아웃풋이 3곳에서 나오나? 라는 의문을 가지실 수 있습니다.</p>
 
-<p>이때 실제로 저희가 활용하는 아웃풋은 가장 마지막에 있는 아웃풋이고,
-중간중간 있는 affine regressors 레이어는 모델을 학습시키는 과정에서</p>
+<p>이때 실제로 저희가 활용하는 아웃풋은 가장 마지막에 있는 아웃풋이고, 중간중간 있는 affine regressors 레이어는 모델을 학습시키는 과정에서</p>
 
 <p>backpropagation이라는 딥러닝 필수 과정이 들어가게 되는데 이때 중간중간에서 이를 보정해주게 됩니다.</p>
 
 <p>간결히 말하면 중간에 있는 아웃풋은 모델을 학습시키는데 있어서 보정해주는 역할을 해준다 정도로 이해하시면 되겠습니다.</p>
 
-<p>추가적으로, 6-DOF라고 논문 제목에 기재되어있지만 실제로 6-DOF는 카메라 pose를 통상적으로 
-의미하는 바입니다.</p>
+<p>추가적으로, 6-DOF라고 논문 제목에 기재되어있지만 실제로 6-DOF는 카메라 pose를 통상적으로 의미하는 바입니다.</p>
 
 <p>실제 orientation을 오일러 좌표로 표현하게 되면 gimbal lock이란 문제에 빠지게 되는데요.</p>
 
 <p>이 때문에 쿼터니안 좌표라는것이 나오게 되었습니다.
 실제로 모델 아웃풋으로는 총 7차원의 아웃풋이 나오며 이는 position 3개, orientation 4개의 벡터가 하나의 행렬로 나오게 됩니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/loss_function.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/10.png" alt="loss_function" /></p>
 
 <p>과연 어떻게 동시에 position과 orientation을 학습시키게 될까요?</p>
 
-<p>이 전에 딥러닝이 어떻게 학습하는지를 구두로 설명드리겠습니다.</p>
+<p>이 전에 딥러닝이 어떻게 학습하는지 설명드리겠습니다.</p>
 
-<p>SfM을 통해 GT를 만들었다고 했습니다. 모델은 이때 임의의 데이터를 시작으로 
-GT와 차이를 비교하게 됩니다. 이때 차이를 loss function을 통해서 구하게 되고 
-이는 loss function의 수치가 작은 방향으로 파라미터를 수정하는 과정이
-딥러닝이 학습한다. 라고 표현할 수 있겠습니다.</p>
+<p>SfM을 통해 GT를 만들었다고 했습니다. 모델은 이때 임의의 데이터를 시작으로 GT와 차이를 비교하게 됩니다. 이때 차이를 loss function을 통해서 구하게 되고 이는 loss function의 수치가 작은 방향으로 파라미터를 수정하는 과정이 딥러닝이 학습한다. 라고 표현할 수 있겠습니다.</p>
 
 <p>여기서 loss function을 어떻게 정의 한지를 설명드리려 하고 있습니다.</p>
 
@@ -321,8 +234,7 @@ GT와 차이를 비교하게 됩니다. 이때 차이를 loss function을 통해
 
 <p>이때 postion의 유클리디언 거리와 orientation의 유클리디언 거리의 합으로 loss function을 정의하여 position과 orientation을 동시에 학습시키겠다는 전략을 취한것입니다.</p>
 
-<p>베타는 두 개의 관계에서 중요도를 결정하기 위한 파라미터입니다. 각 파라미터에 따른 성능은
-위 그래프를 통해 확인 할 수 있습니다.</p>
+<p>베타는 두 개의 관계에서 중요도를 결정하기 위한 파라미터입니다. 각 파라미터에 따른 성능은 위 그래프를 통해 확인 할 수 있습니다.</p>
 
 <p>이때 눈여겨 볼것이 위 빨간 상자의 표현식입니다.</p>
 
@@ -336,16 +248,14 @@ GT와 차이를 비교하게 됩니다. 이때 차이를 loss function을 통해
 
 <p>다음은 실제로 SfM을 통해 나온 한 이미지에서의 pose를 가져왔습니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/quaternion.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/11.png" alt="quaternion" /></p>
 
-<p>벡터의 합을 구하면 다음과 같은데요. 컴퓨터가 표현할 수 있는 소숫점의 자리수가 제한적이기에
-일부 오차는 불가피 합니다만 학습을 하는과정에 있어서 약간의 오차가 있으면 이 오차가 계속해서
-누적이 되게 됩니다.
+<p>벡터의 합을 구하면 다음과 같은데요. 컴퓨터가 표현할 수 있는 소숫점의 자리수가 제한적이기에 일부 오차는 불가피 합니다만 학습을 하는과정에 있어서 약간의 오차가 있으면 이 오차가 계속해서 누적이 되게 됩니다.
 이를 방지하기 위해 한번 학습할 때마다 쿼터니안의 크기로 나눠줌으로써 누적에러를 막겠다라는 전략을 취했습니다.</p>
 
 <p>파라미터는 다음과 같습니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/파라미터.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/12.png" alt="파라미터" /></p>
 
 <hr />
 
@@ -353,54 +263,45 @@ GT와 차이를 비교하게 됩니다. 이때 차이를 loss function을 통해
 
 <p>실험 결과입니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/버드아이뷰.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/13.png" alt="버드아이뷰" /></p>
 
 <p>한 이미지에서 camera pose를 추출하는데 약 5ms에서 95ms가 걸렸다고 합니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/수치화.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/14.png" alt="수치화" /></p>
 
 <p>각 데이터셋 별, posenet의 에러, 기존 알고리즘 등등 의 결과를 나타낸 표입니다.</p>
 
-<p>실외 환경에서는 약 2~3미터 간격의 position과 5~8도 정도의 orientation의 오차를 가짐을
-보여줍니다.
-실내 환경에서 더 낮은 에러를 보여주는데요. 이는 실내에서 feature를 더 추출하기 용이한 
-환경이기에 라고 논문에서 기술하고 있습니다.</p>
+<p>실외 환경에서는 약 2~3미터 간격의 position과 5~8도 정도의 orientation의 오차를 가짐을 보여줍니다.
+실내 환경에서 더 낮은 에러를 보여주는데요. 이는 실내에서 feature를 더 추출하기 용이한 환경이기에 라고 논문에서 기술하고 있습니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/정성평가_2.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/15.png" alt="정성평가_2" /></p>
 
 <p>정성평가입니다.</p>
 
 <p>원래 잔디같이 매끈하고 특징점이라 부를만한것이 없는 상황에서는 feature를 뽑기 어려움에도 강건함을 보여주고 있습니다. 또한 이미지가 흔들림이 있어도 강건하게 예측하는 모습을 보입니다.</p>
 
-<p>이때 흔들리게 되면 feature라고 부를만한 건물 외벽의 경계선이라든가 특정 랜드마크들이 넓게 
-번져보이는데 이 때문에 모델이 조금 더 가까운 환경이라고 예측하였다고 필자는 예상하고 있습니다.</p>
+<p>이때 흔들리게 되면 feature라고 부를만한 건물 외벽의 경계선이라든가 특정 랜드마크들이 넓게 번져보이는데 이 때문에 모델이 조금 더 가까운 환경이라고 예측하였다고 필자는 예상하고 있습니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/정성평가.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/16.png" alt="정성평가" /></p>
 
-<p>gt와 모델이 예측한 scene을 겹쳐서 보여주고 있는데요. 어둡거나 강한 빛이 있는 환경, 안개가 낀 
-환경 등에서도 강건함을 보여주고 있습니다.</p>
+<p>gt와 모델이 예측한 scene을 겹쳐서 보여주고 있는데요. 어둡거나 강한 빛이 있는 환경, 안개가 낀 환경 등에서도 강건함을 보여주고 있습니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/정성평가_1.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/17.png" alt="정성평가_1" /></p>
 
-<p>또한 날씨가 다르거나, 동적인 물체가 많이 scene에 있거나 혹은 아무 카메라로나 찍어도 역시
-역시 강건함을 보여주고 있습니다.</p>
+<p>또한 날씨가 다르거나, 동적인 물체가 많이 scene에 있거나 혹은 아무 카메라로나 찍어도 역시 강건함을 보여주고 있습니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/오버헤드.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/18.png" alt="오버헤드" /></p>
 
 <p>기존의 SIFT알고리즘과 비교하여도 우수한 성능을 뽐내고 있습니다.</p>
 
 <p>위에서 transfer learning을 언급드렸는데요. 당시에 딥러닝이 관심을 많이 받으며, transfer learning 기법이 탄생함에 따라 transfer learning의 효과도 같이 논문에서 언급을 하는 그래프입니다.</p>
 
-<p>여기서 transfer learning이란 이미 사전에 보편적인 데이터셋에 대해서 조금 학습을 시킨 후,
-개인이 수집한 데이터를 학습시키게 되면, 학습 시간이 줄 뿐더러 모델이 좀 더 general해지고, 
-robust해짐을 보여주고 있습니다.</p>
+<p>여기서 transfer learning이란 이미 사전에 보편적인 데이터셋에 대해서 조금 학습을 시킨 후, 개인이 수집한 데이터를 학습시키게 되면, 학습 시간이 줄 뿐더러 모델이 좀 더 general해지고, robust해짐을 보여주고 있습니다.</p>
 
-<p><img src="https://github.com/KOREATECH-KROAD/KOREATECH-KROAD.github.io/tree/main/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/새일런시맵.png" alt="Untitled" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/19.png" alt="새일런시맵" /></p>
 
-<p>Saliency maps를 통한 평가입니다. 이는 모델이 학습함에 따라 관심있게 본 구역을 시각화 한 map이라고 볼 수 있는데요. 잔디같이 feature가 추출이 잘 되지 않거나 동적인 물체들에 대해서는 모델이
-관심있게 보지 않음을 시각화한 실험입니다.
-또한 기존의 고전적인 방법들과는 다르게 그 overhead와 필요한 데이터셋의 수가 현저히 적음을
-보여주고 있습니다.</p>
+<p>Saliency maps를 통한 평가입니다. 이는 모델이 학습함에 따라 관심있게 본 구역을 시각화 한 map이라고 볼 수 있는데요. 잔디 같이 feature가 추출이 잘 되지 않거나 동적인 물체들에 대해서는 모델이 관심있게 보지 않음을 시각화한 실험입니다.
+또한 기존의 고전적인 방법들과는 다르게 그 overhead와 필요한 데이터셋의 수가 현저히 적음을 보여주고 있습니다.</p>
 
 <hr />
 
@@ -408,15 +309,69 @@ robust해짐을 보여주고 있습니다.</p>
 
 <p>긴 글 읽으시느라 고생 많으셨습니다.</p>
 
-<p>이 논문을 평가를 하자면 CNN 네트워크를 기반으로 end-to-end형식의 camera pose localization을 
-최초로 제시하였다는점에 높게 평가 받고 있습니다.</p>
+<p>이 논문을 평가를 하자면 CNN 네트워크를 기반으로 end-to-end형식의 camera pose localization을 최초로 제시하였다는점에 높게 평가 받고 있습니다.</p>
 
-<p>또한 당시 검증되지 않은 딥러닝 기법인, transfer learning의 효과도 잘 보여주는 논문이였고,
-기존에 고전적인 방법인 SIFT보다 훨씬 우월한 성능을 보인다는 점을 보였습니다.</p>
+<p>또한 당시 검증되지 않은 딥러닝 기법인, transfer learning의 효과도 잘 보여주는 논문이였고, 기존에 고전적인 방법인 SIFT보다 훨씬 우월한 성능을 보인다는 점을 보였습니다.</p>
 
-<p>이는 당시 시대 상인, 
-real-time processing의 필요성, 사전 3D-map이 없는 환경에서의 localization, 다른 추가적인 센서 
-없이 localization을 잘 할 수 있음에 따라 여러 분야에서 두루 사용할 수 있는 application을 제시하였다고 필자는 생각하고 있습니다.</p>
+<p>이는 당시 시대 상인, real-time processing의 필요성, 사전 3D-map이 없는 환경에서의 localization, 다른 추가적인 센서 없이 localization을 잘 할 수 있음에 따라 여러 분야에서 두루 사용할 수 있는 application을 제시하였다고 필자는 생각하고 있습니다.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>K-ROAD 기술 블로그 개설의 의의</title>
+	  <link>https://KOREATECH-KROAD.github.io//K-ROAD-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4%EC%9D%98-%EC%9D%98%EC%9D%98</link>
+	  <author></author>
+	  <pubDate>2024-03-19T18:00:00+09:00</pubDate>
+	  <guid>https://KOREATECH-KROAD.github.io//K-ROAD-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4%EC%9D%98-%EC%9D%98%EC%9D%98</guid>
+	  <description><![CDATA[
+	     <h3 id="안녕하세요-k-road-대표-유재민입니다">안녕하세요. K-ROAD 대표 유재민입니다.</h3>
+
+<p>K-ROAD 기술 블로그가 개설되었습니다. 이에 따라 대표로서 연구 내용 블로그 포스팅의 포문을 열게 되었습니다.
+처음 대표로 K-ROAD 5기의 운영을 맞게 되었을 때 K-ROAD의 기술적 능력을 알리는 웹 페이지를 제작하자고 의견을 꺼내었고 그 이유는 다음과 같습니다.</p>
+
+<h2 id="로보틱스-분야는-진입장벽이-너무-높다">로보틱스 분야는 진입장벽이 너무 높다.</h2>
+<p>제 주변 지인들 중에도 로보틱스 분야에 관심이 있고 공부 해보고 싶은 학우들이 많습니다. 하지만 하나같이 저에게 “어떻게 공부를 시작해야 할지 모르겠다”라고 물어왔습니다.</p>
+
+<p>K-ROAD 대표로서 활동하게 된 이후, 그 질문의 빈도는 자연스럽게 더 늘어났습니다</p>
+
+<p>저 또한 이런 질문은 대답하기 난감했습니다.</p>
+
+<p>로보틱스 분야는 <strong>하드웨어와 소프트웨어 결합의 결정체</strong>입니다. 따라서 어느 한 분야라도 지식이 부족하다면 벽에 막힌 것 같은 기분이 들 겁니다. 현재의 저는 그 벽을 허물기 위해 노력하고 있는 로보틱스 연구자 중 하나이지만, 막막하던 시절의 저를 떠오르게 하는 사람들을 보면 상당한 안타까움이 느껴집니다.</p>
+
+<p>또한 로보틱스는 분야의 특성상 <strong>학습해야 될 양이 상당히 방대</strong>합니다.</p>
+
+<p>이로 인해 진입장벽은 높아져가고, 대기업조차 로보틱스 개발자 가뭄에 시달리고 있습니다.
+따라서 저는 학습을 위한 커리큘럼을 제공하거나 로보틱스의 세계 연구 동향을 분석해 연구회 내외의 연구 흐름을 이끄는 역할을 하고자 합니다.</p>
+
+<p>로보틱스 분야의 정보 공유의 장이자, 로보틱스 칼럼의 일환으로써 저희가 공부한 내용을 공유하여 로보틱스 연구 희망자들(딥러닝, 매니퓰레이터, 컴퓨터 비전, slam, 차량 제어 등)이 발을 돌리지 않고 <strong>로보틱스라는 분야에 더욱 깊히 발을 담굴 수 있는 pool</strong>을 만드는 것이 목표입니다.</p>
+
+<h2 id="-그래서-네가-하고-싶은-게-정확히-뭔데-">” 그래서 네가 하고 싶은 게 정확히 뭔데? “</h2>
+
+<p>제가 다른 학우들보다 먼저 발을 담군 입장에서 두 번째로 많이 들었던 질문입니다.</p>
+
+<p><em>”너 로보틱스 팀에서 딥러닝도 같이 하지 않냐? 나도 딥러닝 하고싶어!”</em></p>
+
+<p>라는 질문을 많이 들었습니다. 저는 여기서 역질문을 합니다.</p>
+
+<p><strong><em>”딥러닝으로 뭘 하고 싶은데?”</em></strong></p>
+
+<p>라는 질문했을 때 명확히 자신이 이루고자 하는 바를 대답한 사람이 단 한 명도 없었습니다. 딥러닝은 일종의 툴일 뿐입니다. 따라서 엔지니어의 입장에서 딥러닝은 툴로써 바라봐야 하는데 오히려 그 겉모습에 집중하는 경향을 많이 봐왔습니다.</p>
+
+<p>프로그래밍(또는 코딩) 또한 비슷한 맥락입니다. 이 이야기는 저희 K-ROAD 회원들에게도 전하고 싶은 말입니다. 
+K-ROAD뿐만 아니라 많은 대학생 로보틱스 팀의 학생들이 자율주행 또는 로보틱스 분야의 공부를 시작하기 위해 다들 코딩 실력 향상에만 집착하는 모습을 보입니다. 물론 프로그래밍 실력은 중요합니다. 로보틱스 분야와 뗄 수 없는 요소지요.</p>
+
+<p>하지만 코딩도 우리가 생각한 <strong>기능을 구현하기 위한 일종의 툴</strong>이지 그 이상, 그 이하도 아닙니다.</p>
+
+<p>이러한 인사이트을 미래의 로보틱스 연구자, 또는 초중고 학생들과 같은 어린이 로보틱스 연구자에게 전하고 싶다는 것이 제 두 번째 의도 입니다.</p>
+
+<h2 id="k-road를-세상에-알리자">K-ROAD를 세상에 알리자</h2>
+
+<p>기술 블로그 개설의 마지막 이유입니다.</p>
+
+<p>저희 K-ROAD가 다수의 기업 사이에서 언급되고 있다는 소식을 대표가 된 이후로 종종 듣고 있습니다. 이에 따라 저희의 수준을 외부에 더 알리고, 연구회원들이 지속적으로 학습을 할 수 있도록 독력하기 위해 기술 블로그가 잘 쓰일 수 있을 것이라고 판단했습니다.</p>
+
+<p>이로써 저희 K-ROAD를 더 널리 알리고 더 많은 양질의 로보틱스 연구자들을 배출해 내는 것이 저와 K-ROAD의 궁극적인 목표입니다.</p>
 
 	  ]]></description>
 	</item>
