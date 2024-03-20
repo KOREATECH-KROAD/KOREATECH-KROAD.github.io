@@ -5,1364 +5,316 @@
    
       <title>KOREATECH-KROAD.github.io/</title>
    
-   <link>http://localhost:4000</link>
+   <link>https://KOREATECH-KROAD.github.io/</link>
    <description>KOREATECH 자율주행차연구회</description>
    <language>ko</language>
    <managingEditor> </managingEditor>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
-	  <title>웹페이지 개설 의도를 곁들인 Posenet</title>
-	  <link>//%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%9C%EC%84%A4-%EC%9D%98%EB%8F%84%EB%A5%BC-%EA%B3%81%EB%93%A4%EC%9D%B8-Posenet</link>
+	  <title>Posenet</title>
+	  <link>https://KOREATECH-KROAD.github.io//Posenet</link>
 	  <author></author>
-	  <pubDate>2024-03-19T19:18:00+09:00</pubDate>
-	  <guid>//%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%9C%EC%84%A4-%EC%9D%98%EB%8F%84%EB%A5%BC-%EA%B3%81%EB%93%A4%EC%9D%B8-Posenet</guid>
+	  <pubDate>2024-03-20T19:18:00+09:00</pubDate>
+	  <guid>https://KOREATECH-KROAD.github.io//Posenet</guid>
 	  <description><![CDATA[
-	     <html>
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>웹페이지 개설 의도를 곁들인 Posenet</title>
-	<style>
-		/* cspell:disable-file */
-		/* webkit printing magic: print all background colors */
-		html {
-			-webkit-print-color-adjust: exact;
-		}
-
-		* {
-			box-sizing: border-box;
-			-webkit-print-color-adjust: exact;
-		}
-
-		html,
-		body {
-			margin: 0;
-			padding: 0;
-		}
-
-		@media only screen {
-			body {
-				margin: 2em auto;
-				max-width: 900px;
-				color: rgb(55, 53, 47);
-			}
-		}
-
-		body {
-			line-height: 1.5;
-			white-space: pre-wrap;
-		}
-
-		a,
-		a.visited {
-			color: inherit;
-			text-decoration: underline;
-		}
-
-		.pdf-relative-link-path {
-			font-size: 80%;
-			color: #444;
-		}
-
-		h1,
-		h2,
-		h3 {
-			letter-spacing: -0.01em;
-			line-height: 1.2;
-			font-weight: 600;
-			margin-bottom: 0;
-		}
-
-		.page-title {
-			font-size: 2.5rem;
-			font-weight: 700;
-			margin-top: 0;
-			margin-bottom: 0.75em;
-		}
-
-		h1 {
-			font-size: 1.875rem;
-			margin-top: 1.875rem;
-		}
-
-		h2 {
-			font-size: 1.5rem;
-			margin-top: 1.5rem;
-		}
-
-		h3 {
-			font-size: 1.25rem;
-			margin-top: 1.25rem;
-		}
-
-		.source {
-			border: 1px solid #ddd;
-			border-radius: 3px;
-			padding: 1.5em;
-			word-break: break-all;
-		}
-
-		.callout {
-			border-radius: 3px;
-			padding: 1rem;
-		}
-
-		figure {
-			margin: 1.25em 0;
-			page-break-inside: avoid;
-		}
-
-		figcaption {
-			opacity: 0.5;
-			font-size: 85%;
-			margin-top: 0.5em;
-		}
-
-		mark {
-			background-color: transparent;
-		}
-
-		.indented {
-			padding-left: 1.5em;
-		}
-
-		hr {
-			background: transparent;
-			display: block;
-			width: 100%;
-			height: 1px;
-			visibility: visible;
-			border: none;
-			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-		}
-
-		img {
-			max-width: 100%;
-		}
-
-		@media only print {
-			img {
-				max-height: 100vh;
-				object-fit: contain;
-			}
-		}
-
-		@page {
-			margin: 1in;
-		}
-
-		.collection-content {
-			font-size: 0.875rem;
-		}
-
-		.column-list {
-			display: flex;
-			justify-content: space-between;
-		}
-
-		.column {
-			padding: 0 1em;
-		}
-
-		.column:first-child {
-			padding-left: 0;
-		}
-
-		.column:last-child {
-			padding-right: 0;
-		}
-
-		.table_of_contents-item {
-			display: block;
-			font-size: 0.875rem;
-			line-height: 1.3;
-			padding: 0.125rem;
-		}
-
-		.table_of_contents-indent-1 {
-			margin-left: 1.5rem;
-		}
-
-		.table_of_contents-indent-2 {
-			margin-left: 3rem;
-		}
-
-		.table_of_contents-indent-3 {
-			margin-left: 4.5rem;
-		}
-
-		.table_of_contents-link {
-			text-decoration: none;
-			opacity: 0.7;
-			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-		}
-
-		table,
-		th,
-		td {
-			border: 1px solid rgba(55, 53, 47, 0.09);
-			border-collapse: collapse;
-		}
-
-		table {
-			border-left: none;
-			border-right: none;
-		}
-
-		th,
-		td {
-			font-weight: normal;
-			padding: 0.25em 0.5em;
-			line-height: 1.5;
-			min-height: 1.5em;
-			text-align: left;
-		}
-
-		th {
-			color: rgba(55, 53, 47, 0.6);
-		}
-
-		ol,
-		ul {
-			margin: 0;
-			margin-block-start: 0.6em;
-			margin-block-end: 0.6em;
-		}
-
-		li>ol:first-child,
-		li>ul:first-child {
-			margin-block-start: 0.6em;
-		}
-
-		ul>li {
-			list-style: disc;
-		}
-
-		ul.to-do-list {
-			padding-inline-start: 0;
-		}
-
-		ul.to-do-list>li {
-			list-style: none;
-		}
-
-		.to-do-children-checked {
-			text-decoration: line-through;
-			opacity: 0.375;
-		}
-
-		ul.toggle>li {
-			list-style: none;
-		}
-
-		ul {
-			padding-inline-start: 1.7em;
-		}
-
-		ul>li {
-			padding-left: 0.1em;
-		}
-
-		ol {
-			padding-inline-start: 1.6em;
-		}
-
-		ol>li {
-			padding-left: 0.2em;
-		}
-
-		.mono ol {
-			padding-inline-start: 2em;
-		}
-
-		.mono ol>li {
-			text-indent: -0.4em;
-		}
-
-		.toggle {
-			padding-inline-start: 0em;
-			list-style-type: none;
-		}
-
-		/* Indent toggle children */
-		.toggle>li>details {
-			padding-left: 1.7em;
-		}
-
-		.toggle>li>details>summary {
-			margin-left: -1.1em;
-		}
-
-		.selected-value {
-			display: inline-block;
-			padding: 0 0.5em;
-			background: rgba(206, 205, 202, 0.5);
-			border-radius: 3px;
-			margin-right: 0.5em;
-			margin-top: 0.3em;
-			margin-bottom: 0.3em;
-			white-space: nowrap;
-		}
-
-		.collection-title {
-			display: inline-block;
-			margin-right: 1em;
-		}
-
-		.page-description {
-			margin-bottom: 2em;
-		}
-
-		.simple-table {
-			margin-top: 1em;
-			font-size: 0.875rem;
-			empty-cells: show;
-		}
-
-		.simple-table td {
-			height: 29px;
-			min-width: 120px;
-		}
-
-		.simple-table th {
-			height: 29px;
-			min-width: 120px;
-		}
-
-		.simple-table-header-color {
-			background: rgb(247, 246, 243);
-			color: black;
-		}
-
-		.simple-table-header {
-			font-weight: 500;
-		}
-
-		time {
-			opacity: 0.5;
-		}
-
-		.icon {
-			display: inline-block;
-			max-width: 1.2em;
-			max-height: 1.2em;
-			text-decoration: none;
-			vertical-align: text-bottom;
-			margin-right: 0.5em;
-		}
-
-		img.icon {
-			border-radius: 3px;
-		}
-
-		.user-icon {
-			width: 1.5em;
-			height: 1.5em;
-			border-radius: 100%;
-			margin-right: 0.5rem;
-		}
-
-		.user-icon-inner {
-			font-size: 0.8em;
-		}
-
-		.text-icon {
-			border: 1px solid #000;
-			text-align: center;
-		}
-
-		.page-cover-image {
-			display: block;
-			object-fit: cover;
-			width: 100%;
-			max-height: 30vh;
-		}
-
-		.page-header-icon {
-			font-size: 3rem;
-			margin-bottom: 1rem;
-		}
-
-		.page-header-icon-with-cover {
-			margin-top: -0.72em;
-			margin-left: 0.07em;
-		}
-
-		.page-header-icon img {
-			border-radius: 3px;
-		}
-
-		.link-to-page {
-			margin: 1em 0;
-			padding: 0;
-			border: none;
-			font-weight: 500;
-		}
-
-		p>.user {
-			opacity: 0.5;
-		}
-
-		td>.user,
-		td>time {
-			white-space: nowrap;
-		}
-
-		input[type="checkbox"] {
-			transform: scale(1.5);
-			margin-right: 0.6em;
-			vertical-align: middle;
-		}
-
-		p {
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
-		}
-
-		.image {
-			border: none;
-			margin: 1.5em 0;
-			padding: 0;
-			border-radius: 0;
-			text-align: center;
-		}
-
-		.code,
-		code {
-			background: rgba(135, 131, 120, 0.15);
-			border-radius: 3px;
-			padding: 0.2em 0.4em;
-			border-radius: 3px;
-			font-size: 85%;
-			tab-size: 2;
-		}
-
-		code {
-			color: #eb5757;
-		}
-
-		.code {
-			padding: 1.5em 1em;
-		}
-
-		.code-wrap {
-			white-space: pre-wrap;
-			word-break: break-all;
-		}
-
-		.code>code {
-			background: none;
-			padding: 0;
-			font-size: 100%;
-			color: inherit;
-		}
-
-		blockquote {
-			font-size: 1.25em;
-			margin: 1em 0;
-			padding-left: 1em;
-			border-left: 3px solid rgb(55, 53, 47);
-		}
-
-		.bookmark {
-			text-decoration: none;
-			max-height: 8em;
-			padding: 0;
-			display: flex;
-			width: 100%;
-			align-items: stretch;
-		}
-
-		.bookmark-title {
-			font-size: 0.85em;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			height: 1.75em;
-			white-space: nowrap;
-		}
-
-		.bookmark-text {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.bookmark-info {
-			flex: 4 1 180px;
-			padding: 12px 14px 14px;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
-
-		.bookmark-image {
-			width: 33%;
-			flex: 1 1 180px;
-			display: block;
-			position: relative;
-			object-fit: cover;
-			border-radius: 1px;
-		}
-
-		.bookmark-description {
-			color: rgba(55, 53, 47, 0.6);
-			font-size: 0.75em;
-			overflow: hidden;
-			max-height: 4.5em;
-			word-break: break-word;
-		}
-
-		.bookmark-href {
-			font-size: 0.75em;
-			margin-top: 0.25em;
-		}
-
-		.sans {
-			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-		}
-
-		.code {
-			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
-		}
-
-		.serif {
-			font-family: Lyon-Text, Georgia, ui-serif, serif;
-		}
-
-		.mono {
-			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
-		}
-
-		.pdf .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
-		}
-
-		.pdf .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
-		}
-
-		.pdf .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
-		}
-
-		.pdf .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
-		}
-
-		.highlight-default {
-			color: rgba(55, 53, 47, 1);
-		}
-
-		.highlight-gray {
-			color: rgba(120, 119, 116, 1);
-			fill: rgba(120, 119, 116, 1);
-		}
-
-		.highlight-brown {
-			color: rgba(159, 107, 83, 1);
-			fill: rgba(159, 107, 83, 1);
-		}
-
-		.highlight-orange {
-			color: rgba(217, 115, 13, 1);
-			fill: rgba(217, 115, 13, 1);
-		}
-
-		.highlight-yellow {
-			color: rgba(203, 145, 47, 1);
-			fill: rgba(203, 145, 47, 1);
-		}
-
-		.highlight-teal {
-			color: rgba(68, 131, 97, 1);
-			fill: rgba(68, 131, 97, 1);
-		}
-
-		.highlight-blue {
-			color: rgba(51, 126, 169, 1);
-			fill: rgba(51, 126, 169, 1);
-		}
-
-		.highlight-purple {
-			color: rgba(144, 101, 176, 1);
-			fill: rgba(144, 101, 176, 1);
-		}
-
-		.highlight-pink {
-			color: rgba(193, 76, 138, 1);
-			fill: rgba(193, 76, 138, 1);
-		}
-
-		.highlight-red {
-			color: rgba(212, 76, 71, 1);
-			fill: rgba(212, 76, 71, 1);
-		}
-
-		.highlight-gray_background {
-			background: rgba(241, 241, 239, 1);
-		}
-
-		.highlight-brown_background {
-			background: rgba(244, 238, 238, 1);
-		}
-
-		.highlight-orange_background {
-			background: rgba(251, 236, 221, 1);
-		}
-
-		.highlight-yellow_background {
-			background: rgba(251, 243, 219, 1);
-		}
-
-		.highlight-teal_background {
-			background: rgba(237, 243, 236, 1);
-		}
-
-		.highlight-blue_background {
-			background: rgba(231, 243, 248, 1);
-		}
-
-		.highlight-purple_background {
-			background: rgba(244, 240, 247, 0.8);
-		}
-
-		.highlight-pink_background {
-			background: rgba(249, 238, 243, 0.8);
-		}
-
-		.highlight-red_background {
-			background: rgba(253, 235, 236, 1);
-		}
-
-		.block-color-default {
-			color: inherit;
-			fill: inherit;
-		}
-
-		.block-color-gray {
-			color: rgba(120, 119, 116, 1);
-			fill: rgba(120, 119, 116, 1);
-		}
-
-		.block-color-brown {
-			color: rgba(159, 107, 83, 1);
-			fill: rgba(159, 107, 83, 1);
-		}
-
-		.block-color-orange {
-			color: rgba(217, 115, 13, 1);
-			fill: rgba(217, 115, 13, 1);
-		}
-
-		.block-color-yellow {
-			color: rgba(203, 145, 47, 1);
-			fill: rgba(203, 145, 47, 1);
-		}
-
-		.block-color-teal {
-			color: rgba(68, 131, 97, 1);
-			fill: rgba(68, 131, 97, 1);
-		}
-
-		.block-color-blue {
-			color: rgba(51, 126, 169, 1);
-			fill: rgba(51, 126, 169, 1);
-		}
-
-		.block-color-purple {
-			color: rgba(144, 101, 176, 1);
-			fill: rgba(144, 101, 176, 1);
-		}
-
-		.block-color-pink {
-			color: rgba(193, 76, 138, 1);
-			fill: rgba(193, 76, 138, 1);
-		}
-
-		.block-color-red {
-			color: rgba(212, 76, 71, 1);
-			fill: rgba(212, 76, 71, 1);
-		}
-
-		.block-color-gray_background {
-			background: rgba(241, 241, 239, 1);
-		}
-
-		.block-color-brown_background {
-			background: rgba(244, 238, 238, 1);
-		}
-
-		.block-color-orange_background {
-			background: rgba(251, 236, 221, 1);
-		}
-
-		.block-color-yellow_background {
-			background: rgba(251, 243, 219, 1);
-		}
-
-		.block-color-teal_background {
-			background: rgba(237, 243, 236, 1);
-		}
-
-		.block-color-blue_background {
-			background: rgba(231, 243, 248, 1);
-		}
-
-		.block-color-purple_background {
-			background: rgba(244, 240, 247, 0.8);
-		}
-
-		.block-color-pink_background {
-			background: rgba(249, 238, 243, 0.8);
-		}
-
-		.block-color-red_background {
-			background: rgba(253, 235, 236, 1);
-		}
-
-		.select-value-color-uiBlue {
-			background-color: rgba(35, 131, 226, .07);
-		}
-
-		.select-value-color-pink {
-			background-color: rgba(245, 224, 233, 1);
-		}
-
-		.select-value-color-purple {
-			background-color: rgba(232, 222, 238, 1);
-		}
-
-		.select-value-color-green {
-			background-color: rgba(219, 237, 219, 1);
-		}
-
-		.select-value-color-gray {
-			background-color: rgba(227, 226, 224, 1);
-		}
-
-		.select-value-color-translucentGray {
-			background-color: rgba(255, 255, 255, 0.0375);
-		}
-
-		.select-value-color-orange {
-			background-color: rgba(250, 222, 201, 1);
-		}
-
-		.select-value-color-brown {
-			background-color: rgba(238, 224, 218, 1);
-		}
-
-		.select-value-color-red {
-			background-color: rgba(255, 226, 221, 1);
-		}
-
-		.select-value-color-yellow {
-			background-color: rgba(253, 236, 200, 1);
-		}
-
-		.select-value-color-blue {
-			background-color: rgba(211, 229, 239, 1);
-		}
-
-		.select-value-color-pageGlass {
-			background-color: undefined;
-		}
-
-		.select-value-color-washGlass {
-			background-color: undefined;
-		}
-
-		.checkbox {
-			display: inline-flex;
-			vertical-align: text-bottom;
-			width: 16;
-			height: 16;
-			background-size: 16px;
-			margin-left: 2px;
-			margin-right: 5px;
-		}
-
-		.checkbox-on {
-			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-		}
-
-		.checkbox-off {
-			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-		}
-	</style>
-</head>
-
-<body>
-	<article id="661966ba-ba7f-4726-9fa1-ecde31e5ecb2" class="page sans">
-		<header>
-			<h1 class="page-title">웹페이지 개설 의도를 곁들인 Posenet</h1>
-			<p class="page-description"></p>
-		</header>
-		<div class="page-body">
-			<h3 id="0b77a21d-63ab-40b2-9d18-4ad9fa8c880b" class="">안녕하세요 대표 유재민입니다.<br /><br />케이로드 웹 페이지 개설과 함께 연구 내용
-				블로그 포스팅의 포문을 열게 되었습니다.<br /><br />처음 대표로 케이로드를 운영을 맞게 되었을때 케이로드 웹을 제작하자고 의견을 꺼내었고 그 이유는 다음과 같습니다.<br />
-			</h3>
-			<p id="35f067fa-5e0d-4d88-ad61-846b4c10794d" class="">
-			</p>
-			<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
-				id="c2103ea1-5386-4758-a44c-959bb2f90a66">
-				<div style="font-size:1.5em"><span class="icon">💡</span></div>
-				<div style="width:100%"><strong><mark class="highlight-red"><em>로보틱스라는 분야의 진입장벽이 너무
-								높다.</em></mark></strong>
-					<ul id="7b11f3db-b39e-46c9-a107-dc57b5321f4b" class="bulleted-list">
-						<li style="list-style-type:disc">제 주변 지인들만 보더라도 로보틱스라는 분야에 대해 관심이 있고 공부 해보고 싶은 학우들 다수가 저에게
-							“<mark class="highlight-orange"><em>어떻게 공부하는게 좋냐? “</em></mark>라고 많이들 질문을 하였습니다.<br />케이로드
-							대표로써 활동하게 된 이후로 그 질문의 빈도는 더 늘었죠.<br /></li>
-					</ul>
-					<ul id="eabd0920-759b-4378-b129-19e68b72ac1c" class="bulleted-list">
-						<li style="list-style-type:disc">저 또한 이런 질문을 받을때 항상 난감하곤 했습니다. <br />로보틱스라는 분야는 <br /><mark
-								class="highlight-orange"><em>하드웨어와 소프트웨어결합의 결정체 </em></mark>중 하나이며 어느 하나의 지식의 모자람을 느낀다면
-							벽에 막히기 마련이기 때문이죠. 저 또한 현재 계속 그 벽을 허물려 노력하고 있는<br />로보틱스 연구자 중 하나이지만 그 방법 또한 모르던 저를 생각해보면 참
-							애석하다라고 많이 느꼈습니다.<br /></li>
-					</ul>
-					<ul id="5c574af8-695c-4def-9cac-028ea3c7797d" class="bulleted-list">
-						<li style="list-style-type:disc">또한 로보틱스라는 분야의 특성상 <mark class="highlight-orange"><em>학습해야될 양이
-									상당히 방대</em></mark>합니다. <br />대기업들 또한 로보틱스 개발자들 가뭄에 시달리고 있는것을 보면 그 이유가 명확하죠.<br />이에
-							따라 일종의 커리큘럼을 제공하거나 세계적인 연구 동향들에 대해서도 흐름을 잡는 역할 또한 겸하고자 합니다.<br /></li>
-					</ul>
-					<ul id="6074c218-b160-4111-a2c8-1a4e9a098718" class="bulleted-list">
-						<li style="list-style-type:disc">이에 따라 정보 공유의 장이자, 로보틱스 칼럼의 일환으로써 저희가 공부한 내용을 공유함으로 인하여 로보틱스 연구
-							희망자들(딥러닝, 매니퓰레이터, 컴퓨터 비전, slam, 차량 제어, 등등)이 발을 돌리지 않고 <mark
-								class="highlight-orange"><em>로보틱스라는 분야에 더욱 깊히 발을 담굴 수 있는 pool</em></mark>을 만드는것이 제 의도 중
-							하나였습니다.</li>
-					</ul>
-					<p id="d16720e0-972f-4019-8916-c38eba1f22d3" class="">
-					</p>
-					<h3 id="d0d41ed3-f473-49ec-8e10-98441da33a37" class=""><strong><mark class="highlight-red"><em>너가 뭘
-									하고 싶은데?</em></mark></strong></h3>
-					<ul id="92d77f54-75d8-43ea-82ca-8c2abcc0807f" class="bulleted-list">
-						<li style="list-style-type:disc">제가 다른 학우들보다 먼저 발을 담군 입장에서 두번째로 많이 들었던 질문입니다.<br /><br /><mark
-								class="highlight-orange"><em>”너 로보틱스팀에서 딥러닝도 같이 하지 않냐? 나도 딥러닝 하고싶어!” </em></mark><mark
-								class="highlight-default"><br />라는 질문을 많이 들었습니다. 저는 여기서 역질문을
-								합니다.<br /><br /></mark><mark class="highlight-orange"><em>”딥러닝으로 뭘 하고
-									싶은데?”<br /><br /></em></mark><mark class="highlight-default">라고 질문했을때 대답한 학우가 한명도
-								없습니다. 딥러닝을 활용하는 입장에서 <br />딥러닝 또한 일종의 툴 이기 때문에 그 툴로써 바라봐야되는데 그 껍데기에 많이 집중하는 행태를 많이
-								보았습니다.<br /></mark></li>
-					</ul>
-					<ul id="d5631940-e1ed-4123-a758-19052ce3268e" class="bulleted-list">
-						<li style="list-style-type:disc"><mark class="highlight-default">코딩도 비슷한 맥락입니다. 이 이야기는 저희 케이로드
-								회원들에게도 전하고 싶은 말인데요. <br />케이로드나 자율주행 또는 로보틱스라는 분야를 공부하기 위해 다들 <br />코딩에만 너무 집중하는 모습을
-								보입니다. 물론 중요합니다. 빠질 수 없는 요소지요.<br />하지만 코딩도 <br /></mark><mark
-								class="highlight-orange"><em>우리가 생각한 메소드를 구현하기 위한 일종의 툴</em></mark><mark
-								class="highlight-default">이지 그 이상 그 이하도 아닙니다.</mark></li>
-					</ul>
-					<ul id="256916ae-77da-4934-9fde-3cf12266ff68" class="bulleted-list">
-						<li style="list-style-type:disc"><mark class="highlight-default">이러한 인사이트를 항상 미래의 로보틱스 연구자들 또는
-								로린이(어린이 로보틱스 연구자)들에게 <br />전하고 싶은것이 제 두번째 의도 입니다.<br /></mark></li>
-					</ul>
-					<p id="4407c0e0-9b7a-442c-9460-242ea0d41760" class="">
-					</p>
-					<h3 id="ba58b5ac-4ce1-450e-b796-21cddd842e72" class=""><strong><mark class="highlight-red"><em>케이로드의
-									홍보</em></mark></strong></h3>
-					<ul id="bee6e389-0f3d-44fe-9208-eca5b4898598" class="bulleted-list">
-						<li style="list-style-type:disc">마지막 의도입니다. 저희 케이로드가 다른 기업들에서 많이들 언급되고 있다는 소식을 대표가 된 이후로 많이 듣고
-							있습니다. 이에 발 맞춰 저희의 수준을 조금 더 어필할 수 있는 영역을 만들고 회원들이 지속적으로 학습을 할 수 있도록 하는데 <br />그 목적이
-							있습니다.<br /></li>
-					</ul>
-					<ul id="fa6872e6-3314-45ba-8b8e-6f57ec0056eb" class="bulleted-list">
-						<li style="list-style-type:disc"><strong><em><span style="border-bottom:0.05em solid"><mark
-											class="highlight-red">이로써 저희 케이로드를 더 외부에 알릴 수 있고 더 많은 로보틱스 연구자들을 배출해 내고자
-											하는것이 제 목표이자 저희 케이로드의 목표입니다.</mark></span></em></strong></li>
-					</ul>
-				</div>
-			</figure>
-			<p id="f82feac6-4095-464a-983a-55107959284b" class="">
-			</p>
-			<p id="3c9a0526-8eb4-4972-9342-c30395f57722" class="">
-			</p>
-			<hr id="a5eb829c-b04d-46e7-b998-cb1ca513ec5b" />
-			<p id="4dac0d1c-dd97-404d-aa10-01bbd11b643d" class="">
-			</p>
-			<p id="d6001328-b841-4881-8d1c-7fc75fb5a4ff" class="">각설하고 본론으로 돌아가겠습니다.</p>
-			<p id="626f9d11-1038-4054-90c7-7e5e17d4dc13" class="">형식은 paper review형식으로 진행하겠고 처음이니만큼 <br />가볍고 흥미를 불러
-				일으킬만한 논문을 가져왔습니다.<br /></p>
-			<p id="f78d9fb3-40d6-49a2-8662-f41a6836b51e" class="">
-			</p>
-			<ul id="4ca803aa-07e3-41e7-a3a3-2a7117d7396a" class="toggle">
-				<li>
-					<details open="">
-						<summary>Intro</summary>
-					</details>
-				</li>
-			</ul>
-			<ul id="6f432364-fe63-4649-b5f5-9de0ad994c63" class="toggle">
-				<li>
-					<details open="">
-						<summary>Background knowledge</summary>
-					</details>
-				</li>
-			</ul>
-			<ul id="1857304e-8c56-4394-93cb-c73fbf5baa1d" class="toggle">
-				<li>
-					<details open="">
-						<summary>Methodology</summary>
-					</details>
-				</li>
-			</ul>
-			<ul id="9ccdcd2c-705e-40f1-b608-93c4f16e75ac" class="toggle">
-				<li>
-					<details open="">
-						<summary>Experiment</summary>
-					</details>
-				</li>
-			</ul>
-			<ul id="6f1889b7-cdd7-4bc6-9d0d-08df7f8839d1" class="toggle">
-				<li>
-					<details open="">
-						<summary>Conclusion</summary>
-					</details>
-				</li>
-			</ul>
-			<p id="fdadd869-00dd-47e9-a06c-b1c97a9e9aff" class="">순으로 내용을 진행하도록 하겠습니다.</p>
-			<p id="b8d01f5e-4c5b-4663-b7ff-c5b53d650f30" class="">
-			</p>
-			<hr id="d556df79-5bdb-4d30-ae2a-47921787ca84" />
-			<p id="3755533c-63f5-4c11-b868-ebd9ec5ee497" class="">
-			</p>
-			<h1 id="f0f85d96-66ba-4810-8754-53c31ad47f0d" class=""><strong>Intro</strong></h1>
-			<p id="2088eaaa-18ef-4214-86a7-340c6a432f32" class="">
-			</p>
-			<p id="5acffb2d-ea2f-407b-a85e-07ccfa2dca94" class="">
-			</p>
-			<p id="d16f2725-67d5-4f71-8a89-b41b7430a453" class="">
-			</p>
-			<blockquote id="f3241e5f-b058-4469-8141-143518fe6e73" class=""><mark class="highlight-yellow"><strong><em>당시
-							급격히 발전하던 딥러닝을 camera pose estimation에 활용하였다!</em></strong></mark></blockquote>
-			<p id="2fc78e50-b02a-4454-a40f-40b136144ed9" class="">이 논문의 주요 contribution입니다. </p>
-			<p id="6ad717e0-c3d5-4af5-ad20-cd172463c548" class="">
-			</p>
-			<p id="94c70295-69f7-4620-95a5-7acb0fc573d3" class="">논문을 읽을 때 당시의 배경을 생각하면서 읽으면 더욱 흥미롭는데요.</p>
-			<p id="7b8a485c-81c8-43fc-8656-158f025fdc7c" class="">  </p>
-			<!-- <figure id="8992892d-e8db-46a6-82ef-b78bb575cd7a" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled.png"><img
-						style="width:637px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled.png" /></a>
-			</figure> -->
-			<p><img src="http://KOREATECH-KROAD.github.io/assets/images/2024-03-19-웹페이지_개설_의도를_곁들인_포즈넷_이미지/1.png" alt="Test Image" /></p>
-
-
-			<p id="96b0d42c-1ded-4b8e-a394-aae029174a89" class="">각년도별로 이미지 classfication 대회에서 SOTA(state of the art, 당시
-				최고 성능을 의미)를 찍었던</p>
-			<p id="a6236f02-dded-4c8e-81dc-aac80f8b2320" class="">딥러닝 모델과 accuracy를 시각화 한 자료입니다.</p>
-			<p id="03e9da3f-2dfe-4aef-bf08-a752621e0bd4" class="">사람의 이미지 classification의 error가 8~9 정도 되는것으로 보아</p>
-			<p id="58cdb003-9080-4d27-976c-e7bdb0d6ec94" class="">2014년도부터 VGG가 사람의 이미지 분류 능력을 능가함으로써 딥러닝에 대한 관심도가 상당히
-				올라갔습니다.</p>
-			<p id="f1402de8-3978-4747-a50a-4b87df2e168c" class="">
-			</p>
-			<p id="0a0f7d99-4806-415b-930c-ba500e598c52" class="">당시 로보틱스 분야에서는 모바일 로보틱스에 대한 관심도가 급증하고 있었습니다.</p>
-			<p id="8c4d2354-ea2e-4878-b3f4-4afcf9a88eb0" class="">이에 따라 real-time processing(실시간 처리 능력)의 필요성이 생겼습니다.</p>
-			<p id="44294543-6adf-41b7-9d3c-c42f19e3fb0e" class="">
-			</p>
-			<p id="8ec4489a-2610-446a-b6f7-918d23805998" class="">예를 들자면 카페에 있는 무인 로봇에서 앞에 놓인 대상이 사람인지 아닌지 구분하는 task에서
-				실시간 처리 능력이 필요해졌다는 의미인데 논문이 나온 2015년을 배경으로 살펴보면, 무인 로봇에 <br />넣을만큼 작고 가벼운 컴퓨터에서도 real-time 연산이 가능함을 느끼고
-				있었죠.<br />이는 작은 컴퓨터에도 넣을 수 있을만큼 <br /><em><strong>가벼운 딥러닝 모델</strong></em>이 필요해졌음을 의미합니다.</p>
-			<p id="bff1f022-9cd5-448b-9e07-b6ca95f7c895" class="">
-			</p>
-			<p id="7d60f0bb-5bbb-4696-9865-a75386271beb" class="">또한, 이 논문의 특징 중 하나가 범용성입니다. 단순히 아무 카메라로 찍은 사진으로 다른 추가적인
-				센서 없이 camera의 포즈를 추정할 수 있다는 점에서 2024년 2월 17일 기준으로 피인용수 2469회를 달성하고 있고 후속 연구에도 많은 귀감을 주었습니다.</p>
-			<p id="b9ba6da3-2cab-4a67-9747-2887c4318f9b" class="">
-			</p>
-			<p id="9694cbf9-1d5f-4cb4-b324-52f4e766e507" class="">저는 Slam을 연구하는 입장에서 slam과 연관을 안 지을 수 없는데요. </p>
-			<p id="c857435b-8a6e-43bb-89f0-43f24a1ac56e" class="">과연 Slam이 무엇일까요?</p>
-			<p id="74ec61a9-391f-4445-bb47-a4d66d5870d2" class="">
-			</p>
-			<blockquote id="80c1d4d0-472c-4050-8ce4-37ede2a7f248" class=""><mark
-					class="highlight-red"><em><strong>Simultaneous Localization and mapping</strong></em></mark>
-			</blockquote>
-			<p id="60475d2a-ba44-418c-9e4e-ea87ee77d283" class="">의 약자입니다. 한글로 번역하자면 Localization과 mapping을 동시에
-				진행하겠다는겁니다.</p>
-			<p id="25af12be-2c57-40e4-a269-7e0b1d023ca1" class="">한번 더 풀어서 그 뜻을 파헤쳐 보자면 현재 내가 혹은 로봇이 어디있는지를 정의함과 동시에 그
-				주변 환경을 map의 형태로 output을 내놓는 기술입니다.</p>
-			<p id="70193e6a-3bfc-4763-910d-f404ea14f0ce" class="">즉 Localization(odometry), map 두 개의 output을 내놓는 역할을 하게
-				됩니다.</p>
-			<p id="860a7a3e-bda3-4f53-a291-b5d5df63aa79" class="">
-			</p>
-			<p id="b8cfd779-7870-410e-bd8e-91366dee66cc" class="">slam을 다룬 논문은 아니니 다음 기회에 slam에 대하여 더욱 자세하게 다루어 보겠습니다.
-			</p>
-			<p id="e667f587-c5e9-4c73-bc8e-2f69a54c4086" class="">
-			</p>
-			<p id="199a6411-575a-4471-9f63-c55b9e2dfe1d" class="">다음은 저희 학교(한국기술교육대학교) 텔동을 mapping한 결과입니다.</p>
-			<figure id="c46a88fb-f241-4ada-96cd-892a9e7c082d" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%201.png"><img
-						style="width:708px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%201.png" /></a>
-			</figure>
-			<p id="533dfe9e-978d-468f-ad8c-756740b2daf2" class="">다음은 저희 학교 인문경영관을 mapping한 결과이죠.</p>
-			<figure id="30697d1c-ef8b-4c4c-a67c-e5e7d95f0384" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%202.png"><img
-						style="width:1806px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%202.png" /></a>
-			</figure>
-			<blockquote id="c64ad8bc-6f57-429a-a626-4e63889c93a6" class="">HDL-graph-slam(High Density Lidar) 활용
-			</blockquote>
-			<p id="5336c4a5-4906-479d-ad75-ad27de5c0a1b" class="">
-			</p>
-			<p id="658d76cb-a153-43a2-896d-ef8bfb791848" class="">
-			</p>
-			<p id="042db5a9-5e01-4e27-8e37-8bdf049a5743" class="">그렇다면 slam기술의 성능을 어떻게 평가할까요?</p>
-			<p id="eeb63c4a-e148-4dad-b1c1-fcedc8763132" class="">두가지 방법이 주를 이룹니다.</p>
-			<ol type="1" id="1732de10-6ec6-4cb2-bfc1-7f9df79388c7" class="numbered-list" start="1">
-				<li>Localization 성능 평가</li>
-			</ol>
-			<ol type="1" id="f95f59b2-83b1-426d-a6b1-61861aef3c5a" class="numbered-list" start="2">
-				<li>정성 평가(눈으로 봤을 때 잘 나왔는가?)</li>
-			</ol>
-			<p id="d5a7eff1-6d3f-4c4a-8967-2fa0c29bd71e" class="">
-			</p>
-			<p id="2936b6a6-c117-4f1c-92a7-6bd415d7fee9" class="">mapping은 localization하는데 있어서 시각화하는 자료의 느낌이 강하죠.</p>
-			<p id="b269015c-1590-4f41-9c75-693274942156" class="">
-			</p>
-			<p id="61711d52-8250-4610-92b4-0a20592faa18" class="">이처럼 localization 성능에서 posenet이 높은 정확도를 보였기 때문에 높은
-				피인용수를 <br />달성할 수 있던 이유 중 하나입니다.<br /></p>
-			<p id="05677f70-1b25-419b-9575-e47ec96b2441" class="">
-			</p>
-			<p id="63caeec8-4713-4302-bd8e-85b781e22e5f" class="">
-			</p>
-			<p id="5106f22d-3894-4c84-b714-a3302e38819f" class="">
-			</p>
-			<hr id="9913d770-a393-4f7a-aa5d-75c2d216e07a" />
-			<h1 id="19fa34c3-f9fc-455b-957b-052fc5d817e0" class="">Background knowledge</h1>
-			<figure id="057a2095-7f34-48ff-a450-6763c7db275b" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%203.png"><img
-						style="width:708px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%203.png" /></a>
-			</figure>
-			<p id="5c170b0e-448a-49e6-aa91-39cd7de3fae0" class="">
-			</p>
-			<p id="c2a99b2c-ea54-4162-a50f-371e29aba50c" class="">논문 제목에도 나와있는 용어인데요. 6-DOF라 함은 6개의 자유도를 가진 pose를 의미합니다.
-			</p>
-			<p id="3a259e26-e882-4ea5-a85c-161651bee1b6" class="">이때 matrix의 형태로 나타나게 되는데요. <br />우측 상단 수식에서의 x 는
-				camera가 촬영한 시점의 x,y,z좌표를 의미하게 됩니다.<br />q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠. 이때 현실 세계는 3차원 공간으로
-				<br />표현되므로 3개의 값을 가짐을 알 수 있습니다.<br />
-			</p>
-			<p id="96bebdae-e1d3-4fc7-b59b-1215f907985b" class="">
-			</p>
-			<p id="f61003a1-8869-4650-ab7f-9eba78f99e55" class="">즉, posenet은 camera의 position과 orientation을 output으로
-				내뱉는 딥러닝 네트워크를 의미합니다.</p>
-			<p id="e3136ff7-a61e-40fb-ae8a-d47c4db9a0cb" class="">이는 곧 output으로 Localization 데이터를 뱉는 아이임을 알 수 있죠.</p>
-			<p id="ab2d22ee-6ac1-4a16-9c77-6a896b1dc739" class="">
-			</p>
-			<p id="076603c4-b8c0-499c-b214-5a1b68d691c8" class="">그렇다면 네트워크를 학습시키기 위한 데이터셋을 어떻게 생성하였을까요?</p>
-			<p id="505948ff-301e-4579-90de-82fe99b9f449" class="">이때 데이터셋은 다음을 포함해야합니다.</p>
-			<ul id="32c64c7e-f592-4cb3-8025-a387e3941a3e" class="bulleted-list">
-				<li style="list-style-type:disc">촬영한 이미지</li>
-			</ul>
-			<ul id="1e21dfb2-0b79-4e0d-aa12-c0c501cc0804" class="bulleted-list">
-				<li style="list-style-type:disc">촬영한 이미지의 pose</li>
-			</ul>
-			<p id="cf76ff5b-c86e-414a-a2a7-ab7c21123e6f" class="">
-			</p>
-			<p id="9948c9da-3d02-42ae-9335-bd9462abdd0e" class="">다음과 같은 기술을 사용하였습니다.</p>
-			<figure id="98bae6a7-55e9-4a31-b301-15cf6e7b41db" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%204.png"><img
-						style="width:1157px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%204.png" /></a>
-			</figure>
-			<p id="c844ed48-e570-44ca-a654-c9861f33e164" class="">한 시점에서 카메라의 포즈를 추정하기 위해서는 <br /><br /><span
-					style="border-bottom:0.05em solid"><strong><mark class="highlight-red">한 물체를 바라본 최소 두 개의 시점
-							이상</mark></strong></span>이 필요합니다.</p>
-			<p id="276bda66-4aa9-43d5-b83b-c997b0de3c79" class="">
-			</p>
-			<p id="595d19ec-9e60-4b73-8e09-a96fabc6dce2" class="">이 점이 굉장히 중요한데요. 이는 에피폴라 기하학에서 기인 할 수 있습니다.</p>
-			<ul id="a5613d46-439d-46a5-aa06-e9d872a39945" class="bulleted-list">
-				<li style="list-style-type:disc">에피폴라 선: 왼쪽 시점의 픽셀이 바라보는 3D 점을 오른쪽 시점도 바라고 있다면, 오른쪽 시점에서는 그 3D 점이 에피폴라 선
-					위에 맺힐 것이다.</li>
-			</ul>
-			<p id="14162a30-d25e-4fd3-98a3-2804c87eff40" class="">라는 가정에서 에피폴라 기하학은 시작됩니다.</p>
-			<p id="c7a869b0-deae-4edf-8fa0-93a9c2942c99" class="">에피폴라 기하학을 설명하게 된다면 이 블로그 글보다 더 많은 내용이 들어가기에 간단히 늬앙스를
-				이해하는 부분으로도 해당 블로그 글을 읽는데 무리가 없으시라 생각됩니다.</p>
-			<p id="1edbecd3-d344-4006-b69b-07c37b120fed" class="">더 깊은 내용은 다음 url에서 확인하실 수 있습니다.</p>
-			<figure id="5c47f6cf-d28c-4944-b4de-43e7296a2978" class="link-to-page"><a
-					href="https://www.notion.so/5c47f6cfd28c4944b4de43e7296a2978?pvs=21">에피폴라 기하학</a></figure>
-			<figure id="0e37f2aa-7843-4ac2-a2c9-8c605ecb7d1b" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%205.png"><img
-						style="width:1091px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%205.png" /></a>
-			</figure>
-			<p id="829cfbcd-0013-4bd3-b433-725fb8b9b72d" class="">
-			</p>
-			<p id="770a562c-a14f-40de-a390-53a903741db8" class="">
-			</p>
-			<p id="92980f92-55ea-4910-bad5-6cee81d3ea8a" class="">SfM의 이름에 맞게 2D video를 활용해 일정 frame단위로 이미지를 만들고 이를 에피폴라
-				기하학에 의거하여 3차원 구조물과 camera parameter를 생성하겠다는 의미입니다.</p>
-			<p id="83f649a1-d5e3-4570-a20d-73e24a02ff7a" class="">
-			</p>
-			<p id="ced0cfb3-7537-400b-a3b3-e7bf0192da59" class="">요약하면 에피폴라 기하학에 의거하여 삼각층량법이 유효하게 되고,<br />이에 따라 SIFT,
-				FAST알고리즘 등을 활용하여 SfM(Structure from Motion)이라는 <br />기술이 생기게 됩니다.<br /></p>
-			<p id="0552c498-3d2b-4b55-80e5-17a100e09249" class="">
-			</p>
-			<p id="655abff5-edf0-4c20-b076-d44e522b8b2e" class="">풀어서 이야기 하자면, 고전적 방법으로 feature를 추출하고 이를 GT(ground
-				truth)로 삼겠다 입니다.</p>
-			<p id="a4db7160-1300-465f-9d87-df88d6cefee5" class="">
-			</p>
-			<p id="db410049-1838-4912-a9f1-54412e3a7cf9" class="">그러면 왜 이리 좋은 기술을 놔두고 posenet이라는것 만들었는데?라는 의문이 드실겁니다.
-			</p>
-			<p id="25675d38-e21d-46b9-8571-c494614fe283" class="">
-			</p>
-			<figure id="768ff3f7-ea76-4818-aa59-ef0fdf605af3" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%206.png"><img
-						style="width:670px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%206.png" /></a>
-			</figure>
-			<p id="7b97f9a2-f56f-4e53-8588-ae9bed9e879f" class="">위 사진은 제가 실제로 local 환경(개인 pc)에서 SfM을 진행한 화면을 발췌한것인데요.
-			</p>
-			<p id="71b4dac1-3f5a-4006-acf6-87fc1955d706" class="">100여장 정도의 사진밖에 없었지만 output을 내뱉기까지 10여분 이상 소요됨을
-				확인하였습니다.</p>
-			<p id="0d94ce31-cf99-4135-90d4-97ac30a35896" class="">
-			</p>
-			<p id="60ccc3cd-4b44-4077-8e39-e89bc181fc57" class="">
-			</p>
-			<hr id="858c21da-63de-427e-b03e-f5d7c787528b" />
-			<h1 id="c3f1f940-9a81-4103-a39e-94c9f2cdd327" class="">Methodology</h1>
-			<p id="27ca07bf-4d85-4f97-a3ac-a500cd3a265c" class="">방법론은 굉장히 심플합니다.</p>
-			<figure id="1186814f-2b42-41b5-95ff-569cf1fc74f9" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%207.png"><img
-						style="width:708px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%207.png" /></a>
-			</figure>
-			<p id="de1dbed7-a79f-4042-8a53-0a1adc27f94b" class="">224*224 이미지를 Posenet에 넣으면 camera pose가 나오게 됩니다.</p>
-			<p id="b681efda-f5a0-4ca1-895f-414d70e96558" class="">이때 posenet의 아키텍쳐는 당시 SOTA이던 GoogLenet을 활용하였다고 기재되어
-				있습니다.</p>
-			<p id="76ba8533-3b7a-4d48-84eb-2300234fe912" class="">
-			</p>
-			<figure id="8521518c-227d-49ff-abb4-61a6f46b8bbc" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%208.png"><img
-						style="width:708px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%208.png" /></a>
-			</figure>
-			<p id="4f159513-8d60-468a-a945-636c4088bbb1" class="">
-			</p>
-			<p id="9cee46d6-ebad-4495-be43-34038ee80f3e" class="">약간의 아키텍쳐 수정이 필요했는데 이때 빨간 상자의 부분은 기존에 이미지
-				classification을 위한 </p>
-			<p id="4ffd58a7-1735-4358-9fd9-39e9f37bcf15" class="">softmax 레이어였으나 카메라의 pose를 아웃풋으로 내뱉기 위헤 Affine
-				regressors 레이어로 </p>
-			<p id="dff87b86-da1a-49ff-91fa-5c9352aa5d37" class="">바꾸었습니다.</p>
-			<p id="129e7d11-7538-4d5f-886c-969e333892ba" class="">
-			</p>
-			<p id="6ad93a30-aea7-4492-9754-e191434b52ee" class="">약간의 아키텍쳐 설명을 드리면 왜 아웃풋이 3곳에서 나오나? 라는 의문을 가지실 수 있습니다.
-			</p>
-			<p id="ddb392bc-4470-4f8a-a3b3-4f6cea7ba28e" class="">이때 실제로 저희가 활용하는 아웃풋은 가장 마지막에 있는 아웃풋이고,<br />중간중간 있는
-				affine regressors 레이어는 모델을 학습시키는 과정에서<br /></p>
-			<p id="a526ec73-b3c3-4a2f-afc5-0e32e0d2c794" class="">backpropagation이라는 딥러닝 필수 과정이 들어가게 되는데 이때 중간중간에서 이를
-				보정해주게 됩니다.</p>
-			<p id="a918d5d3-a461-422d-9cf2-2628461df304" class="">
-			</p>
-			<p id="575f8a75-6745-4be1-a8d7-d944ee68e5b5" class="">간결히 말하면 중간에 있는 아웃풋은 모델을 학습시키는데 있어서 보정해주는 역할을 해준다 정도로
-				이해하시면 되겠습니다.</p>
-			<p id="afe536d6-daea-4efc-a49c-3cc27eb4032a" class="">
-			</p>
-			<p id="0cd98557-66f5-4c4d-86ea-98f794d9dab2" class="">추가적으로, 6-DOF라고 논문 제목에 기재되어있지만 실제로 6-DOF는 카메라 pose를
-				통상적으로 <br />의미하는 바입니다.<br /></p>
-			<p id="cabaca4e-d2a7-41c1-9c54-d40d5390c4ad" class="">실제 orientation을 오일러 좌표로 표현하게 되면 gimbal lock이란 문제에 빠지게
-				되는데요.</p>
-			<p id="fb5a2268-0afd-465d-a512-1316fd64741f" class="">이는 오일러 좌표만으로 표현 할 수 없는 각도가 있음을 의미합니다.</p>
-			<p id="20e6a843-e7e4-41cb-9166-a1b96c98dc9d" class="">이 때문에 쿼터니안 좌표라는것이 나오게 되었습니다.<br />실제로 모델 아웃풋으로는 총 7차원의
-				아웃풋이 나오며 이는 position 3개, orientation 4개의 벡터가 하나의 행렬로 나오게 됩니다.<br /></p>
-			<p id="c89961b4-064c-4760-bd81-48f941c97169" class="">
-			</p>
-			<p id="6ecead27-5045-49ef-b8d1-0bd0a1767e06" class="">
-			</p>
-			<figure id="53f6cf99-919f-46a2-b85d-b5442faf44d2" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%209.png"><img
-						style="width:708px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%209.png" /></a>
-			</figure>
-			<p id="27d1cad3-d435-4f7d-937f-ef917d03efb1" class="">과연 어떻게 동시에 position과 orientation을 추정하도록 학습시키게 될까요?</p>
-			<p id="b5479366-d0c4-4539-9200-b41f248b8ed0" class="">
-			</p>
-			<p id="a5035f98-3cb3-454a-9b53-eb55b1f692cd" class="">이 전에 딥러닝이 어떻게 학습하는지를 구두로 설명드리겠습니다.</p>
-			<p id="446bdccd-f61a-4db5-a5bb-970eab80ce7b" class="">SfM을 통해 GT를 만들었다고 했습니다. 모델은 이때 임의의 데이터를 시작으로 <br />GT와
-				차이를 비교하게 됩니다. 이때 차이를 loss function을 통해서 구하게 되고 <br />이는 loss function의 수치가 작은 방향으로 파라미터를 수정하는
-				과정이<br />딥러닝이 학습한다. 라고 표현할 수 있겠습니다.<br /></p>
-			<p id="56b2da7e-ac33-4c57-b3d3-fa57b10199ff" class="">
-			</p>
-			<p id="fb249e3a-2993-4a39-8d66-7dc22bdc1cc0" class="">여기서 loss function을 어떻게 정의 한지를 설명드리려 하고 있습니다.</p>
-			<p id="c2ff9840-1091-45b2-81c4-0535c3c3f512" class="">L2-norm을 활용하여 나타내고 있는데요. 이는 유클리디언 거리(gt와 모델이 예측 한 데이터의
-				차이)의 표현식을 의미합니다.</p>
-			<p id="6a5996c8-a6af-4f3b-a9a2-3cd16fa36d65" class="">이때 postion의 유클리디언 거리와 orientation의 유클리디언 거리의 합으로 loss
-				function을 정의하여 position과 orientation을 동시에 학습시키겠다는 전략을 취한것입니다.</p>
-			<p id="808231a8-a6aa-4ed2-9712-7b3bc2e736d6" class="">베타는 두 개의 관계에서 중요도를 결정하기 위한 파라미터입니다. 각 파라미터에 따른
-				성능은<br />위 그래프를 통해 확인 할 수 있습니다.<br /></p>
-			<p id="de96e1d4-9073-4c62-94b6-865db9adb93b" class="">
-			</p>
-			<p id="b902f3dd-9f65-4b86-be88-9160da900390" class="">이때 눈여겨 볼것이 위 빨간 상자의 표현식입니다.</p>
-			<p id="c9bbd5c5-bffb-4b75-b8aa-ba8befddb6a8" class="">사실 quatenion의 unit vector의 크기는 1입니다. 과연 1을 1로 나누는
-				task가 의미가 있나? 라는 생각이 들 수 있습니다. 저도 처음에 왜 나누는지 이해가 가지 않았는데요.</p>
-			<p id="3367a120-25db-4f08-b924-f6935de7eaf5" class="">
-			</p>
-			<p id="f9d5316b-d131-49d1-9622-3d2e273d498d" class="">Camera Pose [<strong>X Y Z</strong> <strong>W P Q
-					R</strong>]</p>
-			<ul id="6197e070-d216-4eb3-9650-5e2183d973cf" class="bulleted-list">
-				<li style="list-style-type:disc"><strong>20.134839 -16.641770 1.735459</strong> <strong>0.672315
-						0.574745 -0.296687 0.360053</strong></li>
-			</ul>
-			<p id="08d9d288-7345-4ddf-b45f-f8322e6361db" class="">다음은 실제로 SfM을 통해 나온 한 이미지에서의 pose를 가져왔습니다.</p>
-			<p id="50e77ca6-f226-4cd0-aab0-05985c0e119f" class="">
-			</p>
-			<figure id="7b2e242c-b564-4721-b314-744beebdb11d" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2010.png"><img
-						style="width:907px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2010.png" /></a>
-			</figure>
-			<p id="54d26978-a51d-4fb1-9670-abb06efabe9f" class="">벡터의 크기를 구하면 다음과 같은데요. 컴퓨터가 표현할 수 있는 소숫점의 자리수가
-				제한적이기에<br />일부 오차는 불가피 합니다만 학습을 하는과정에 있어서 약간의 오차가 있으면 이 오차가 계속해서<br />누적이 되게 됩니다.<br />이를 방지하기 위해 한번 학습할
-				때마다 쿼터니안의 크기로 나눠줌으로써 누적에러를 막겠다라는 전략을 취했습니다.<br /></p>
-			<p id="46de6e1b-2ddb-40ec-bf8b-c5f9f54800b6" class="">
-			</p>
-			<p id="bb88c6fe-13ee-46a4-aec1-aa3b6ce09440" class="">파라미터는 다음과 같습니다.</p>
-			<figure id="fe70b6e8-cbbc-462c-afbb-1d6c69fb0649" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2011.png"><img
-						style="width:1101px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2011.png" /></a>
-			</figure>
-			<hr id="6f94debd-9dfc-4e8f-8b67-2d8da16ed938" />
-			<p id="1fe40738-3f4d-4cae-9956-e6734b04d435" class="">
-			</p>
-			<h1 id="d8ea232d-59b9-4e02-b474-387b7f874028" class="">Experiment</h1>
-			<p id="1105bfb2-9e2b-46a0-8300-009d7630d850" class="">실험 결과입니다.</p>
-			<figure id="d15d32d3-f034-40c3-93a2-ab7648457279" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2012.png"><img
-						style="width:1342px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2012.png" /></a>
-			</figure>
-			<p id="be36978e-1b2d-46c1-8979-1ebbc82e61bd" class="">한 이미지에서 camera pose를 추출하는데 약 5ms에서 95ms가 걸렸다고 합니다.</p>
-			<p id="5739fe8d-3400-487f-8f8d-f7d8dddd2be6" class="">
-			</p>
-			<figure id="0dbe28ed-dd99-4790-9d2e-604be9e10e3e" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2013.png"><img
-						style="width:1267px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2013.png" /></a>
-			</figure>
-			<p id="fc09300a-5652-4cdc-af46-4913a405966e" class="">각 데이터셋 별, posenet의 에러, 기존 알고리즘 등등 의 결과를 나타낸 표입니다.</p>
-			<p id="a8a7db84-bb3e-4859-bf7e-76ed823d7765" class="">실외 환경에서는 약 2~3미터 간격의 position과 5~8도 정도의 orientation의
-				오차를 가짐을<br />보여줍니다.<br />실내 환경에서 더 낮은 에러를 보여주는데요. 이는 실내에서 feature를 더 추출하기 용이한 <br />환경이기에 라고 논문에서 기술하고
-				있습니다.<br /></p>
-			<p id="0032f033-80f3-4143-982f-ed68348ffecb" class="">
-			</p>
-			<figure id="0de7e994-f3dc-4f60-a127-4cd7a558ced3" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2014.png"><img
-						style="width:695px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2014.png" /></a>
-			</figure>
-			<p id="7950f89a-ab1a-417b-b647-f8ca5d38daf6" class="">정성평가입니다.</p>
-			<p id="4e8a931a-138b-4458-ba9d-7780c33cbe41" class="">원래 잔디같이 매끈하고 특징점이라 부를만한것이 없는 상황에서는 feature를 뽑기 어려움에도
-				강건함을 보여주고 있습니다. 또한 이미지가 흔들림이 있어도 강건하게 예측하는 모습을 보입니다.</p>
-			<p id="d47820c0-a091-4a7f-a79f-8951063ddda8" class="">이때 흔들리게 되면 feature라고 부를만한 건물 외벽의 경계선이라든가 특정 랜드마크들이 넓게
-				<br />번져보이는데 이 때문에 모델이 조금 더 가까운 환경이라고 예측하였다고 필자는 예상하고 있습니다.<br />
-			</p>
-			<figure id="12858bd6-e8c6-49ee-a271-1e56abc6cc5d" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2015.png"><img
-						style="width:708px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2015.png" /></a>
-			</figure>
-			<p id="10da3e0f-6a06-44f2-8107-d404e27a212b" class="">gt와 모델이 예측한 scene을 겹쳐서 보여주고 있는데요. 어둡거나 강한 빛이 있는 환경,
-				안개가 낀 <br />환경 등에서도 강건함을 보여주고 있습니다.<br /></p>
-			<p id="5242aeab-ecdd-42c1-8c93-09b808457f86" class="">
-			</p>
-			<figure id="e070183f-5297-4484-9c27-7a58eb045fe5" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2016.png"><img
-						style="width:708px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2016.png" /></a>
-			</figure>
-			<p id="5fa1fc47-cfd7-4114-81cc-a31d991b2993" class="">또한 날씨가 다르거나, 동적인 물체가 많이 scene에 있거나 혹은 아무 카메라로나
-				찍어도<br />역시 강건함을 보여주고 있습니다.<br /></p>
-			<p id="83a4e407-b011-494a-885b-a50748160081" class="">
-			</p>
-			<figure id="49da8519-eaf7-4a40-a22c-80488c7b467c" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2017.png"><img
-						style="width:708px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2017.png" /></a>
-			</figure>
-			<p id="de8c54c5-ede3-488f-8da6-f2ad5a1a6767" class="">기존의 SIFT알고리즘과 비교하여도 우수한 성능을 뽐내고 있습니다.</p>
-			<p id="75da9055-cc2e-4350-bdd2-703c52d0e1e3" class="">
-			</p>
-			<p id="98711dcc-2f09-4634-997a-85ab8c1806e8" class="">위에서 transfer learning을 언급드렸는데요. 당시에 딥러닝이 관심을 많이 받으며,
-				transfer learning 기법이 탄생함에 따라 transfer learning의 효과도 같이 논문에서 언급을 하는 그래프입니다.</p>
-			<p id="3b3b255c-88d4-49fa-8b90-99c0b181264b" class="">여기서 transfer learning이란 이미 사전에 보편적인 데이터셋에 대해서 조금 학습을
-				시킨 후,<br />개인이 수집한 데이터를 학습시키게 되면, 학습 시간이 감소할 뿐더러 모델이 좀 더 general해지고, <br />robust해짐을 보여주고 있습니다.<br />
-			</p>
-			<p id="77b942f8-7ae3-49ba-82d3-b283d330f66c" class="">
-			</p>
-			<figure id="aa373dda-cbd9-46a1-a53a-b4cb4c356a7d" class="image"><a
-					href="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2018.png"><img
-						style="width:1262px"
-						src="%E1%84%8B%E1%85%B0%E1%86%B8%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AF%20%E1%84%8B%E1%85%B4%E1%84%83%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%80%E1%85%A7%E1%87%80%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B5%E1%86%AB%20Posenet%20661966baba7f47269fa1ecde31e5ecb2/Untitled%2018.png" /></a>
-			</figure>
-			<p id="0900fac3-fb96-4449-b6d7-9a838b3420bc" class="">Saliency maps를 통한 평가입니다. 이는 모델이 학습함에 따라 관심있게 본 구역을 시각화
-				한 map이라고 볼 수 있는데요. 잔디같이 feature가 추출이 잘 되지 않거나 동적인 물체들에 대해서는 모델이<br />관심있게 보지 않음을 시각화한 실험입니다.<br />또한 기존의
-				고전적인 방법들과는 다르게 그 overhead와 필요한 데이터셋의 수가 현저히 적음을<br />보여주고 있습니다.<br /></p>
-			<hr id="cd930994-a7c1-4619-b2c7-11fbe4ea973a" />
-			<h1 id="920c78f9-7a3c-456a-8fdc-c98ca92c52b9" class="">Conclusion</h1>
-			<p id="84024627-31fc-4612-b199-ec6d4b4589cd" class="">긴 글 읽으시느라 고생 많으셨습니다.</p>
-			<p id="09b72973-2316-432d-af75-a3b21057bf04" class=""><br />이 논문을 평가를 하자면 CNN 네트워크를 기반으로 end-to-end형식의
-				camera pose localization을 <br />최초로 제시하였다는점에 높게 평가 받고 있습니다.<br /></p>
-			<p id="b1d840b4-1ce1-4f79-981e-36a5b91f47b9" class="">또한 당시 검증되지 않은 딥러닝 기법인, transfer learning의 효과도 잘 보여주는
-				논문이였고,<br />기존에 고전적인 방법인 SIFT보다 훨씬 우월한 성능을 보인다는 점을 보였습니다.<br /></p>
-			<p id="7c61f809-d0a2-4b74-a5d0-2825cd777fdd" class="">
-			</p>
-			<p id="b52fc383-3683-4494-89c3-8c2554952514" class="">이는 당시 시대 상인, <br />real-time processing의 필요성, <br />
-			</p>
-			<p id="055c8b4a-31f4-428c-b8c5-f969cd1bf69d" class="">사전 3D-map이 없는 환경에서의 localization, </p>
-			<p id="91c293f9-1053-47d4-b424-c79dd9b2d5a5" class="">다른 추가적인 센서 없이 localization을 잘 할 수 있음에 따라 여러 분야에서 두루
-				사용할 수 있는 application을 제시하였다고 필자는 생각하고 있습니다.</p>
-		</div>
-	</article><span class="sans" style="font-size:14px;padding-top:2em"></span>
-</body>
-
-</html>
+	     <h3 id="안녕하세요-k-road-대표-유재민입니다">안녕하세요. K-ROAD 대표 유재민입니다.</h3>
+
+<p>첫 기술 관련 글이니 가볍고 흥미를 불러 일으킬만한 논문을 가져왔습니다.
+형식은 paper review 형식으로 진행하려고 합니다.</p>
+
+<ul>
+  <li>Intro</li>
+  <li>Background knowledge</li>
+  <li>Methodology</li>
+  <li>Experiment</li>
+  <li>Conclusion</li>
+</ul>
+
+<p>순으로 내용을 진행하도록 하겠습니다.</p>
+
+<hr />
+
+<h1 id="intro">Intro</h1>
+<h2 id="title">Title</h2>
+<p>PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization</p>
+
+<h2 id="authors">Authors</h2>
+<p>Alex Kendall, Matthew Grimes, Roberto Cipolla</p>
+
+<h2 id="conference">Conference</h2>
+<p>Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2015</p>
+
+<h2 id="citation">Citation</h2>
+<p>2469</p>
+
+<hr />
+
+<blockquote>
+  <p><em>당시 급격히 발전하던 딥러닝을 <strong>camera pose estimation</strong>에 활용하였다!</em></p>
+</blockquote>
+
+<p>이 논문의 주요 contribution입니다.</p>
+
+<p>논문을 읽을 때 당시의 배경을 생각하면서 읽으면 더욱 흥미롭습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/1.png" alt="딥러닝동향" /></p>
+
+<p>연도별로 이미지 classfication 대회에서 SOTA(state of the art, 당시 최고 성능을 의미)를 찍었던 딥러닝 모델과 accuracy를 시각화 한 자료입니다.</p>
+
+<p>사람의 이미지 classification의 error가 8~9 정도 되는것으로 보아 2014년도부터 VGG가 사람의 이미지 분류 능력을 능가함으로써 딥러닝에 대한 관심도가 상당히 올라갔습니다.</p>
+
+<p>당시 로보틱스 분야에서는 모바일 로보틱스에 대한 관심도가 급증하고 있었습니다.</p>
+
+<p>이에 따라  real-time processing(실시간 처리 능력)의 필요성이 생겼습니다.</p>
+
+<p>위를 예를 들자면 카페에 있는 무인 로봇에서 앞에 놓인 대상이 사람인지 아닌지 구분하는 task에서 실시간 처리 능력이 필요해졌다는 의미인데 논문이 나온 2015년을 배경으로 살펴보자면, 무인 로봇에 넣을만큼 작고 가벼운 컴퓨터에서도 real-time 연산이 가능함을 느끼고 있었죠.
+이는 작은 컴퓨터에도 넣을 수 있을만큼 <strong><em>가벼운 딥러닝 모델</em></strong>이 필요해졌음을 의미합니다.</p>
+
+<p>또한, 이 논문의 특징 중 하나가 범용성입니다. 단순이 아무 카메라로 찍은 사진으로 다른 추가적인 센서 없이 camera의 포즈를 추정할 수 있다는 점에서 2024년 2월 17일 기준으로 피인용수 2469회를 달성하고 있고 후속 연구에도 많은 귀감을 주었습니다.</p>
+
+<p>저는 Slam을 연구하는 입장에서 slam과 연관을 안 지을 수 없는데요.</p>
+
+<p>과연 Slam이 무엇일까요?</p>
+
+<blockquote>
+  <p><strong><em>Simultaneous Localization and mapping</em></strong></p>
+</blockquote>
+
+<p>의 약자입니다. 한글로 번역하자면 Localization과 mapping을 동시에 진행하겠다는겁니다.</p>
+
+<p>한번 더 풀어서 그 뜻을 파헤쳐 보자면 현재 내가 혹은 로봇이 어디있는지를 정의함과 동시에 그 주변 환경을 map의 형태로 output을 내놓는 기술입니다.</p>
+
+<p>즉 Localization(odometry), map 두 개의 output을 내놓는 역할을 하게 됩니다.</p>
+
+<p>slam을 다룬 논문은 아니니 다음 기회에 slam에 대하여 더욱 자세하게 다루어 보겠습니다.</p>
+
+<p>다음은 저희 학교(한국기술교육대학교) 텔동을 mapping한 결과입니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/2.png" alt="텔동 SLAm" /></p>
+
+<p>다음은 저희 학교 인문경영관을 mapping한 결과이죠.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/3.png" alt="인문경영관 SLAM" /></p>
+
+<blockquote>
+  <p>HDL-graph-slam(High Density Lidar) 활용</p>
+</blockquote>
+
+<p>그렇다면 slam기술의 성능을 어떻게 평가할까요?</p>
+
+<p>두가지 방법이 주를 이룹니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Localization 성능 평가
+2. 정성 평가(눈으로 봤을 때 잘 나왔는가?)
+</code></pre></div></div>
+
+<p>mapping은 localization하는데 있어서 시각화하는 자료의 느낌이 강하죠.</p>
+
+<p>이처럼 localization 성능에서 posenet이 높은 정확도를 보였기 때문에 높은 피인용수를 달성할 수 있던 이유 중 하나입니다.</p>
+
+<hr />
+
+<h1 id="background-knowledge">Background knowledge</h1>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/4.png" alt="6 DOF 설명" /></p>
+
+<p>논문 제목에도 나와있는 용어인데요. 6-DOF라 함은 6개의 자유도를 가진 pose를 의미합니다.</p>
+
+<p>이때 벡터의 형태로 나타나게 되는데요. 
+우측 상단 수식에서의 x 는 camera가 촬영한 시점의 x,y,z좌표를 의미하게 됩니다.
+q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠. 이때 현실 세계는 3차원 공간으로 표현되므로 3개의 값을 가짐을 알 수 있습니다.</p>
+
+<p>즉, camera의 position과 orientation을 output으로 내뱉는 딥러닝 네트워크를 의미합니다.</p>
+
+<p>이는 곧 output으로 Localization 데이터를 뱉는 아이임을 알 수 있죠.</p>
+
+<p>그렇다면 네트워크를 학습시키기 위한 데이터셋을 어떻게 생성하였을까요?</p>
+
+<p>이떄 데이터셋은 다음을 포함해야합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  - 촬영한 이미지
+  - 촬영한 이미지의 pose
+</code></pre></div></div>
+
+<p>이때 다음과 같은 기술을 사용하였습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/5.png" alt="SfM(Structure from Motion)" /></p>
+
+<p>한 시점에서 카메라의 포즈를 추정하기 위해서는 <strong>한 물체를 바라본 최소 두 개의 시점 이상</strong>이 필요합니다.</p>
+
+<p>이 점이 굉장히 중요한데요. 이는 에피폴라 기하학에서 기인 할 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>에피폴라 선: 왼쪽 시점의 픽셀이 바라보는 3D 점을 오른쪽 시점도 바라고 있다면, 오른쪽 시점에서는 그 3D 점이 에피폴라 선 위에 맺힐 것이다.
+</code></pre></div></div>
+
+<p>라는 가정에서 에피폴라 기하학은 시작됩니다.</p>
+
+<p>에피폴라 기하학을 설명하게 된다면 이 블로그 글보다 더 많은 내용이 들어가기에 간단히 늬앙스를 이해하는 부분으로도 해당 블로그 글을 읽는데 무리가 없으시라 생각됩니다.</p>
+
+<p>더 깊은 내용은 다음 url에서 확인하실 수 있습니다.</p>
+
+<p><a href="https://www.notion.so/5c47f6cfd28c4944b4de43e7296a2978?pvs=21">에피폴라 기하학</a></p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/6.png" alt="에피폴라 기하학" /></p>
+
+<p>SfM의 이름에 맞게 2D video를 활용해 일정 frame단위로 이미지를 만들고 이를 에피폴라 기하학에 의거하여 3차원 구조물과 camera parameter를 생성하겠다는 의미입니다.</p>
+
+<p>요약하면 에피폴라 기하학에 의거하여 삼각층량법이 유효하게 되고, 이에 따라 SIFT, FAST알고리즘 등을 활용하여 SfM(Structure from Motion)이라는 기술이 생기게 됩니다.</p>
+
+<p>풀어서 이야기 하자면, 고전적 방법으로 feature를 추출하고 이를 GT(ground truth)로 삼겠다 입니다.</p>
+
+<p>그러면 왜 이리 좋은 기술을 놔두고 posenet이라는것 만들었는데?라는 의문이 드실겁니다.</p>
+
+<h3 id="sfm의-한계">SfM의 한계</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- real-time processing이 불가능하다.
+- overhead가 너무 크다.(연산 비용, 메모리 비용 등등)
+- 강건하지 않다.
+</code></pre></div></div>
+
+<p>이쯤에서 논문에서 주장하는 Posenet의 차별점을 말씀 드리겠습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- real-time
+- 단 하나의 이미지만 있어도 pose추정이 가능하다.
+- 강건하다.
+- transfer learning이 가능하다.(뒤에서 추가 설명을 드리도록 하겠습니다.)
+</code></pre></div></div>
+
+<p>&lt;/aside&gt;</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/7.png" alt="sfm로컬" /></p>
+
+<p>위 사진은 제가 실제로 local 환경(개인 pc)에서 SfM을 진행한 화면을 발췌한 것인데요.</p>
+
+<p>100여장 정도의 사진밖에 없었지만 output을 내뱉기까지 10여분 이상 소요됨을 확인하였습니다.</p>
+
+<hr />
+
+<h1 id="methodology">Methodology</h1>
+
+<p>방법론은 굉장히 심플합니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/8.png" alt="오버뷰" /></p>
+
+<p>224*224 이미지를 Posenet에 넣으면 camera pose가 나오게 됩니다.</p>
+
+<p>이때 posenet의 아키텍쳐는 당시 SOTA이던 GoogLenet을 활용하였다고 기재되어 있습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/9.png" alt="googlenet" /></p>
+
+<p>약간의 아키텍쳐 수정이 필요했는데 이때 빨간 상자의 부분은 기존에 이미지 classification을 위한 softmax 레이어였으나 카메라의 pose를 아웃풋으로 내뱉기 위헤 Affine regressors 레이어로 바꾸었습니다.</p>
+
+<p>약간의 아키텍쳐 설명을 드리면 왜 아웃풋이 3곳에서 나오나? 라는 의문을 가지실 수 있습니다.</p>
+
+<p>이때 실제로 저희가 활용하는 아웃풋은 가장 마지막에 있는 아웃풋이고, 중간중간 있는 affine regressors 레이어는 모델을 학습시키는 과정에서</p>
+
+<p>backpropagation이라는 딥러닝 필수 과정이 들어가게 되는데 이때 중간중간에서 이를 보정해주게 됩니다.</p>
+
+<p>간결히 말하면 중간에 있는 아웃풋은 모델을 학습시키는데 있어서 보정해주는 역할을 해준다 정도로 이해하시면 되겠습니다.</p>
+
+<p>추가적으로, 6-DOF라고 논문 제목에 기재되어있지만 실제로 6-DOF는 카메라 pose를 통상적으로 의미하는 바입니다.</p>
+
+<p>실제 orientation을 오일러 좌표로 표현하게 되면 gimbal lock이란 문제에 빠지게 되는데요.</p>
+
+<p>이 때문에 쿼터니안 좌표라는것이 나오게 되었습니다.
+실제로 모델 아웃풋으로는 총 7차원의 아웃풋이 나오며 이는 position 3개, orientation 4개의 벡터가 하나의 행렬로 나오게 됩니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/10.png" alt="loss_function" /></p>
+
+<p>과연 어떻게 동시에 position과 orientation을 학습시키게 될까요?</p>
+
+<p>이 전에 딥러닝이 어떻게 학습하는지 설명드리겠습니다.</p>
+
+<p>SfM을 통해 GT를 만들었다고 했습니다. 모델은 이때 임의의 데이터를 시작으로 GT와 차이를 비교하게 됩니다. 이때 차이를 loss function을 통해서 구하게 되고 이는 loss function의 수치가 작은 방향으로 파라미터를 수정하는 과정이 딥러닝이 학습한다. 라고 표현할 수 있겠습니다.</p>
+
+<p>여기서 loss function을 어떻게 정의 한지를 설명드리려 하고 있습니다.</p>
+
+<p>L2-norm을 활용하여 나타내고 있는데요. 이는 유클리디언 거리(gt와 모델이 예측 한 데이터의 차이)의 표현식을 의미합니다.</p>
+
+<p>이때 postion의 유클리디언 거리와 orientation의 유클리디언 거리의 합으로 loss function을 정의하여 position과 orientation을 동시에 학습시키겠다는 전략을 취한것입니다.</p>
+
+<p>베타는 두 개의 관계에서 중요도를 결정하기 위한 파라미터입니다. 각 파라미터에 따른 성능은 위 그래프를 통해 확인 할 수 있습니다.</p>
+
+<p>이때 눈여겨 볼것이 위 빨간 상자의 표현식입니다.</p>
+
+<p>사실 quatenion의 unit vector의 합은 1입니다. 과연 1을 1로 나누는 task가 의미가 있나? 라는 생각이 들 수 있습니다. 저도 처음에 왜 나누는지 이해가 가지 않았는데요.</p>
+
+<p>Camera Pose [<strong>X Y Z</strong> <strong>W P Q R</strong>]</p>
+
+<ul>
+  <li><strong>20.134839 -16.641770 1.735459</strong> <strong>0.672315 0.574745 -0.296687 0.360053</strong></li>
+</ul>
+
+<p>다음은 실제로 SfM을 통해 나온 한 이미지에서의 pose를 가져왔습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/11.png" alt="quaternion" /></p>
+
+<p>벡터의 합을 구하면 다음과 같은데요. 컴퓨터가 표현할 수 있는 소숫점의 자리수가 제한적이기에 일부 오차는 불가피 합니다만 학습을 하는과정에 있어서 약간의 오차가 있으면 이 오차가 계속해서 누적이 되게 됩니다.
+이를 방지하기 위해 한번 학습할 때마다 쿼터니안의 크기로 나눠줌으로써 누적에러를 막겠다라는 전략을 취했습니다.</p>
+
+<p>파라미터는 다음과 같습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/12.png" alt="파라미터" /></p>
+
+<hr />
+
+<h1 id="experiment">Experiment</h1>
+
+<p>실험 결과입니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/13.png" alt="버드아이뷰" /></p>
+
+<p>한 이미지에서 camera pose를 추출하는데 약 5ms에서 95ms가 걸렸다고 합니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/14.png" alt="수치화" /></p>
+
+<p>각 데이터셋 별, posenet의 에러, 기존 알고리즘 등등 의 결과를 나타낸 표입니다.</p>
+
+<p>실외 환경에서는 약 2~3미터 간격의 position과 5~8도 정도의 orientation의 오차를 가짐을 보여줍니다.
+실내 환경에서 더 낮은 에러를 보여주는데요. 이는 실내에서 feature를 더 추출하기 용이한 환경이기에 라고 논문에서 기술하고 있습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/15.png" alt="정성평가_2" /></p>
+
+<p>정성평가입니다.</p>
+
+<p>원래 잔디같이 매끈하고 특징점이라 부를만한것이 없는 상황에서는 feature를 뽑기 어려움에도 강건함을 보여주고 있습니다. 또한 이미지가 흔들림이 있어도 강건하게 예측하는 모습을 보입니다.</p>
+
+<p>이때 흔들리게 되면 feature라고 부를만한 건물 외벽의 경계선이라든가 특정 랜드마크들이 넓게 번져보이는데 이 때문에 모델이 조금 더 가까운 환경이라고 예측하였다고 필자는 예상하고 있습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/16.png" alt="정성평가" /></p>
+
+<p>gt와 모델이 예측한 scene을 겹쳐서 보여주고 있는데요. 어둡거나 강한 빛이 있는 환경, 안개가 낀 환경 등에서도 강건함을 보여주고 있습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/17.png" alt="정성평가_1" /></p>
+
+<p>또한 날씨가 다르거나, 동적인 물체가 많이 scene에 있거나 혹은 아무 카메라로나 찍어도 역시 강건함을 보여주고 있습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/18.png" alt="오버헤드" /></p>
+
+<p>기존의 SIFT알고리즘과 비교하여도 우수한 성능을 뽐내고 있습니다.</p>
+
+<p>위에서 transfer learning을 언급드렸는데요. 당시에 딥러닝이 관심을 많이 받으며, transfer learning 기법이 탄생함에 따라 transfer learning의 효과도 같이 논문에서 언급을 하는 그래프입니다.</p>
+
+<p>여기서 transfer learning이란 이미 사전에 보편적인 데이터셋에 대해서 조금 학습을 시킨 후, 개인이 수집한 데이터를 학습시키게 되면, 학습 시간이 줄 뿐더러 모델이 좀 더 general해지고, robust해짐을 보여주고 있습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/19.png" alt="새일런시맵" /></p>
+
+<p>Saliency maps를 통한 평가입니다. 이는 모델이 학습함에 따라 관심있게 본 구역을 시각화 한 map이라고 볼 수 있는데요. 잔디 같이 feature가 추출이 잘 되지 않거나 동적인 물체들에 대해서는 모델이 관심있게 보지 않음을 시각화한 실험입니다.
+또한 기존의 고전적인 방법들과는 다르게 그 overhead와 필요한 데이터셋의 수가 현저히 적음을 보여주고 있습니다.</p>
+
+<hr />
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>긴 글 읽으시느라 고생 많으셨습니다.</p>
+
+<p>이 논문을 평가를 하자면 CNN 네트워크를 기반으로 end-to-end형식의 camera pose localization을 최초로 제시하였다는점에 높게 평가 받고 있습니다.</p>
+
+<p>또한 당시 검증되지 않은 딥러닝 기법인, transfer learning의 효과도 잘 보여주는 논문이였고, 기존에 고전적인 방법인 SIFT보다 훨씬 우월한 성능을 보인다는 점을 보였습니다.</p>
+
+<p>이는 당시 시대 상인, real-time processing의 필요성, 사전 3D-map이 없는 환경에서의 localization, 다른 추가적인 센서 없이 localization을 잘 할 수 있음에 따라 여러 분야에서 두루 사용할 수 있는 application을 제시하였다고 필자는 생각하고 있습니다.</p>
+
 	  ]]></description>
 	</item>
 
