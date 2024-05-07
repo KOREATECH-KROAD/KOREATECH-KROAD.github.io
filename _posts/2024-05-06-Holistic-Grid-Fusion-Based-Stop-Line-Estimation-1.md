@@ -7,6 +7,7 @@ date: 2024-05-06 23:00:00
 tags: tech sensor-fusion
 subclass: 'post tag-tech tag-sensor-fusion'
 logo: 'assets/images/kroad_white.png'
+use_math: true
 author: minseokkim
 categories: minseokkim
 ---
@@ -51,12 +52,12 @@ categories: minseokkim
 
 1. 엣지 검출과 란삭을 통한 정지선 후보들 검출
 2. 정지선 후보의 주변의 HOG features를 추출하고, 정지선 구별을 위해 TER based classifier 적용
-3. [1], [11] 을 학습 기반과 체계 기반 둘 다에 각각 정지선 검출을 진행한다.
+3. [ 1 ], [ 11 ] 을 학습 기반과 체계 기반 둘 다에 각각 정지선 검출을 진행한다.
 4. 이후 수평 모폴로지 연산을 통해 이미지의 수평방향으로 구조 요소를 이용하여 패턴을 찾거나 수정하는 데 사용됩니다.
 
-[1]  Stop-line detection and localization method for intersection scenarios@IEEE2011
+[ 1 ]  Stop-line detection and localization method for intersection scenarios@IEEE2011
 
-[11] Stop sign andstop line detection and distance calculation for autonomous vehicle control@IEEE2018
+[ 11 ] Stop sign andstop line detection and distance calculation for autonomous vehicle control@IEEE2018
 
 이와 같은 경우는 정지선과 위치 추정을 추적하는 과정에 있어 안정화해준다.
 
@@ -95,8 +96,8 @@ Sensor Fusion한 결과는 센서의 불확실성을 고려해 확률론적 환�
 위 시스템은 기하학적이면서 의미론적인 정보 둘 다 부호화한 차량이 중심인 그리드 맵인 정보를 혼합해줍니다. 혼합된 그리드맵은 멀티 레이어로 점유도, 도로 표시, 라이다 강도, 의미 지면, 교통 이력을 포함하고 있고, bird’s eye view로 구현되어 있습니다.
 
 
-> 💡 **의미론적 vs 기하학적** </br>
-데이터의 의미나 의도 초점을 맞추는 것은 의미론적 </br>
+> 💡 **의미론적 vs 기하학적** <br>
+데이터의 의미나 의도 초점을 맞추는 것은 의미론적 <br>
 데이터의 공간의 특성에 초점을 맞추는 것은 기하학적
 
 
@@ -119,8 +120,8 @@ UNet에는 3가지 핵심 아이디어가 있습 인코더의 피처맵을 디�
 이러한 두가지 마스킹(공간맵, 거리맵)은 학습을 통한 보조회귀손실을 추가해줍니다.
 
 
-> 💡 SDT : 이미지의 픽셀에서 객체 경계까지의 최단 거리를 계산하는 방법 중 하나</br>
-방향 지도를 사용하는 이유 : 데이터의 공간적 방향 정보를 제공하고, 신경망이 데이터의 기본적인 공간 구조를 더 잘 이해하도록 돕는데 도움이 됩니다.</br>
+> 💡 SDT : 이미지의 픽셀에서 객체 경계까지의 최단 거리를 계산하는 방법 중 하나<br>
+방향 지도를 사용하는 이유 : 데이터의 공간적 방향 정보를 제공하고, 신경망이 데이터의 기본적인 공간 구조를 더 잘 이해하도록 돕는데 도움이 됩니다.<br>
 PCA : 다차원 데이터 세트의 차원을 축소하는 기술로, 데이터를 가장 잘 설명하는 주요한 변수를 찾아내는 데 사용된다. ⇒ 차원을 줄이지만 데이터의 정보를 최대한 보존하는데 사용된다.
 
 
@@ -132,9 +133,9 @@ PCA : 다차원 데이터 세트의 차원을 축소하는 기술로, 데이터�
 
 *출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020*
 
-> x : 이미지의 픽셀 2D 좌표 벡터</br>
-M : 정지선 영역을 표현하는 foreground(이미지의 중요한 정보) masking</br>
-d : 거리값</br>
+> x : 이미지의 픽셀 2D 좌표 벡터<br>
+M : 정지선 영역을 표현하는 foreground(이미지의 중요한 정보) masking<br>
+d : 거리값<br>
 F : foreground point
 
 
