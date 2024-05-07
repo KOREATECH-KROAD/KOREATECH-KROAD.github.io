@@ -42,8 +42,9 @@
 
     <!-- Ghost outputs important style and meta data with this tag -->
     {% include head.html %}
-    {% include mathjax_support.html %}
-
+    {% if page.use_math %}
+        {% include mathjax_support.html %}
+    {% endif %}
 </head>
 
 <body
@@ -60,9 +61,10 @@
         <!-- The tiny footer at the very bottom -->
         <footer class="site-footer clearfix">
             <!-- <section class="copyright"><a href="{{ site.baseurl }}">{{ site.name }}</a> &copy; {{ site.time | date: '%Y'}} -->
-                <section class="copyright"><a href="{{ site.baseurl }}">{{ site.name }}</a>&copy;2020
+            <section class="copyright"><a href="{{ site.baseurl }}">{{ site.name }}</a>&copy;2020
                 <a class="footer-icon" href="{{ site.github_url }}"><i class="fab fa-github"></i></a>
-                <a class="footer-icon" href="{{ site.instagram_url }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="footer-icon" href="{{ site.instagram_url }}" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
                 <a class="footer-icon" href="{{site.youtube_url}}" target="_blank"><i class="fab fa-youtube"></i></a>
             </section>
             <!-- <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a
