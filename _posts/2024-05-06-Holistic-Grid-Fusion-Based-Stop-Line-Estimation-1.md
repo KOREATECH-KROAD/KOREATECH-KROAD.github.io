@@ -52,12 +52,12 @@ categories: minseokkim
 
 1. 엣지 검출과 란삭을 통한 정지선 후보들 검출
 2. 정지선 후보의 주변의 HOG features를 추출하고, 정지선 구별을 위해 TER based classifier 적용
-3. [ 1 ], [ 11 ] 을 학습 기반과 체계 기반 둘 다에 각각 정지선 검출을 진행한다.
+3. \[1\], \[11\] 을 학습 기반과 체계 기반 둘 다에 각각 정지선 검출을 진행한다.
 4. 이후 수평 모폴로지 연산을 통해 이미지의 수평방향으로 구조 요소를 이용하여 패턴을 찾거나 수정하는 데 사용됩니다.
 
-[ 1 ]  Stop-line detection and localization method for intersection scenarios@IEEE2011
+\[1\]  Stop-line detection and localization method for intersection scenarios@IEEE2011
 
-[ 11 ] Stop sign andstop line detection and distance calculation for autonomous vehicle control@IEEE2018
+\[11\] Stop sign andstop line detection and distance calculation for autonomous vehicle control@IEEE2018
 
 이와 같은 경우는 정지선과 위치 추정을 추적하는 과정에 있어 안정화해준다.
 
