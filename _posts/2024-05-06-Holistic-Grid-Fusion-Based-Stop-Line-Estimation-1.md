@@ -11,9 +11,7 @@ author: minseokkim
 categories: minseokkim
 ---
 
-# Holistic Grid Fusion Based Stop Line Estimation - 1
-
-안녕하세요. K-Road 5기 김민석입니다.
+안녕하세요. K-ROAD 5기 김민석입니다.
 
 저는 이번 기술 블로그 주제로 정지선과 관련된 이야기를 진행하려고 합니다.
 
@@ -23,19 +21,19 @@ categories: minseokkim
 
 ![출처 : 차량 기계 기술 법인](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/1.png)
 
-출처 : 차량 기계 기술 법인
+*출처 : 차량 기계 기술 법인*
 
-실제 자동차의 경우 안정적인 정지를 위해 53미터 정도를 필요로 하고 있다. 자율주행에서의 정지는 정지 유/무를 판별하는 공주거리, 이후 제동거리를 합해 안정적인 정지거리를 구할 수 있습니다. 만약 카메라만 활용한다면 거리는 30미터로 터무니 없게 부족합니다. 그렇다고 lidar만 활용하기에는 정지선에 대한 intensity 값을 정확하게 가져오기 힘들어 아무리 200m를 보는 lidar라 하더라도 정지선에 인식하기에는 무리가 있습니다.
+실제 자동차의 경우 안정적인 정지를 위해 53m 정도를 필요로 하고 있습니다. 자율주행에서의 정지는 정지 유/무를 판별하는 공주거리, 이후 제동거리를 합해 안정적인 정지거리를 구할 수 있습니다. 만약 카메라만 활용한다면 거리는 30m로 터무니 없게 부족합니다. 그렇다고 lidar만 활용하기에는 정지선에 대한 intensity 값을 정확하게 가져오기 힘들어 아무리 200m를 보는 lidar라 하더라도 정지선에 인식하기에는 무리가 있습니다.
 
 ![출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/2.png)
 
-출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020
+*출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020*
 
-그래서 이번 Paper에서는 여러 단서를 활용하여 교차로의 존재를 감지하고 교차로의 정지선을 예측하는 것입니다. 이때 저희가 사용한 데이터는 스테리오 카메라입니다. 스테리오 카메라는 흔히 Depth카메라라고도 불리는데 이건 rgb의 값만 가져오는 기존의 카메라와 달리 rgbd(depth)의 값을 가져옵니다.
+그래서 이번 Paper에서는 여러 단서를 활용하여 교차로의 존재를 감지하고 교차로의 정지선을 예측하는 것입니다. 이때 저희가 사용한 데이터는 stereo 카메라입니다. stereo 카메라는 흔히 depth 카메라라고도 불리는데 이건 rgb의 값만 가져오는 기존의 카메라와 달리 rgbd(depth)의 값을 가져옵니다.
 
 ![출처 : IDS](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/3.png)
 
-출처 : IDS
+*출처 : IDS*
 
 다음으로 HD(High Definintion)를 활용하는 것입니다. HD는 도로의 위치, 크기, 차선의 수, 교차로 등의 세부 정부가 포함되어 있는 지도로 도로의 곡률, 경사, 고도 등의 지형 정보도 제공합니다.  센서 데이터만 활용해서 정지선 검출에는 한계를 보이기에 HD를 활용해 localizing도 함께 진행하는 것입니다.
 
@@ -43,7 +41,7 @@ categories: minseokkim
 
 ![출처 : [https://go-hard.tistory.com/123](https://go-hard.tistory.com/123)](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/4.png)
 
-출처 : [https://go-hard.tistory.com/123](https://go-hard.tistory.com/123)
+*출처 : [https://go-hard.tistory.com/123](https://go-hard.tistory.com/123)*
 
 # Related Work
 
@@ -74,7 +72,7 @@ categories: minseokkim
 
 ![출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/5.png)
 
-출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020
+*출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020*
 
 위 그림은 논문에서 제안하고 있는 방법론으로 멀티센서를 활용해 학습 기반의 Architecture입니다.
 
@@ -96,12 +94,11 @@ Sensor Fusion한 결과는 센서의 불확실성을 고려해 확률론적 환�
 
 위 시스템은 기하학적이면서 의미론적인 정보 둘 다 부호화한 차량이 중심인 그리드 맵인 정보를 혼합해줍니다. 혼합된 그리드맵은 멀티 레이어로 점유도, 도로 표시, 라이다 강도, 의미 지면, 교통 이력을 포함하고 있고, bird’s eye view로 구현되어 있습니다.
 
-<aside>
-💡 의미론적 vs 기하학적
-데이터의 의미나 의도 초점을 맞추는 것은 의미론적
+
+> 💡 **의미론적 vs 기하학적** </br>
+데이터의 의미나 의도 초점을 맞추는 것은 의미론적 </br>
 데이터의 공간의 특성에 초점을 맞추는 것은 기하학적
 
-</aside>
 
 ### Network Architecture
 
@@ -109,7 +106,7 @@ Sensor Fusion한 결과는 센서의 불확실성을 고려해 확률론적 환�
 
 ![[https://wikidocs.net/148870](https://wikidocs.net/148870)](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/6.png)
 
-[https://wikidocs.net/148870](https://wikidocs.net/148870)
+*출처: [https://wikidocs.net/148870](https://wikidocs.net/148870)*
 
 UNet에는 3가지 핵심 아이디어가 있습 인코더의 피처맵을 디코더의 피처맵에 Concat하여 위치 정보를 전달하고, 데이터셋의 전처리, 변형을 이용하여 데이터 수를 증가시킵니다. 마지막으로 테두리를 더 잘 분할하기 위해 Weight를 추가한 손실함수를 활용합니다.
 
@@ -121,12 +118,11 @@ UNet에는 3가지 핵심 아이디어가 있습 인코더의 피처맵을 디�
 
 이러한 두가지 마스킹(공간맵, 거리맵)은 학습을 통한 보조회귀손실을 추가해줍니다.
 
-<aside>
-💡 SDT : 이미지의 픽셀에서 객체 경계까지의 최단 거리를 계산하는 방법 중 하나
-방향 지도를 사용하는 이유 : 데이터의 공간적 방향 정보를 제공하고, 신경망이 데이터의 기본적인 공간 구조를 더 잘 이해하도록 돕는데 도움이 됩니다.
+
+> 💡 SDT : 이미지의 픽셀에서 객체 경계까지의 최단 거리를 계산하는 방법 중 하나</br>
+방향 지도를 사용하는 이유 : 데이터의 공간적 방향 정보를 제공하고, 신경망이 데이터의 기본적인 공간 구조를 더 잘 이해하도록 돕는데 도움이 됩니다.</br>
 PCA : 다차원 데이터 세트의 차원을 축소하는 기술로, 데이터를 가장 잘 설명하는 주요한 변수를 찾아내는 데 사용된다. ⇒ 차원을 줄이지만 데이터의 정보를 최대한 보존하는데 사용된다.
 
-</aside>
 
 추가적인 계산 비용을 피하기 위해 추론하는 동안은 segmentation mask(이미지 처리에서 특정 객체나 영역을 분할하여 표시하는 데 사용되는 이미지)는 생성됩니다. 낮은 디테일이나 높은 수준의 의미론적 정보 둘 다 얻는 능력때문에 공동의 학습에 있어 네트워크의 핵심 구조로 UNet을 사용합니다.
 
@@ -134,13 +130,13 @@ PCA : 다차원 데이터 세트의 차원을 축소하는 기술로, 데이터�
 
 ![출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/7.png)
 
-출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020
+*출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020*
 
-> x : 이미지의 픽셀 2D 좌표 벡터
-M : 정지선 영역을 표현하는 foreground(이미지의 중요한 정보) masking
-d : 거리값
+> x : 이미지의 픽셀 2D 좌표 벡터</br>
+M : 정지선 영역을 표현하는 foreground(이미지의 중요한 정보) masking</br>
+d : 거리값</br>
 F : foreground point
-> 
+
 
 Linear Time에 있어 각각의 픽셀에서 가장 가까운 foreground point를 찾을 수 있는 알고리즘을 활용할 것입니다.
 
@@ -172,7 +168,7 @@ train한 값을 테스트 하기 위한 기준으로 가장 가까운 실제 정
 
 ![출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/8.png)
 
-출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020
+*출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020*
 
 ## Review
 

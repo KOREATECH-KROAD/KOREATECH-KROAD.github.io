@@ -50,6 +50,8 @@ plugins: [jekyll-paginate]
 # or "master" otherwise
 safe: false
 lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 username: KOREATECH-KROAD
 repo: KOREATECH-KROAD.github.io
 branch: master
