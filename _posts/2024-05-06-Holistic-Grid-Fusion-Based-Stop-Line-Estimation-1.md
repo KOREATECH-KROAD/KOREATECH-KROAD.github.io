@@ -145,9 +145,7 @@ Linear Time에 있어 각각의 픽셀에서 가장 가까운 foreground point�
 
 이렇게 표현된 맵의 경우 한 가지 주의할 점이 있습니다. 하나의 정지선이지만 두 가지 이상으로 감지할 수 있습니다. 이를 보완하기 위해 Direction Map을 사용해주는 것입니다.
 
-$$
-L_{seg} = L_{cross}(S_{pred}, S_{gt}) + \lambda_1L_2(D_{pred}, D_{gt}) + \lambda_2L_2(E_{pred}, E_{gt})
-$$
+$$L_{seg} = L_{cross}(S_{pred}, S_{gt}) + \lambda_1L_2(D_{pred}, D_{gt}) + \lambda_2L_2(E_{pred}, E_{gt})$$
 
 방향맵은 당연히 각각의 픽셀에서 정지선을 연속적인 공간의 방향으로 알려주고 있습니다.
 
