@@ -1,6 +1,6 @@
 # Jekyll configuration
-#markdown: redcarpet
-#highlighter: pygments
+# markdown: redcarpet
+# highlighter: pygments
 markdown: kramdown
 highlighter: rouge
 paginate: 5

@@ -7,7 +7,7 @@ date: 2024-05-12 09:00:00
 tags: tech slam
 subclass: 'post tag-tech tag-slam'
 logo: 'assets/images/kroad_white.png'
-use_math: true
+use_math: True
 author: garamkim
 categories: garamkim
 ---
@@ -82,9 +82,6 @@ categories: garamkim
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8040.655696704383!2d127.28194100000002!3d36.763718!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b2ac6c614c717%3A0x820bda83618bd53b!2sKorea%20University%20of%20Technology%20%26%20Education%20(KOREATECH)%2C%20Campus%201!5e1!3m2!1sen!2skr!4v1715530978828!5m2!1sen!2skr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 한국기술교육대학교 위성 사진
-
-<!-- ![출처: Google maps](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/10_학교_위성사진.png)
-출처: Google maps -->
 
 <br><br>
 한국기술교육대학교 SLAM의 경우  YouTube 영상으로도 제작되었으니 관심 있으신 분들은 다음 영상도 확인해보시면 좋을 것 같습니다.
