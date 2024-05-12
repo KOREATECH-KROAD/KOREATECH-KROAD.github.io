@@ -76,7 +76,7 @@ categories: garamkim
 
 출처: Google maps
 
-<iframe src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.312720045096!2d127.28166769846388!3d36.7630647553576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b2ac6c614c717%3A0x820bda83618bd53b!2sKorea University of Technology %26 Education (KOREATECH)%2C Campus 1!5e0!3m2!1sen!2skr!4v1715522416158!5m2!1sen!2skr](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.312720045096!2d127.28166769846388!3d36.7630647553576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b2ac6c614c717%3A0x820bda83618bd53b!2sKorea%20University%20of%20Technology%20%26%20Education%20(KOREATECH)%2C%20Campus%201!5e0!3m2!1sen!2skr!4v1715522416158!5m2!1sen!2skr)" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.312720045096!2d127.28166769846388!3d36.7630647553576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b2ac6c614c717%3A0x820bda83618bd53b!2sKorea University of Technology %26 Education (KOREATECH)%2C Campus 1!5e0!3m2!1sen!2skr!4v1715522416158!5m2!1sen!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 ![출처: Google maps](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/10_학교_위성사진.png)
 
