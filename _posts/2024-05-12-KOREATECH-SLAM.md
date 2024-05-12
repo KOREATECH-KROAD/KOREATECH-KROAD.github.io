@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images/blog/2024-05-12-KOREATECH-SLAM/3_중앙공원.png'
+cover: 'assets/images/blog/2024-05-12-KOREATECH-SLAM/3_slam_중앙공원.png'
 navigation: True
 title: KOREATECH SLAM
 date: 2024-05-12 09:00:00
