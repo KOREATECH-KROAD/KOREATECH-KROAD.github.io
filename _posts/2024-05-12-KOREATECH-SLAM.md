@@ -3,7 +3,7 @@ layout: post
 cover: 'assets/images/blog/2024-05-12-KOREATECH-SLAM/3_중앙공원.png'
 navigation: True
 title: KOREATECH SLAM
-date: 2024-05-12 23:00:00
+date: 2024-05-12 09:00:00
 tags: tech slam
 subclass: 'post tag-tech tag-slam'
 logo: 'assets/images/kroad_white.png'
