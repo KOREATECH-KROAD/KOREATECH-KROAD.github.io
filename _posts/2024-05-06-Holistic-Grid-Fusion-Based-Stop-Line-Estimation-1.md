@@ -2,12 +2,12 @@
 layout: post
 cover: 'assets/images/cover2.jpg'
 navigation: True
-title: Holistic Grid Fusion Based Stop Line Estimation - 1
+title: Holistic Grid Fusion Based Stop Line Estimation 1
 date: 2024-05-06 23:00:00
 tags: tech sensor-fusion
 subclass: 'post tag-tech tag-sensor-fusion'
 logo: 'assets/images/kroad_white.png'
-use_math: true
+use_math: True
 author: minseokkim
 categories: minseokkim
 ---

@@ -18,9 +18,7 @@
 	  <pubDate>2024-03-20T19:18:00+09:00</pubDate>
 	  <guid>https://KOREATECH-KROAD.github.io//Posenet</guid>
 	  <description><![CDATA[
-
-<p>안녕하세요. K-ROAD 대표 유재민입니다.</p>
-
+	     <p>안녕하세요. K-ROAD 대표 유재민입니다.</p>
 
 <p>첫 기술 관련 글이니 가볍고 흥미를 불러 일으킬만한 논문을 가져왔습니다.
 형식은 paper review 형식으로 진행하려고 합니다.</p>
@@ -39,10 +37,11 @@
 
 <blockquote>
   <h1 id="intro">Intro</h1>
-  <h2 id="title">Title</h2>
-  <p>PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization</p>
+
 </blockquote>
 
+<h2 id="title">Title</h2>
+<p>PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization</p>
 
 <h2 id="authors">Authors</h2>
 <p>Alex Kendall, Matthew Grimes, Roberto Cipolla</p>
@@ -63,7 +62,7 @@
 
 <p>논문을 읽을 때 당시의 배경을 생각하면서 읽으면 더욱 흥미롭습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/1.png" alt="딥러닝동향" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/1.png" alt="딥러닝동향" /></p>
 
 <p>연도별로 이미지 classfication 대회에서 SOTA(state of the art, 당시 최고 성능을 의미)를 찍었던 딥러닝 모델과 accuracy를 시각화 한 자료입니다.</p>
 
@@ -96,11 +95,11 @@
 
 <p>다음은 저희 학교(한국기술교육대학교) 텔동을 mapping한 결과입니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/2.png" alt="텔동 SLAm" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/2.png" alt="텔동 SLAm" /></p>
 
 <p>다음은 저희 학교 인문경영관을 mapping한 결과이죠.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/3.png" alt="인문경영관 SLAM" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/3.png" alt="인문경영관 SLAM" /></p>
 
 <blockquote>
   <p>HDL-graph-slam(High Density Lidar) 활용</p>
@@ -124,8 +123,7 @@
   <h1 id="background-knowledge">Background knowledge</h1>
 </blockquote>
 
-
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/4.png" alt="6 DOF 설명" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/4.png" alt="6 DOF 설명" /></p>
 
 <p>논문 제목에도 나와있는 용어인데요. 6-DOF라 함은 6개의 자유도를 가진 pose를 의미합니다.</p>
 
@@ -147,7 +145,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>이때 다음과 같은 기술을 사용하였습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/5.png" alt="SfM(Structure from Motion)" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/5.png" alt="SfM(Structure from Motion)" /></p>
 
 <p>한 시점에서 카메라의 포즈를 추정하기 위해서는 <strong>한 물체를 바라본 최소 두 개의 시점 이상</strong>이 필요합니다.</p>
 
@@ -164,7 +162,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p><a href="https://www.notion.so/5c47f6cfd28c4944b4de43e7296a2978?pvs=21">에피폴라 기하학</a></p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/6.png" alt="에피폴라 기하학" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/6.png" alt="에피폴라 기하학" /></p>
 
 <p>SfM의 이름에 맞게 2D video를 활용해 일정 frame단위로 이미지를 만들고 이를 에피폴라 기하학에 의거하여 3차원 구조물과 camera parameter를 생성하겠다는 의미입니다.</p>
 
@@ -172,7 +170,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>풀어서 이야기 하자면, 고전적 방법으로 feature를 추출하고 이를 GT(ground truth)로 삼겠다 입니다.</p>
 
-<p>그러면 왜 이리 좋은 기술을 놔두고 posenet이라는것 만들었는데?라는 의문이 드실겁니다.</p>
+<p>그러면 왜 이리 좋은 기술을 놔두고 posenet이라는것 만들었는데?라는 의문이 드실blog/겁니다.</p>
 
 <h3 id="sfm의-한계">SfM의 한계</h3>
 
@@ -189,8 +187,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 - transfer learning이 가능하다.(뒤에서 추가 설명을 드리도록 하겠습니다.)
 </code></pre></div></div>
 
-
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/7.png" alt="sfm로컬" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/7.png" alt="sfm로컬" /></p>
 
 <p>위 사진은 제가 실제로 local 환경(개인 pc)에서 SfM을 진행한 화면을 발췌한 것인데요.</p>
 
@@ -202,16 +199,15 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
   <h1 id="methodology">Methodology</h1>
 </blockquote>
 
-
 <p>방법론은 굉장히 심플합니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/8.png" alt="오버뷰" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/8.png" alt="오버뷰" /></p>
 
 <p>224*224 이미지를 Posenet에 넣으면 camera pose가 나오게 됩니다.</p>
 
 <p>이때 posenet의 아키텍쳐는 당시 SOTA이던 GoogLenet을 활용하였다고 기재되어 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/9.png" alt="googlenet" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/9.png" alt="googlenet" /></p>
 
 <p>약간의 아키텍쳐 수정이 필요했는데 이때 빨간 상자의 부분은 기존에 이미지 classification을 위한 softmax 레이어였으나 카메라의 pose를 아웃풋으로 내뱉기 위헤 Affine regressors 레이어로 바꾸었습니다.</p>
 
@@ -230,7 +226,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 <p>이 때문에 쿼터니안 좌표라는것이 나오게 되었습니다.
 실제로 모델 아웃풋으로는 총 7차원의 아웃풋이 나오며 이는 position 3개, orientation 4개의 벡터가 하나의 행렬로 나오게 됩니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/10.png" alt="loss_function" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/10.png" alt="loss_function" /></p>
 
 <p>과연 어떻게 동시에 position과 orientation을 학습시키게 될까요?</p>
 
@@ -258,14 +254,14 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>다음은 실제로 SfM을 통해 나온 한 이미지에서의 pose를 가져왔습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/11.png" alt="quaternion" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/11.png" alt="quaternion" /></p>
 
 <p>벡터의 합을 구하면 다음과 같은데요. 컴퓨터가 표현할 수 있는 소숫점의 자리수가 제한적이기에 일부 오차는 불가피 합니다만 학습을 하는과정에 있어서 약간의 오차가 있으면 이 오차가 계속해서 누적이 되게 됩니다.
 이를 방지하기 위해 한번 학습할 때마다 쿼터니안의 크기로 나눠줌으로써 누적에러를 막겠다라는 전략을 취했습니다.</p>
 
 <p>파라미터는 다음과 같습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/12.png" alt="파라미터" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/12.png" alt="파라미터" /></p>
 
 <hr />
 
@@ -273,21 +269,20 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
   <h1 id="experiment">Experiment</h1>
 </blockquote>
 
-
 <p>실험 결과입니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/13.png" alt="버드아이뷰" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/13.png" alt="버드아이뷰" /></p>
 
 <p>한 이미지에서 camera pose를 추출하는데 약 5ms에서 95ms가 걸렸다고 합니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/14.png" alt="수치화" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/14.png" alt="수치화" /></p>
 
 <p>각 데이터셋 별, posenet의 에러, 기존 알고리즘 등등 의 결과를 나타낸 표입니다.</p>
 
 <p>실외 환경에서는 약 2~3미터 간격의 position과 5~8도 정도의 orientation의 오차를 가짐을 보여줍니다.
 실내 환경에서 더 낮은 에러를 보여주는데요. 이는 실내에서 feature를 더 추출하기 용이한 환경이기에 라고 논문에서 기술하고 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/15.png" alt="정성평가_2" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/15.png" alt="정성평가_2" /></p>
 
 <p>정성평가입니다.</p>
 
@@ -295,15 +290,15 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>이때 흔들리게 되면 feature라고 부를만한 건물 외벽의 경계선이라든가 특정 랜드마크들이 넓게 번져보이는데 이 때문에 모델이 조금 더 가까운 환경이라고 예측하였다고 필자는 예상하고 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/16.png" alt="정성평가" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/16.png" alt="정성평가" /></p>
 
 <p>gt와 모델이 예측한 scene을 겹쳐서 보여주고 있는데요. 어둡거나 강한 빛이 있는 환경, 안개가 낀 환경 등에서도 강건함을 보여주고 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/17.png" alt="정성평가_1" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/17.png" alt="정성평가_1" /></p>
 
 <p>또한 날씨가 다르거나, 동적인 물체가 많이 scene에 있거나 혹은 아무 카메라로나 찍어도 역시 강건함을 보여주고 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/18.png" alt="오버헤드" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/18.png" alt="오버헤드" /></p>
 
 <p>기존의 SIFT알고리즘과 비교하여도 우수한 성능을 뽐내고 있습니다.</p>
 
@@ -311,7 +306,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>여기서 transfer learning이란 이미 사전에 보편적인 데이터셋에 대해서 조금 학습을 시킨 후, 개인이 수집한 데이터를 학습시키게 되면, 학습 시간이 줄 뿐더러 모델이 좀 더 general해지고, robust해짐을 보여주고 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/19.png" alt="새일런시맵" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/19.png" alt="새일런시맵" /></p>
 
 <p>Saliency maps를 통한 평가입니다. 이는 모델이 학습함에 따라 관심있게 본 구역을 시각화 한 map이라고 볼 수 있는데요. 잔디 같이 feature가 추출이 잘 되지 않거나 동적인 물체들에 대해서는 모델이 관심있게 보지 않음을 시각화한 실험입니다.
 또한 기존의 고전적인 방법들과는 다르게 그 overhead와 필요한 데이터셋의 수가 현저히 적음을 보여주고 있습니다.</p>
@@ -321,7 +316,6 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 <blockquote>
   <h1 id="conclusion">Conclusion</h1>
 </blockquote>
-
 
 <p>긴 글 읽으시느라 고생 많으셨습니다.</p>
 

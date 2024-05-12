@@ -12,15 +12,307 @@
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
+	  <title>KOREATECH SLAM</title>
+	  <link>https://KOREATECH-KROAD.github.io//KOREATECH-SLAM</link>
+	  <author></author>
+	  <pubDate>2024-05-12T18:00:00+09:00</pubDate>
+	  <guid>https://KOREATECH-KROAD.github.io//KOREATECH-SLAM</guid>
+	  <description><![CDATA[
+	     <p>안녕하세요. K-ROAD 5기 김가람입니다.</p>
+
+<p>오늘은 SLAM이 무엇인지에 대한 간단한 이야기와 교내에서 SLAM 기술을 이용하여 진행한 실험에 대한 글을 적으려고 합니다.</p>
+
+<hr />
+
+<h2 id="slam이란">SLAM이란?</h2>
+
+<p><strong>SLAM</strong>이란 <strong>S</strong>imultaneous <strong>L</strong>ocalization <strong>A</strong>nd <strong>M</strong>apping의 약자입니다. 말 그대로 localization과 mapping을 동시에 하는 기술을 의미합니다.</p>
+
+<p>자율주행에서 자신의 위치를 추정하는 일은 매우 중요합니다. 자신의 위치와 주변 환경이 어떻게 생겼는지 알아야만 원하는 위치로 효율적이고 안전하게 이동할 수 있습니다. LiDAR SLAM의 원리는 간단하게 말해서 포인트 클라우드 형식으로 받아온 데이터에서 특징점을 찾아 기존에 받아온 포인트 클라우드 정보들과 대조하여 위치를 찾는 것입니다. 이 과정에서는 GNSS, IMU 등의 센서가 보정을 위해 활용될 수 있습니다.</p>
+
+<p>따라서 필드를 돌며 map을 생성하고 이 과정에서 LiDAR를 통해 받아오는 포인트 클라우드 정보와 센서 정보들을 통해 자신의 위치를 추정합니다.</p>
+
+<hr />
+
+<h2 id="slam-in-koreatech">SLAM in KOREATECH</h2>
+
+<p>한국기술교육대학교 자율주행차연구회 K-ROAD는 얼마 전 교내를 대상으로 LiDAR SLAM 기술을 실험하였습니다.</p>
+
+<p>사용한 플랫폼은 ERP-42이고, 작업에 사용한 라이브러리는 <a href="https://github.com/koide3/hdl_graph_slam">hdl_graph_slam</a>입니다.</p>
+
+<p>주행 경로는 자율주행차연구회의 연구실이 위치한 산학협력관부터 주요 학교 건물이 있는 중앙공원 주변, 후문, 그리고 운동장까지입니다.</p>
+
+<p>재학생 및 교직원 분들의 편의와 안전을 위해 통행이 적은 시간대에 실험을 진행하였습니다.</p>
+
+<hr />
+
+<h2 id="인문경영관">인문경영관</h2>
+
+<p>정문에서 올라오면 담헌실학관 다음으로 만날 수 있는 건문입니다. 중앙공원 앞에 위치해 있어서 자주 지나치게 되는 건물이기도 합니다. 공학을 전공하는 학생들은 교양 수업을 제외하면 자주 가지 않는 건물이기 때문에 생소할 수도 있지만, 한국기술교육대학교를 다니다보면 자주 지나가게 되는 길입니다.
+<img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/1_slam_인문경영관.png" alt="한국기술교육대학교 인문경영관 PCL 이미지" />
+한국기술교육대학교 인문경영관 PCL 이미지</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/2_인문경영관.jpg" alt="출처: [https://ko.wikipedia.org/wiki/한국기술교육대학교](https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EB%8C%80%ED%95%99%EA%B5%90)" />
+출처: <a href="https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EB%8C%80%ED%95%99%EA%B5%90">https://ko.wikipedia.org/wiki/한국기술교육대학교</a></p>
+
+<hr />
+
+<h2 id="중앙공원">중앙공원</h2>
+
+<p>재학생들에게는 일명 텔동(텔레토비 동산)이라고 불리는 중앙공원입니다.<br />
+이곳에서는 축제, 동아리 박람회 등 다양한 행사가 열리기도 합니다. 중앙에 있는 나무를 기준으로 십자 모양의 길이 나 있는 것이 특징입니다.
+<img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/3_slam_중앙공원.png" alt="한국기술교육대학교 중앙공원 PCL 이미지" />
+한국기술교육대학교 중앙공원 PCL 이미지</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/4_중앙공원.png" alt="출처: [https://ko.wikipedia.org/wiki/한국기술교육대학교](https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EB%8C%80%ED%95%99%EA%B5%90)" />
+출처: <a href="https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EB%8C%80%ED%95%99%EA%B5%90">https://ko.wikipedia.org/wiki/한국기술교육대학교</a></p>
+
+<hr />
+
+<h2 id="대학본부--중앙공원">대학본부 &amp; 중앙공원</h2>
+
+<p>이곳은 중앙공원과 붙어 있는 대학본부 건물입니다. 학교의 행정문제를 처리하는 곳으로, 강의실이 없기 때문에 학생들은 재학 중에도 갈 일이 별로 없는 건문이기도 합니다. 하지만 기숙사에서 강의 건물로 올라오는 길목에 위치해 있기 때문에 학교를 다니다 보면 자주 지나치게 됩니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/5_slam_대학본부_중앙공원.png" alt="한국기술교육대학교 대학본부 PCL 이미지" />
+한국기술교육대학교 대학본부 PCL 이미지</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/6_대학본부_중앙공원.png" alt="출처: [https://ko.wikipedia.org/wiki/한국기술교육대학교](https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EB%8C%80%ED%95%99%EA%B5%90)" />
+출처: <a href="https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EA%B8%B0%EC%88%A0%EA%B5%90%EC%9C%A1%EB%8C%80%ED%95%99%EA%B5%90">https://ko.wikipedia.org/wiki/한국기술교육대학교</a></p>
+
+<hr />
+
+<h2 id="학교-전체">학교 전체</h2>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/7_slam_학교.png" alt="한국기술교육대학교 전체 PCL 이미지 1" />
+한국기술교육대학교 전체 PCL 이미지 1</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/8_slam_학교_2.png" alt="한국기술교육대학교 전체 PCL 이미지 2" />
+한국기술교육대학교 전체 PCL 이미지 2</p>
+
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.312720045096!2d127.28166769846388!3d36.7630647553576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b2ac6c614c717%3A0x820bda83618bd53b!2sKorea University of Technology %26 Education (KOREATECH)%2C Campus 1!5e0!3m2!1sen!2skr!4v1715522416158!5m2!1sen!2skr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+<p>한국기술교육대학교 지도</p>
+
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8040.655696704383!2d127.28194100000002!3d36.763718!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b2ac6c614c717%3A0x820bda83618bd53b!2sKorea%20University%20of%20Technology%20%26%20Education%20(KOREATECH)%2C%20Campus%201!5e1!3m2!1sen!2skr!4v1715530978828!5m2!1sen!2skr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+<p>한국기술교육대학교 위성 사진</p>
+
+<!-- ![출처: Google maps](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-12-KOREATECH-SLAM/10_학교_위성사진.png)
+출처: Google maps -->
+
+<p><br /><br />
+한국기술교육대학교 SLAM의 경우  YouTube 영상으로도 제작되었으니 관심 있으신 분들은 다음 영상도 확인해보시면 좋을 것 같습니다.</p>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/-DC6ZDe-v5w?si=sIj0hRa2g_KQ3_Ru" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+<hr />
+
+<h2 id="참고-자료">참고 자료</h2>
+
+<ul>
+  <li>
+    <p><strong>SLAM이란?</strong><br />
+  <a href="https://kr.mathworks.com/discovery/slam.html">https://kr.mathworks.com/discovery/slam.html</a></p>
+  </li>
+  <li>
+    <p><strong>Simultaneous localization and mapping</strong><br />
+  <a href="https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping">https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping</a></p>
+  </li>
+  <li>
+    <p><strong>SLAM이란?</strong><br />
+  <a href="https://www.notion.so/SLAM-f16a75f894ca48d3aa851bca99ec7cce?pvs=21">https://cvlearnblog.notion.site/SLAM-f16a75f894ca48d3aa851bca99ec7cce</a></p>
+  </li>
+</ul>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Holistic Grid Fusion Based Stop Line Estimation 1</title>
+	  <link>https://KOREATECH-KROAD.github.io//Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1</link>
+	  <author></author>
+	  <pubDate>2024-05-07T08:00:00+09:00</pubDate>
+	  <guid>https://KOREATECH-KROAD.github.io//Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1</guid>
+	  <description><![CDATA[
+	     <p>안녕하세요. K-ROAD 5기 김민석입니다.</p>
+
+<p>저는 이번 기술 블로그 주제로 정지선과 관련된 이야기를 진행하려고 합니다.</p>
+
+<p>정지선과 관련된 여러 논문을 찾았고, 그 중에서 저희가 구현하고자 하는 방향과 제일 유사한 Holistic Grid Fusion Based Stop Line Estimation@ICPR2020의 논문을 읽고 Review해보는 글을 작성하게 되었습니다.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/1.png" alt="출처 : 차량 기계 기술 법인" /></p>
+
+<p><em>출처 : 차량 기계 기술 법인</em></p>
+
+<p>실제 자동차의 경우 안정적인 정지를 위해 53m 정도를 필요로 하고 있습니다. 자율주행에서의 정지는 정지 유/무를 판별하는 공주거리, 이후 제동거리를 합해 안정적인 정지거리를 구할 수 있습니다. 만약 카메라만 활용한다면 거리는 30m로 터무니 없게 부족합니다. 그렇다고 lidar만 활용하기에는 정지선에 대한 intensity 값을 정확하게 가져오기 힘들어 아무리 200m를 보는 lidar라 하더라도 정지선에 인식하기에는 무리가 있습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/2.png" alt="출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020" /></p>
+
+<p><em>출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020</em></p>
+
+<p>그래서 이번 Paper에서는 여러 단서를 활용하여 교차로의 존재를 감지하고 교차로의 정지선을 예측하는 것입니다. 이때 저희가 사용한 데이터는 stereo 카메라입니다. stereo 카메라는 흔히 depth 카메라라고도 불리는데 이건 rgb의 값만 가져오는 기존의 카메라와 달리 rgbd(depth)의 값을 가져옵니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/3.png" alt="출처 : IDS" /></p>
+
+<p><em>출처 : IDS</em></p>
+
+<p>다음으로 HD(High Definintion)를 활용하는 것입니다. HD는 도로의 위치, 크기, 차선의 수, 교차로 등의 세부 정부가 포함되어 있는 지도로 도로의 곡률, 경사, 고도 등의 지형 정보도 제공합니다.  센서 데이터만 활용해서 정지선 검출에는 한계를 보이기에 HD를 활용해 localizing도 함께 진행하는 것입니다.</p>
+
+<p>마지막으로 Ransac에 대해서 알고 넘어가도록 하겠습니다. Ransac의 경우 Random Sample Consensus로 데이터를 랜덤하게 샘플링하여 사용하고자 하는 모델을 fitting한 다음 결과가 원하는 목표치에 도달하였는지 확인하는 과정을 통해 모델을 데이터에 맞게 최적화하는 것입니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/4.png" alt="출처 : [https://go-hard.tistory.com/123](https://go-hard.tistory.com/123)" /></p>
+
+<p><em>출처 : <a href="https://go-hard.tistory.com/123">https://go-hard.tistory.com/123</a></em></p>
+
+<h1 id="related-work">Related Work</h1>
+
+<p>현재 정지선을 예측하는 Task는 대표적으로 두 가지가 있습니다.</p>
+
+<h2 id="1-deep-learning">1. Deep Learning</h2>
+
+<ol>
+  <li>엣지 검출과 란삭을 통한 정지선 후보들 검출</li>
+  <li>정지선 후보의 주변의 HOG features를 추출하고, 정지선 구별을 위해 TER based classifier 적용</li>
+  <li>[1], [11] 을 학습 기반과 체계 기반 둘 다에 각각 정지선 검출을 진행한다.</li>
+  <li>이후 수평 모폴로지 연산을 통해 이미지의 수평방향으로 구조 요소를 이용하여 패턴을 찾거나 수정하는 데 사용됩니다.</li>
+</ol>
+
+<p>[1]  Stop-line detection and localization method for intersection scenarios@IEEE2011</p>
+
+<p>[11] Stop sign andstop line detection and distance calculation for autonomous vehicle control@IEEE2018</p>
+
+<p>이와 같은 경우는 정지선과 위치 추정을 추적하는 과정에 있어 안정화해준다.</p>
+
+<p>즉, 이번 논문에서 개발한 시스템은 이상적 형태와 위치적 관계에 대한 가정을 측정하기 위해 지워진 페인트가 있어도 정지선을 검출하는 것이다.</p>
+
+<h3 id="2-vision-learning">2. Vision Learning</h3>
+
+<p>정지선 검출에 있어 CNN 모델을 활용하는 것이다. CNN의 모델은 딥러닝 아키텍처로 합성공 신경망을 의미한다. CNN 모델의 Resnet 활용함으로써 잘못된 경고를 줄일 수 있고, 잘못된 정보와 날씨 조건에 있어서도 정확도를 높여준다.</p>
+
+<p>다만 아쉬운 점이라 한다면 카메라 센서 데이터에 의지하기에 감지 범위는 제한될 뿐더러 부분적으로 아쉬운 결과를 가져오기도 한다.</p>
+
+<h2 id="method">Method</h2>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/5.png" alt="출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020" /></p>
+
+<p><em>출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020</em></p>
+
+<p>위 그림은 논문에서 제안하고 있는 방법론으로 멀티센서를 활용해 학습 기반의 Architecture입니다.</p>
+
+<p>이와 같은 시스템은 안전성과 경로 설정을 보장하기 위해 Stereo Camera, Lidar, Radar 센서를 사용해 감지 영역을 강화시킵니다.</p>
+
+<p>먼저 정적인 환경 정보와 동적인 물체 정보를 받는 것을 우선으로 진행합니다.</p>
+
+<p>정적인 환경은 Segmentation mask를 생성하는 그리드 맵으로 생성되고, 생성된 그리드 맵은 Incoder-Decoder Nueron Network에 값을 넘겨줍니다.</p>
+
+<p>마지막으로 Nueron Network에서는 정지선에 관한 값들을 예측합니다.</p>
+
+<h3 id="input-data">Input data</h3>
+
+<p>전반적인 Pipe-Line은 이와 같지만 좀 더 세부적으로 들어가보도록 하겠습니다.</p>
+
+<p>입력받은 데이터에 있어 비어있는 공간과 장애물의 위치는 셀의 공간 기질과 가능성으로부터 추정합니다. 이와 같은 특징을 활용해 다른 위치에 장착되어 있는 센서들을 혼합시킬 수 있습니다.</p>
+
+<p>Sensor Fusion한 결과는 센서의 불확실성을 고려해 확률론적 환경 모델을 구축하기 위해 Bayes’ theorem(베이시안 이론)을 활용합니다. 그뿐 아니라 SDC(Self-Driving Car)가 도시 주행에 있어 적용시킬 환경이 구축되지 않았을 경우에도 Grid Map을 재구축할 수 있습니다.</p>
+
+<p>위 시스템은 기하학적이면서 의미론적인 정보 둘 다 부호화한 차량이 중심인 그리드 맵인 정보를 혼합해줍니다. 혼합된 그리드맵은 멀티 레이어로 점유도, 도로 표시, 라이다 강도, 의미 지면, 교통 이력을 포함하고 있고, bird’s eye view로 구현되어 있습니다.</p>
+
+<blockquote>
+  <p>💡 <strong>의미론적 vs 기하학적</strong> <br />
+데이터의 의미나 의도 초점을 맞추는 것은 의미론적 <br />
+데이터의 공간의 특성에 초점을 맞추는 것은 기하학적</p>
+</blockquote>
+
+<h3 id="network-architecture">Network Architecture</h3>
+
+<p>이렇게 만들어진 Grid Map은 UNet과 유사한 Network로 전달됩니다. UNet은 말 그대로 Network 구조과 U자 형태와 유사하게 구현된다고해서 이름이 붙었습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/6.png" alt="[https://wikidocs.net/148870](https://wikidocs.net/148870)" /></p>
+
+<p><em>출처: <a href="https://wikidocs.net/148870">https://wikidocs.net/148870</a></em></p>
+
+<p>UNet에는 3가지 핵심 아이디어가 있습 인코더의 피처맵을 디코더의 피처맵에 Concat하여 위치 정보를 전달하고, 데이터셋의 전처리, 변형을 이용하여 데이터 수를 증가시킵니다. 마지막으로 테두리를 더 잘 분할하기 위해 Weight를 추가한 손실함수를 활용합니다.</p>
+
+<p>정지선의 유무에 따라 binary 값을 활용해 값을 예측하는데 이 값은 데이터가 편향되어 있을 때 기울기 오류 역전파에 있어 제한된 정보를 분할해줍니다. 분할된 픽셀은 특정 class와 관련되어 있음을 표현해주기 때문입니다.</p>
+
+<p>따라서 공간의 근접한 정보를 제공할 수 있는 거리 맵을 언급하는 연속되는 표현으로 SDT를 사용합니다.</p>
+
+<p>또, 공간 방향 정보를 제공하고, 데이터의 근본적인 공간 구조를 잘 이해할 수 있는 인공신경망을 돕는 방향 맵을 예측해줍니다.</p>
+
+<p>이러한 두가지 마스킹(공간맵, 거리맵)은 학습을 통한 보조회귀손실을 추가해줍니다.</p>
+
+<blockquote>
+  <p>💡 <strong>SDT</strong> : 이미지의 픽셀에서 객체 경계까지의 최단 거리를 계산하는 방법 중 하나<br />
+방향 지도를 사용하는 이유 : 데이터의 공간적 방향 정보를 제공하고, 신경망이 데이터의 기본적인 공간 구조를 더 잘 이해하도록 돕는데 도움이 됩니다.<br />
+<strong>PCA</strong> : 다차원 데이터 세트의 차원을 축소하는 기술로, 데이터를 가장 잘 설명하는 주요한 변수를 찾아내는 데 사용된다. ⇒ 차원을 줄이지만 데이터의 정보를 최대한 보존하는데 사용된다.</p>
+</blockquote>
+
+<p>추가적인 계산 비용을 피하기 위해 추론하는 동안은 segmentation mask(이미지 처리에서 특정 객체나 영역을 분할하여 표시하는 데 사용되는 이미지)는 생성됩니다. 낮은 디테일이나 높은 수준의 의미론적 정보 둘 다 얻는 능력때문에 공동의 학습에 있어 네트워크의 핵심 구조로 UNet을 사용합니다.</p>
+
+<h3 id="distance-and-direction-map">Distance and Direction Map</h3>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/7.png" alt="출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020" /></p>
+
+<p><em>출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020</em></p>
+
+<blockquote>
+  <p>x : 이미지의 픽셀 2D 좌표 벡터<br />
+M : 정지선 영역을 표현하는 foreground(이미지의 중요한 정보) masking<br />
+d : 거리값<br />
+F : foreground point</p>
+</blockquote>
+
+<p>Linear Time에 있어 각각의 픽셀에서 가장 가까운 foreground point를 찾을 수 있는 알고리즘을 활용할 것입니다.</p>
+
+<p>이때 표현되는 F는 음수가 나올 경우 0으로 짤리고, 양수가 나올 경우 0에서 1 사이의 값으로 normalization해줍니다.</p>
+
+<p>이렇게 표현된 맵의 경우 한 가지 주의할 점이 있습니다. 하나의 정지선이지만 두 가지 이상으로 감지할 수 있습니다. 이를 보완하기 위해 Direction Map을 사용해주는 것입니다.</p>
+
+<!-- $L_{seg} = L_{cross}(S_{pred}, S_{gt}) + \lambda_1L_2(D_{pred}, D_{gt}) + \lambda_2L_2(E_{pred}, E_{gt})$ -->
+
+<p>방향맵은 당연히 각각의 픽셀에서 정지선을 연속적인 공간의 방향으로 알려주고 있습니다.</p>
+
+<ol>
+  <li>하이퍼 파라미터인 람다를 학습 과정에서 0.5로 세팅해줍니다.</li>
+  <li>분할 맵 S는 존재하는 정지선의 희미한 표현들을 추출해줍니다.</li>
+  <li>정지선 L_i에 있어 네 가지 특성 p, p, l, s은 2d image 좌표로 표현되고, 이미지 공간에서 시작과 끝 점이고, 시작과 끝, 정지선의 기울기 사이에서 유클리드 거리이다.</li>
+  <li>요소 레이블링은 다른 그룹에서 positive prediction으로 연결되어 나눠진 segmentation map S에 적용해줍니다.</li>
+  <li>각각의 그룹은 2d point의 cluster이기에 pca를 근본적인 정지선의 기울기 값과 클러스터의 주요한 축들에 적용합니다.</li>
+  <li>그룹의 왼쪽과 오른쪽 좌표를 정지선의 일부로 희미하게 표현된 선 segment의 시작과 끝 포인트를 측정하기 위해 경사축제 정사영합니다.</li>
+</ol>
+
+<p>※ object segmentation mask는 항상 연속적인 결과를 산출하지 않습니다.</p>
+
+<ol>
+  <li>같은 정지선으로부터 두 가지 선은 segmetation 짤림때문에 두 가지 다른 그룹으로 간주합니다.</li>
+  <li>정지선 두 개를 양방향 비교를 기반한 정련의 알고리즘을 수행하고, 조건에 맞다면 중복하는 선을 지웁니다.</li>
+</ol>
+
+<p>위의 과정을 거치면서 최적의 정지선을 추출하는 과정을 갖습니다.</p>
+
+<p>train한 값을 테스트 하기 위한 기준으로 가장 가까운 실제 정지선과의 연관성을 사용합니다. 두 선이 겹치고 정렬되어야 하는데 방향에 대한 오차 한계를 a_thersh로 설정하여  오류역전파와 함께 제약을 완화합니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-06-Holistic-Grid-Fusion-Based-Stop-Line-Estimation-1/8.png" alt="출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020" /></p>
+
+<p><em>출처 : Holistic Grid Fusion Based Stop Line Estimation@arXiv2020</em></p>
+
+<h2 id="review">Review</h2>
+
+<p>내용 이해에 있어 100% 내 것을 만들었다고 보기는 힘들 것 같습니다. 다만 새로운 Task에 대해서 배울 수 있는 시간이었고, 다만 아쉬운 점은 논문은 선택하는 과정이었던 것 같습니다. 현재 하기 힘든 정지선 관련 논문을 찾다가 발견하였지만 정지선 관련 내용이라기보다 Grid Map에 더 비중이 높아보여 다음에는 논문 선택하는 과정에 있어 더 집중해야 할 것 같습니다.</p>
+
+<p>이번 논문은 공부를 하면서 처음으로 읽어본 논문이었습니다. 내용을 정리하는 과정에 있어서도 많이 부족했을 것이고, 이해하는 시간이 오래 걸리다보니 실험쪽은 이번 글에 작성하지 못했습니다. 남은 내용은 다음 게시물을 통해 작성할 예정입니다. 부족한 글 읽어주셔서 감사합니다.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
 	  <title>Posenet</title>
 	  <link>https://KOREATECH-KROAD.github.io//Posenet</link>
 	  <author></author>
 	  <pubDate>2024-03-20T19:18:00+09:00</pubDate>
 	  <guid>https://KOREATECH-KROAD.github.io//Posenet</guid>
 	  <description><![CDATA[
-
-<p>안녕하세요. K-ROAD 대표 유재민입니다.</p>
-
+	     <p>안녕하세요. K-ROAD 대표 유재민입니다.</p>
 
 <p>첫 기술 관련 글이니 가볍고 흥미를 불러 일으킬만한 논문을 가져왔습니다.
 형식은 paper review 형식으로 진행하려고 합니다.</p>
@@ -39,10 +331,11 @@
 
 <blockquote>
   <h1 id="intro">Intro</h1>
-  <h2 id="title">Title</h2>
-  <p>PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization</p>
+
 </blockquote>
 
+<h2 id="title">Title</h2>
+<p>PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization</p>
 
 <h2 id="authors">Authors</h2>
 <p>Alex Kendall, Matthew Grimes, Roberto Cipolla</p>
@@ -63,7 +356,7 @@
 
 <p>논문을 읽을 때 당시의 배경을 생각하면서 읽으면 더욱 흥미롭습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/1.png" alt="딥러닝동향" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/1.png" alt="딥러닝동향" /></p>
 
 <p>연도별로 이미지 classfication 대회에서 SOTA(state of the art, 당시 최고 성능을 의미)를 찍었던 딥러닝 모델과 accuracy를 시각화 한 자료입니다.</p>
 
@@ -96,11 +389,11 @@
 
 <p>다음은 저희 학교(한국기술교육대학교) 텔동을 mapping한 결과입니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/2.png" alt="텔동 SLAm" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/2.png" alt="텔동 SLAm" /></p>
 
 <p>다음은 저희 학교 인문경영관을 mapping한 결과이죠.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/3.png" alt="인문경영관 SLAM" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/3.png" alt="인문경영관 SLAM" /></p>
 
 <blockquote>
   <p>HDL-graph-slam(High Density Lidar) 활용</p>
@@ -120,13 +413,11 @@
 
 <hr />
 
-
 <blockquote>
   <h1 id="background-knowledge">Background knowledge</h1>
 </blockquote>
 
-
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/4.png" alt="6 DOF 설명" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/4.png" alt="6 DOF 설명" /></p>
 
 <p>논문 제목에도 나와있는 용어인데요. 6-DOF라 함은 6개의 자유도를 가진 pose를 의미합니다.</p>
 
@@ -148,7 +439,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>이때 다음과 같은 기술을 사용하였습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/5.png" alt="SfM(Structure from Motion)" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/5.png" alt="SfM(Structure from Motion)" /></p>
 
 <p>한 시점에서 카메라의 포즈를 추정하기 위해서는 <strong>한 물체를 바라본 최소 두 개의 시점 이상</strong>이 필요합니다.</p>
 
@@ -165,7 +456,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p><a href="https://www.notion.so/5c47f6cfd28c4944b4de43e7296a2978?pvs=21">에피폴라 기하학</a></p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/6.png" alt="에피폴라 기하학" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/6.png" alt="에피폴라 기하학" /></p>
 
 <p>SfM의 이름에 맞게 2D video를 활용해 일정 frame단위로 이미지를 만들고 이를 에피폴라 기하학에 의거하여 3차원 구조물과 camera parameter를 생성하겠다는 의미입니다.</p>
 
@@ -173,7 +464,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>풀어서 이야기 하자면, 고전적 방법으로 feature를 추출하고 이를 GT(ground truth)로 삼겠다 입니다.</p>
 
-<p>그러면 왜 이리 좋은 기술을 놔두고 posenet이라는것 만들었는데?라는 의문이 드실겁니다.</p>
+<p>그러면 왜 이리 좋은 기술을 놔두고 posenet이라는것 만들었는데?라는 의문이 드실blog/겁니다.</p>
 
 <h3 id="sfm의-한계">SfM의 한계</h3>
 
@@ -190,7 +481,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 - transfer learning이 가능하다.(뒤에서 추가 설명을 드리도록 하겠습니다.)
 </code></pre></div></div>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/7.png" alt="sfm로컬" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/7.png" alt="sfm로컬" /></p>
 
 <p>위 사진은 제가 실제로 local 환경(개인 pc)에서 SfM을 진행한 화면을 발췌한 것인데요.</p>
 
@@ -198,21 +489,19 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <hr />
 
-
 <blockquote>
   <h1 id="methodology">Methodology</h1>
 </blockquote>
 
-
 <p>방법론은 굉장히 심플합니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/8.png" alt="오버뷰" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/8.png" alt="오버뷰" /></p>
 
 <p>224*224 이미지를 Posenet에 넣으면 camera pose가 나오게 됩니다.</p>
 
 <p>이때 posenet의 아키텍쳐는 당시 SOTA이던 GoogLenet을 활용하였다고 기재되어 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/9.png" alt="googlenet" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/9.png" alt="googlenet" /></p>
 
 <p>약간의 아키텍쳐 수정이 필요했는데 이때 빨간 상자의 부분은 기존에 이미지 classification을 위한 softmax 레이어였으나 카메라의 pose를 아웃풋으로 내뱉기 위헤 Affine regressors 레이어로 바꾸었습니다.</p>
 
@@ -231,7 +520,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 <p>이 때문에 쿼터니안 좌표라는것이 나오게 되었습니다.
 실제로 모델 아웃풋으로는 총 7차원의 아웃풋이 나오며 이는 position 3개, orientation 4개의 벡터가 하나의 행렬로 나오게 됩니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/10.png" alt="loss_function" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/10.png" alt="loss_function" /></p>
 
 <p>과연 어떻게 동시에 position과 orientation을 학습시키게 될까요?</p>
 
@@ -259,37 +548,35 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>다음은 실제로 SfM을 통해 나온 한 이미지에서의 pose를 가져왔습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/11.png" alt="quaternion" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/11.png" alt="quaternion" /></p>
 
 <p>벡터의 합을 구하면 다음과 같은데요. 컴퓨터가 표현할 수 있는 소숫점의 자리수가 제한적이기에 일부 오차는 불가피 합니다만 학습을 하는과정에 있어서 약간의 오차가 있으면 이 오차가 계속해서 누적이 되게 됩니다.
 이를 방지하기 위해 한번 학습할 때마다 쿼터니안의 크기로 나눠줌으로써 누적에러를 막겠다라는 전략을 취했습니다.</p>
 
 <p>파라미터는 다음과 같습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/12.png" alt="파라미터" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/12.png" alt="파라미터" /></p>
 
 <hr />
-
 
 <blockquote>
   <h1 id="experiment">Experiment</h1>
 </blockquote>
 
-
 <p>실험 결과입니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/13.png" alt="버드아이뷰" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/13.png" alt="버드아이뷰" /></p>
 
 <p>한 이미지에서 camera pose를 추출하는데 약 5ms에서 95ms가 걸렸다고 합니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/14.png" alt="수치화" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/14.png" alt="수치화" /></p>
 
 <p>각 데이터셋 별, posenet의 에러, 기존 알고리즘 등등 의 결과를 나타낸 표입니다.</p>
 
 <p>실외 환경에서는 약 2~3미터 간격의 position과 5~8도 정도의 orientation의 오차를 가짐을 보여줍니다.
 실내 환경에서 더 낮은 에러를 보여주는데요. 이는 실내에서 feature를 더 추출하기 용이한 환경이기에 라고 논문에서 기술하고 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/15.png" alt="정성평가_2" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/15.png" alt="정성평가_2" /></p>
 
 <p>정성평가입니다.</p>
 
@@ -297,15 +584,15 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>이때 흔들리게 되면 feature라고 부를만한 건물 외벽의 경계선이라든가 특정 랜드마크들이 넓게 번져보이는데 이 때문에 모델이 조금 더 가까운 환경이라고 예측하였다고 필자는 예상하고 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/16.png" alt="정성평가" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/16.png" alt="정성평가" /></p>
 
 <p>gt와 모델이 예측한 scene을 겹쳐서 보여주고 있는데요. 어둡거나 강한 빛이 있는 환경, 안개가 낀 환경 등에서도 강건함을 보여주고 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/17.png" alt="정성평가_1" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/17.png" alt="정성평가_1" /></p>
 
 <p>또한 날씨가 다르거나, 동적인 물체가 많이 scene에 있거나 혹은 아무 카메라로나 찍어도 역시 강건함을 보여주고 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/18.png" alt="오버헤드" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/18.png" alt="오버헤드" /></p>
 
 <p>기존의 SIFT알고리즘과 비교하여도 우수한 성능을 뽐내고 있습니다.</p>
 
@@ -313,7 +600,7 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 
 <p>여기서 transfer learning이란 이미 사전에 보편적인 데이터셋에 대해서 조금 학습을 시킨 후, 개인이 수집한 데이터를 학습시키게 되면, 학습 시간이 줄 뿐더러 모델이 좀 더 general해지고, robust해짐을 보여주고 있습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/19.png" alt="새일런시맵" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-03-20-웹페이지_개설_의도를_곁들인_포즈넷_이미지/19.png" alt="새일런시맵" /></p>
 
 <p>Saliency maps를 통한 평가입니다. 이는 모델이 학습함에 따라 관심있게 본 구역을 시각화 한 map이라고 볼 수 있는데요. 잔디 같이 feature가 추출이 잘 되지 않거나 동적인 물체들에 대해서는 모델이 관심있게 보지 않음을 시각화한 실험입니다.
 또한 기존의 고전적인 방법들과는 다르게 그 overhead와 필요한 데이터셋의 수가 현저히 적음을 보여주고 있습니다.</p>
@@ -323,7 +610,6 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 <blockquote>
   <h1 id="conclusion">Conclusion</h1>
 </blockquote>
-
 
 <p>긴 글 읽으시느라 고생 많으셨습니다.</p>
 
@@ -337,18 +623,18 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 	</item>
 
 	<item>
-	  <title>K-ROAD 기술 블로그 개설의 의의</title>
+	  <title>K ROAD 기술 블로그 개설의 의의</title>
 	  <link>https://KOREATECH-KROAD.github.io//K-ROAD-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4%EC%9D%98-%EC%9D%98%EC%9D%98</link>
 	  <author></author>
 	  <pubDate>2024-03-19T18:00:00+09:00</pubDate>
 	  <guid>https://KOREATECH-KROAD.github.io//K-ROAD-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B0%9C%EC%84%A4%EC%9D%98-%EC%9D%98%EC%9D%98</guid>
 	  <description><![CDATA[
-
-<p>안녕하세요. K-ROAD 대표 유재민입니다.</p>
-
+	     <p>안녕하세요. K-ROAD 대표 유재민입니다.</p>
 
 <p>K-ROAD 기술 블로그가 개설되었습니다. 이에 따라 대표로서 연구 내용 블로그 포스팅의 포문을 열게 되었습니다.
-처음 대표로 K-ROAD 5기의 운영을 맞게 되었을 때 K-ROAD의 기술적 능력을 알리는 웹 페이지를 제작하자고 의견을 꺼내었고 그 이유는 다음과 같습니다.</p>
+처음 대표로 K-ROAD 5기의 운영을 맞게 되었을 때 K-ROAD의 기술적 능력을 알리는 웹 페이지를 제작하자고 의견을 꺼내었고 그 이유는 다음과 같습니다.
+<br /></p>
+<hr />
 
 <h2 id="로보틱스-분야는-진입장벽이-너무-높다">로보틱스 분야는 진입장벽이 너무 높다.</h2>
 <p>제 주변 지인들 중에도 로보틱스 분야에 관심이 있고 공부 해보고 싶은 학우들이 많습니다. 하지만 하나같이 저에게 “어떻게 공부를 시작해야 할지 모르겠다”라고 물어왔습니다.</p>
@@ -364,7 +650,9 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 <p>이로 인해 진입장벽은 높아져가고, 대기업조차 로보틱스 개발자 가뭄에 시달리고 있습니다.
 따라서 저는 학습을 위한 커리큘럼을 제공하거나 로보틱스의 세계 연구 동향을 분석해 연구회 내외의 연구 흐름을 이끄는 역할을 하고자 합니다.</p>
 
-<p>로보틱스 분야의 정보 공유의 장이자, 로보틱스 칼럼의 일환으로써 저희가 공부한 내용을 공유하여 로보틱스 연구 희망자들(딥러닝, 매니퓰레이터, 컴퓨터 비전, slam, 차량 제어 등)이 발을 돌리지 않고 <strong>로보틱스라는 분야에 더욱 깊히 발을 담굴 수 있는 pool</strong>을 만드는 것이 목표입니다.</p>
+<p>로보틱스 분야의 정보 공유의 장이자, 로보틱스 칼럼의 일환으로써 저희가 공부한 내용을 공유하여 로보틱스 연구 희망자들(딥러닝, 매니퓰레이터, 컴퓨터 비전, slam, 차량 제어 등)이 발을 돌리지 않고 <strong>로보틱스라는 분야에 더욱 깊히 발을 담굴 수 있는 pool</strong>을 만드는 것이 목표입니다.
+<br /></p>
+<hr />
 
 <h2 id="-그래서-네가-하고-싶은-게-정확히-뭔데-">” 그래서 네가 하고 싶은 게 정확히 뭔데? “</h2>
 
@@ -381,50 +669,19 @@ q는 camera를 촬영한 시점이 얼마나 돌아가있는가를 의미하죠.
 <p>프로그래밍(또는 코딩) 또한 비슷한 맥락입니다. 이 이야기는 저희 K-ROAD 회원들에게도 전하고 싶은 말입니다. 
 K-ROAD뿐만 아니라 많은 대학생 로보틱스 팀의 학생들이 자율주행 또는 로보틱스 분야의 공부를 시작하기 위해 다들 코딩 실력 향상에만 집착하는 모습을 보입니다. 물론 프로그래밍 실력은 중요합니다. 로보틱스 분야와 뗄 수 없는 요소지요.</p>
 
-<p>하지만 코딩도 우리가 생각한 <strong>기능을 구현하기 위한 일종의 툴</strong>이지 그 이상, 그 이하도 아닙니다.</p>
+<p>하지만 코딩도 우리가 생각한 <strong>기능을 구현하기 위한 일종의 툴</strong>이지 그 이상, 그 이하도 아닙니다. 가장 중요한 것은 어떠한 일의 문제를 잘 정의하고, 그 문제에 적합한 해결방안을 찾는 것입니다.</p>
 
-<p>이러한 인사이트을 미래의 로보틱스 연구자, 또는 초중고 학생들과 같은 어린이 로보틱스 연구자에게 전하고 싶다는 것이 제 두 번째 의도 입니다.</p>
+<p>이러한 인사이트을 미래의 로보틱스 연구자, 또는 초중고 학생들과 같은 어린이 로보틱스 연구자에게 전하고 싶다는 것이 제 두 번째 의도 입니다.
+<br /></p>
+<hr />
 
 <h2 id="k-road를-세상에-알리자">K-ROAD를 세상에 알리자</h2>
 
 <p>기술 블로그 개설의 마지막 이유입니다.</p>
 
-<p>저희 K-ROAD가 다수의 기업 사이에서 언급되고 있다는 소식을 대표가 된 이후로 종종 듣고 있습니다. 이에 따라 저희의 수준을 외부에 더 알리고, 연구회원들이 지속적으로 학습을 할 수 있도록 독력하기 위해 기술 블로그가 잘 쓰일 수 있을 것이라고 판단했습니다.</p>
+<p>저희 K-ROAD가 다수의 기업 사이에서 언급되고 있다는 소식을 대표가 된 이후로 종종 듣고 있습니다. 이에 따라 저희의 수준을 외부에 더 알리고, 연구회원들이 지속적으로 학습을 할 수 있도록 독려하기 위해 기술 블로그가 잘 쓰일 수 있을 것이라고 판단했습니다.</p>
 
 <p>이로써 저희 K-ROAD를 더 널리 알리고 더 많은 양질의 로보틱스 연구자들을 배출해 내는 것이 저와 K-ROAD의 궁극적인 목표입니다.</p>
-
-	  ]]></description>
-	</item>
-
-	<item>
-	  <title>test post</title>
-	  <link>https://KOREATECH-KROAD.github.io//test-post</link>
-	  <author></author>
-	  <pubDate>2024-02-05T10:18:00+09:00</pubDate>
-	  <guid>https://KOREATECH-KROAD.github.io//test-post</guid>
-	  <description><![CDATA[
-	     <h1 id="2024-02-05">2024-02-05</h1>
-<h2 id="테스트를-합시다">테스트를 합시다</h2>
-<h3 id="test">TEST</h3>
-
-<p>이건 마크다운으로 작성한 글입니다.</p>
-
-<p>아래 참조</p>
-
-<p><a href="https://gist.github.com/ihoneymon/652be052a0727ad59601">Markdown 문법 정리</a></p>
-
-<blockquote>
-  <p>HTML로도 작성 가능</p>
-</blockquote>
-
-<p>코드 작성 테스트</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BootSpringBootApplication</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello world"</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
 
 	  ]]></description>
 	</item>
