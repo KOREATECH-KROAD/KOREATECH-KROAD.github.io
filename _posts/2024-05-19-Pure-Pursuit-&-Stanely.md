@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/1_kinematic_bicycle_model.png'
+cover: 'assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/1_kinematic_bicycle.png'
 navigation: True
 title: Pure Pursuit & Stanely
 date: 2024-05-19 02:00:00
@@ -21,7 +21,7 @@ categories: gyeomhan
 Kinematic bicycle model은 단순화 된 자동차의 수학적 모델로 일반적인 주행 조건에서 차량 움직임을 매우 잘 포착하는 모델입니다.<br>
 실제 자전거처럼 뒷바퀴는 고정되어 있고 앞바퀴를 통해 차량의 방향을 제어합니다. 
 
-![Kinematic bicycle model](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/1_kinematic_bicycle_model.png)
+![Kinematic bicycle model](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/1_kinematic_bicycle.png)
 
 **Motion Equation**은 다음과 같습니다.
 
