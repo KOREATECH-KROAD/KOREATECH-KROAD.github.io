@@ -4,7 +4,7 @@ cover: 'assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/1_kinematic_bicycle
 navigation: True
 title: Pure Pursuit & Stanely
 date: 2024-05-19 02:00:00
-tags: tech sensor-fusion
+tags: tech control
 subclass: 'post tag-tech tag-control'
 logo: 'assets/images/kroad_white.png'
 use_math: True
