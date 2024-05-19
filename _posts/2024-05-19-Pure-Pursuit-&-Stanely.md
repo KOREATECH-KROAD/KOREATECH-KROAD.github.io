@@ -25,7 +25,9 @@ Kinematic bicycle model은 단순화 된 자동차의 수학적 모델로 일반
 
 **Motion Equation**은 다음과 같습니다.
 
-![Kinematic bicycle model Motion Equation](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/2_kbm_motion_equation.png)
+<!-- ![Kinematic bicycle model Motion Equation](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/2_kbm_motion_equation.png) -->
+
+<img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/2_kbm_motion_equation.png" alt="Kinematic bicycle model Motion Equation" width="600px">
 
 ---
 
@@ -48,7 +50,14 @@ Pure Pursuit 알고리즘은 **경로 추종** 알고리즘 중 하나로, **�
 **Ld :** 뒷바퀴 중심과 목표 지점 사이의 거리<br>
 **R :** 두 점을 지나는 원의 반지름(자동차의 선회반경)
 
-![Untitled](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/5.png)
+<!-- $\frac{ld}{\sin2(\alpha)}=\frac {R}{\sin(\frac{\pi}{2}-\alpha)}$<br>
+$\frac{ld}{2\sin(\alpha)*\cos(\alpha)}=\frac{R}{\cos(\alpha)}$<br>
+$\frac{ld}{\sin(\alpha)}=2R$<br>
+$k=\frac{1}{R}=\frac{2\sin(\alpha)}{ld}$ -->
+
+<!-- ![Untitled](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/5.png) -->
+
+<img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/5.png" width="450px" height="auto">
 
 관련된 수식은 위와 같으며 Kinematic bicycle model에 의해
 
@@ -92,6 +101,7 @@ Stanley 방식은 헤딩 오차와 횡방향 오차를 고려하여 차량을 �
     차량 경로의 방향 및 자동차의 축방향에 맞춰 헤딩 오차를 없애기 위한 조향각 결정
 
     ![Untitled](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/10.png)
+    <!-- <img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/10.png" width="150px"> -->
 
 2. **횡방향 오차 고려**
     조향각을 횡방향 오차에 비례하여 제어하는데 이때 차량의 속력에 따라 조향 속도가 너무 크지 않도록 제어합니다. k값은 튜닝 파라미터 입니다.
