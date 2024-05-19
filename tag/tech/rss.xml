@@ -31,7 +31,9 @@
 
 <p><strong>Motion Equation</strong>은 다음과 같습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/2_kbm_motion_equation.png" alt="Kinematic bicycle model Motion Equation" /></p>
+<!-- ![Kinematic bicycle model Motion Equation](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/2_kbm_motion_equation.png) -->
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/2_kbm_motion_equation.png" alt="Kinematic bicycle model Motion Equation" width="600px" /></p>
 
 <hr />
 
@@ -54,7 +56,14 @@
 <strong>Ld :</strong> 뒷바퀴 중심과 목표 지점 사이의 거리<br />
 <strong>R :</strong> 두 점을 지나는 원의 반지름(자동차의 선회반경)</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/5.png" alt="Untitled" /></p>
+<!-- $\frac{ld}{\sin2(\alpha)}=\frac {R}{\sin(\frac{\pi}{2}-\alpha)}$<br>
+$\frac{ld}{2\sin(\alpha)*\cos(\alpha)}=\frac{R}{\cos(\alpha)}$<br>
+$\frac{ld}{\sin(\alpha)}=2R$<br>
+$k=\frac{1}{R}=\frac{2\sin(\alpha)}{ld}$ -->
+
+<!-- ![Untitled](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/5.png) -->
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/5.png" width="450px" height="auto" /></p>
 
 <p>관련된 수식은 위와 같으며 Kinematic bicycle model에 의해</p>
 
@@ -99,7 +108,8 @@ Look Ahead Distance는 Look Ahead Point까지의 거리를 결정합니다.<br /
     <p><strong>헤딩 오차 고려</strong>
  차량 경로의 방향 및 자동차의 축방향에 맞춰 헤딩 오차를 없애기 위한 조향각 결정</p>
 
-    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/10.png" alt="Untitled" /></p>
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/10.png" alt="Untitled" />
+ <!-- <img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/10.png" width="150px"> --></p>
   </li>
   <li>
     <p><strong>횡방향 오차 고려</strong>
