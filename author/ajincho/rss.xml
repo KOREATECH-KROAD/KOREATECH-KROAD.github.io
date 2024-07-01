@@ -45,7 +45,7 @@
 
 <p>작동원리는 좀 더 쉬운 이해를 위해 그림을 가져와보았습니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-21-Bit*/1.png" alt="BIT* 알고리즘의 작동원리" /></p>
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-21-Bit*/1.png" alt="BIT* 알고리즘의 작동원리" width="85%" /></p>
 
 <p>이 그림은 BIT* 휴리스틱을 사용하여 경로의 최소 길이를 검색하는 것을 나타냅니다.</p>
 
@@ -55,7 +55,8 @@
 
 <p>BIT<em>의 특징은 다른 알고리즘과 비교하며 알아보려고 합니다. 경로 생성 알고리즘 중 RRT</em>알고리즘의 특징에서 좀 더 발전 시키면 BIT*알고리즘과 유사합니다.</p>
 
-<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-21-Bit*/2.png" alt="BIT* 의 특징" /></p>
+<!-- ![BIT* 의 특징](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-21-Bit*/2.png) -->
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-21-Bit*/2.png" alt="BIT* 의 특징" width="600px" /></p>
 
 <ul>
   <li>RRT*</li>
