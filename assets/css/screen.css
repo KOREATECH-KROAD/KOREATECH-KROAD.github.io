@@ -586,7 +586,7 @@ body.nav-opened .site-wrapper {
     height: 100vh;
     margin-bottom: 5rem;
     text-align: center;
-    background: #222 no-repeat center center blur(8px);
+    /* background: #222 no-repeat center center blur(8px); */
     /* filter: blur(8px); */
     background-image: fil;
     background-size: cover;
