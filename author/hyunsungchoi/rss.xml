@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>KOREATECH-KROAD.github.io/</title>
+   
+   <link>https://KOREATECH-KROAD.github.io/</link>
+   <description>KOREATECH 자율주행차연구회</description>
+   <language>ko</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>SMC & ISMC</title>
+	  <link>https://KOREATECH-KROAD.github.io//SMC-&-ISMC</link>
+	  <author></author>
+	  <pubDate>2024-06-05T11:00:00+09:00</pubDate>
+	  <guid>https://KOREATECH-KROAD.github.io//SMC-&-ISMC</guid>
+	  <description><![CDATA[
+	     <h2 id="0-why-smc--ismc">0. Why SMC &amp; ISMC</h2>
+
+<p>누군가 “Sliding Mode Control &amp; Integral Sliding Mode Control을 왜 사용해야 하는가?” 라고 묻는다면 한 단어로 요약할 수 있다.</p>
+
+<p>$\Huge\bf{Robust}$</p>
+
+<p>우리가 원하는 제어기의 목표는 항상 강건하고, 추종성이 좋아야하며, 실시간성이 보장되어야 한다. 이번 글에서는 위의 세 개의 목표 중 하나인 강건성이 충족되는 SMC와 ISMC에 대해 소개해보려 한다.</p>
+
+<h2 id="1-smc">1. SMC</h2>
+
+<h3 id="1-1-certainty--uncertainty">1-1. Certainty / Uncertainty</h3>
+
+<p>System을 설계할 때, 대부분은 이론적으로 접근하기에 많은 부분들을 생략하거나 무시한다. 이론적인 상황에 대해 System을 설계한다면 그 System Model은 Certainty을 갖게 될 것이다. 하지만 현실 세계는 복잡하고 상호 모순적인 상황들이 서로 얽혀있기에 비논리적이고, 예측할 수 없다. 즉, Uncertainty을 갖는다. 이러한 System Model을 제어하다보면 제어 성능 및 안정성을 보장할 수 없기에 이를 해결하기 위해 SMC가 도입되었다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/1.png" alt="SMC" /></p>
+
+<h3 id="1-2-matched--unmatched">1-2. Matched / Unmatched</h3>
+
+<p>이러한 Uncertainty는 다시 Matched 와 Unmatched로 분류할 수 있다. Matched는 입력 u를 통해 외란 d를 직접적으로 감쇠시킬 수 있는 상태를 의미하며, Unmatched는 외란 d를 직접적으로 감쇠시킬 수 없는 상태를 의미한다. 즉, 우리가 외란에 직접적으로 대응할 수 있느냐 없느냐에 따라 나뉘게 되고, 대체적으로 SMC는 Matched Uncertainty에 강건하다. 하지만 Unmatched Uncertainty는 SMC가 제성능을 발휘하지 못 할 수 있기에 ISMC라는 적분기를 이용한 SMC를 통해 외란에 더욱 강건한 제어기를 설계할 수 있다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/2_matched_uncertainty.png" alt="Matched Uncertainty" />
+<strong>Matched Uncertainty</strong></p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/3_unmatched_uncertainty.png" alt="Unmatched Uncertainty" />
+<strong>Unmatched Uncertainty</strong></p>
+
+<h3 id="1-3-how-to-smc">1-3. How to SMC?</h3>
+
+<p>그렇다면 SMC의 알고리즘은 어떻게 되어 있을까? 그 순서는 다음과 같다</p>
+
+<ol>
+  <li>
+    <p><strong>Define Error</strong></p>
+
+    <p>대부분의 Controller가 그렇듯 먼저 Error를 정의한다.</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/4_define_error.png" alt="Define Error" /></p>
+  </li>
+  <li>
+    <p><strong>Define Sliding Surface</strong></p>
+
+    <p>위에서 정의한 Error를 이용해 Controller를 디자인한다. 이때, λ는 수렴률을 의미하며, 우리가 직접 설정해야 하는 값이다.</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/5_define_sliding_surface.png" alt="Define Sliding Surface" /></p>
+  </li>
+  <li>
+    <p><strong>Define Input u Without Disturbance</strong></p>
+
+    <p>먼저, 위의 두 단계를 통해 구한 수식을 이용해 외란이 없을 때의 입력 u를 구한다.</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/6_define_input_u_without_disturbance.png" alt="Define Input u Without Disturbance" /></p>
+  </li>
+  <li>
+    <p><strong>Add Signum Function</strong></p>
+
+    <p>다음으로 외란이 들어왔을 때 및 Sliding Surface에 안착하도록 추가적인 입력값을 Signum함수를 통해 보정해준다.</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/7_add_signum_function.png" alt="Add Signum Function" /></p>
+  </li>
+  <li>
+    <p><strong>Redesign Total System</strong></p>
+
+    <p>SMC는 Sliding Surface를 따라 Error가 줄어들도록 추가적인 입력을 넣어주자는 개념이므로 SMC 입력을 추가로 넣은 시스템을 재디자인한다.</p>
+
+    <p>위의 방식으로 SMC를 만들어 Total System에 추가하단다면 아래의 그림과 같은 응답을 보이는데 Signum함수로 외란 값 및 Sliding Surface에서 움직이도록 보정을 해주기에 Chattering이라는 진동현상이 발생하게 된다.</p>
+  </li>
+</ol>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/8.png" alt="Untitled" /></p>
+
+<p>이를 보정하기 위해서는 K값을 조정하거나 Signum 함수를 Saturation Function으로 근사하는 등의 방식으로 Chattering 현상을 없애거나 줄일 수 있다.</p>
+
+<h2 id="2-ismc">2. ISMC</h2>
+
+<h3 id="2-1-why-need-ismc">2-1. Why need ISMC?</h3>
+
+<p>앞서 언급한 것과 같이 기존 SMC는 Unmatched Uncertainty에서 제성능을 발휘하지 못 한다. 그 이유는 우리가 직접적으로 외란을 상쇄시킬 수 없기 때문이다. 그래서 등장한 개념이 적분기를 추가한 ISMC다.</p>
+
+<h3 id="2-2-what-is-differernce">2-2. What is differernce?</h3>
+
+<p>ISMC가 기존 SMC와 다른 점은 딱 하나다. Sliding Surface를 정의하는 방식이 다르다. ISMC는 이름에서 알 수 있듯 적분기를 활용하는데 이를 Sliding Surface를 정의할 때 사용해 새로운 평면을 만들어 Sliding Surface를 생성한다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/9.png" alt="Untitled" /></p>
+
+<p>이를 통해 SMC에서 외란에 취약한 Reaching Phase를 없애고 시작부터 Sliding Surface에서 시작해 더욱 강건한 제어기를 구현할 수 있다.</p>
+
+<h3 id="2-3-next-step">2-3. Next Step</h3>
+
+<p>하지만 ISMC에도 취약점이 있다. ISMC는 Overshooting이 있을 수 있다는 것이다. 앞으로의 연구 방향은 이 Overshooting을 효과적으로 없애며, MPC(Model Predictive Control)와 연결시켜 두 제어기를 모두 사용하는 Controller를 제작하는 것이 다음 목표가 되겠다.</p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
