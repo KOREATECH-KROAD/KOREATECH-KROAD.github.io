@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>KOREATECH-KROAD.github.io/</title>
+   
+   <link>https://KOREATECH-KROAD.github.io/</link>
+   <description>KOREATECH 자율주행차연구회</description>
+   <language>ko</language>
+   <managingEditor> </managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>SMC & ISMC</title>
+	  <link>https://KOREATECH-KROAD.github.io//SMC-&-ISMC</link>
+	  <author></author>
+	  <pubDate>2024-06-05T11:00:00+09:00</pubDate>
+	  <guid>https://KOREATECH-KROAD.github.io//SMC-&-ISMC</guid>
+	  <description><![CDATA[
+	     <h2 id="0-why-smc--ismc">0. Why SMC &amp; ISMC</h2>
+
+<p>누군가 “Sliding Mode Control &amp; Integral Sliding Mode Control을 왜 사용해야 하는가?” 라고 묻는다면 한 단어로 요약할 수 있다.</p>
+
+<p>$\Huge\bf{Robust}$</p>
+
+<p>우리가 원하는 제어기의 목표는 항상 강건하고, 추종성이 좋아야하며, 실시간성이 보장되어야 한다. 이번 글에서는 위의 세 개의 목표 중 하나인 강건성이 충족되는 SMC와 ISMC에 대해 소개해보려 한다.</p>
+
+<h2 id="1-smc">1. SMC</h2>
+
+<h3 id="1-1-certainty--uncertainty">1-1. Certainty / Uncertainty</h3>
+
+<p>System을 설계할 때, 대부분은 이론적으로 접근하기에 많은 부분들을 생략하거나 무시한다. 이론적인 상황에 대해 System을 설계한다면 그 System Model은 Certainty을 갖게 될 것이다. 하지만 현실 세계는 복잡하고 상호 모순적인 상황들이 서로 얽혀있기에 비논리적이고, 예측할 수 없다. 즉, Uncertainty을 갖는다. 이러한 System Model을 제어하다보면 제어 성능 및 안정성을 보장할 수 없기에 이를 해결하기 위해 SMC가 도입되었다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/1.png" alt="SMC" /></p>
+
+<h3 id="1-2-matched--unmatched">1-2. Matched / Unmatched</h3>
+
+<p>이러한 Uncertainty는 다시 Matched 와 Unmatched로 분류할 수 있다. Matched는 입력 u를 통해 외란 d를 직접적으로 감쇠시킬 수 있는 상태를 의미하며, Unmatched는 외란 d를 직접적으로 감쇠시킬 수 없는 상태를 의미한다. 즉, 우리가 외란에 직접적으로 대응할 수 있느냐 없느냐에 따라 나뉘게 되고, 대체적으로 SMC는 Matched Uncertainty에 강건하다. 하지만 Unmatched Uncertainty는 SMC가 제성능을 발휘하지 못 할 수 있기에 ISMC라는 적분기를 이용한 SMC를 통해 외란에 더욱 강건한 제어기를 설계할 수 있다.</p>
+
+<!-- ![Matched Uncertainty](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&-ISMC/2_matched_uncertainty.png)
+**Matched Uncertainty**
+
+![Unmatched Uncertainty](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&-ISMC/3_unmatched_uncertainty.png)
+**Unmatched Uncertainty** -->
+
+<div style="display:flex; justify-content: space-evenly;">
+    <div style="text-align:center">
+        <img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/2_matched_uncertainty.png" style="height:100px" />
+        <b>[Matched Uncertainty]</b>
+    </div>
+    <div style="text-align:center">
+        <img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/3_unmatched_uncertainty.png" style="height:100px" />
+        <b>[Unmatched Uncertainty]</b>
+    </div>
+</div>
+<p><br /></p>
+<h3 id="1-3-how-to-smc">1-3. How to SMC?</h3>
+
+<p>그렇다면 SMC의 알고리즘은 어떻게 되어 있을까? 그 순서는 다음과 같다</p>
+
+<ol>
+  <li>
+    <p><strong>Define Error</strong></p>
+
+    <p>대부분의 Controller가 그렇듯 먼저 Error를 정의한다.</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/4_define_error.png" alt="Define Error" /></p>
+  </li>
+  <li>
+    <p><strong>Define Sliding Surface</strong></p>
+
+    <p>위에서 정의한 Error를 이용해 Controller를 디자인한다. 이때, λ는 수렴률을 의미하며, 우리가 직접 설정해야 하는 값이다.</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/5_define_sliding_surface.png" alt="Define Sliding Surface" /></p>
+  </li>
+  <li>
+    <p><strong>Define Input u Without Disturbance</strong></p>
+
+    <p>먼저, 위의 두 단계를 통해 구한 수식을 이용해 외란이 없을 때의 입력 u를 구한다.</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/6_define_input_u_without_disturbance.png" alt="Define Input u Without Disturbance" /></p>
+  </li>
+  <li>
+    <p><strong>Add Signum Function</strong></p>
+
+    <p>다음으로 외란이 들어왔을 때 및 Sliding Surface에 안착하도록 추가적인 입력값을 Signum함수를 통해 보정해준다.</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/7_add_signum_function.png" alt="Add Signum Function" /></p>
+  </li>
+  <li>
+    <p><strong>Redesign Total System</strong></p>
+
+    <p>SMC는 Sliding Surface를 따라 Error가 줄어들도록 추가적인 입력을 넣어주자는 개념이므로 SMC 입력을 추가로 넣은 시스템을 재디자인한다.</p>
+
+    <p>위의 방식으로 SMC를 만들어 Total System에 추가하단다면 아래의 그림과 같은 응답을 보이는데 Signum함수로 외란 값 및 Sliding Surface에서 움직이도록 보정을 해주기에 Chattering이라는 진동현상이 발생하게 된다.</p>
+  </li>
+</ol>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/8.png" alt="Untitled" /></p>
+
+<p>이를 보정하기 위해서는 K값을 조정하거나 Signum 함수를 Saturation Function으로 근사하는 등의 방식으로 Chattering 현상을 없애거나 줄일 수 있다.</p>
+
+<h2 id="2-ismc">2. ISMC</h2>
+
+<h3 id="2-1-why-need-ismc">2-1. Why need ISMC?</h3>
+
+<p>앞서 언급한 것과 같이 기존 SMC는 Unmatched Uncertainty에서 제성능을 발휘하지 못 한다. 그 이유는 우리가 직접적으로 외란을 상쇄시킬 수 없기 때문이다. 그래서 등장한 개념이 적분기를 추가한 ISMC다.</p>
+
+<h3 id="2-2-what-is-differernce">2-2. What is differernce?</h3>
+
+<p>ISMC가 기존 SMC와 다른 점은 딱 하나다. Sliding Surface를 정의하는 방식이 다르다. ISMC는 이름에서 알 수 있듯 적분기를 활용하는데 이를 Sliding Surface를 정의할 때 사용해 새로운 평면을 만들어 Sliding Surface를 생성한다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-06-05-SMC-&amp;-ISMC/9.png" alt="Untitled" /></p>
+
+<p>이를 통해 SMC에서 외란에 취약한 Reaching Phase를 없애고 시작부터 Sliding Surface에서 시작해 더욱 강건한 제어기를 구현할 수 있다.</p>
+
+<h3 id="2-3-next-step">2-3. Next Step</h3>
+
+<p>하지만 ISMC에도 취약점이 있다. ISMC는 Overshooting이 있을 수 있다는 것이다. 앞으로의 연구 방향은 이 Overshooting을 효과적으로 없애며, MPC(Model Predictive Control)와 연결시켜 두 제어기를 모두 사용하는 Controller를 제작하는 것이 다음 목표가 되겠다.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Pure Pursuit & Stanely</title>
+	  <link>https://KOREATECH-KROAD.github.io//Pure-Pursuit-&-Stanely</link>
+	  <author></author>
+	  <pubDate>2024-05-19T11:00:00+09:00</pubDate>
+	  <guid>https://KOREATECH-KROAD.github.io//Pure-Pursuit-&-Stanely</guid>
+	  <description><![CDATA[
+	     <p>안녕하세요. K-ROAD 5기 한겸입니다.<br />
+오늘은 많은 사람들에게 잘 알려져있는 Pure Pursuit와 Stanely 경로 추종 알고리즘에 대해 소개하려고 합니다.</p>
+
+<hr />
+
+<h2 id="kinematic-bicycle-model이란">Kinematic bicycle model이란?</h2>
+<p>Kinematic bicycle model은 단순화 된 자동차의 수학적 모델로 일반적인 주행 조건에서 차량 움직임을 매우 잘 포착하는 모델입니다.<br />
+실제 자전거처럼 뒷바퀴는 고정되어 있고 앞바퀴를 통해 차량의 방향을 제어합니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/1_kinematic_bicycle.png" alt="Kinematic bicycle model" /></p>
+
+<p><strong>Motion Equation</strong>은 다음과 같습니다.</p>
+
+<!-- ![Kinematic bicycle model Motion Equation](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/2_kbm_motion_equation.png) -->
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/2_kbm_motion_equation.png" alt="Kinematic bicycle model Motion Equation" width="600px" /></p>
+
+<hr />
+
+<h2 id="pure-pursuit-알고리즘이란">Pure Pursuit 알고리즘이란?</h2>
+<p>Pure Pursuit 알고리즘은 <strong>경로 추종</strong> 알고리즘 중 하나로, <strong>차량의 후륜축의 중심</strong>을 <strong>기준점</strong>으로 사용하여 차량의 <strong>운동 방정식</strong>과 <strong>경로의 지오메트리</strong>만을 사용하는 간단한 알고리즘입니다.</p>
+
+<h3 id="pure-pursuit-제어-방식">Pure Pursuit 제어 방식</h3>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/3_Pure_Pursuit_1.png" alt="Pure Pursuit 제어 방식 1" /></p>
+
+<p>먼저 Reference Path위에 Ld 거리만큼 떨어진 Look Ahead Point를 정하고</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/4_Pure_Pursuit_2.png" alt="Pure Pursuit 제어 방식 2" /></p>
+
+<p>이때 뒷바퀴 중심과 Look Ahead Point를 지나는 원의 곡률을 따라서 조향각을 조절합니다.</p>
+
+<p><strong>L</strong> : 차량 길이<br />
+<strong>δ</strong> : 조향각<br />
+<strong>α :</strong> 두 점을 지나는 직선과 차량이 바라보는 방향의 직선 사이의 각도 <br />
+<strong>Ld :</strong> 뒷바퀴 중심과 목표 지점 사이의 거리<br />
+<strong>R :</strong> 두 점을 지나는 원의 반지름(자동차의 선회반경)</p>
+
+<!-- $\frac{ld}{\sin2(\alpha)}=\frac {R}{\sin(\frac{\pi}{2}-\alpha)}$<br>
+$\frac{ld}{2\sin(\alpha)*\cos(\alpha)}=\frac{R}{\cos(\alpha)}$<br>
+$\frac{ld}{\sin(\alpha)}=2R$<br>
+$k=\frac{1}{R}=\frac{2\sin(\alpha)}{ld}$ -->
+
+<!-- ![Untitled](https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/5.png) -->
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/5.png" width="450px" height="auto" /></p>
+
+<p>관련된 수식은 위와 같으며 Kinematic bicycle model에 의해</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/6.png" alt="Untitled" /></p>
+
+<p>이 되며 결과적으로 조향각<strong>δ</strong>는 다음과 같이 정의됩니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/7.png" alt="Untitled" /></p>
+
+<h2 id="look-ahead-distanceld">Look Ahead Distance(Ld)</h2>
+
+<p>다음은 Pure Pursuit 알고리즘의 중요 파라미터인 Look Ahead Distance에 대해 설명하겠습니다.<br />
+Look Ahead Distance는 Look Ahead Point까지의 거리를 결정합니다.<br />
+이때 <strong>Look Ahead Distance를 짧게</strong> 설정하면 경로를 추종하는 시간을 줄일 수 있지만 아래 그림에서 볼 수 있듯 <strong>진동하며 경로를 벗어날 수 있습니다.</strong></p>
+
+<p>반대로,  <strong>Look Ahead Distance를 길게</strong> 설정하면 경로를 부드럽게 추종하지만 <strong>코너에서 더 큰 곡률이 발생할 수 있으며, 경우지를 정확히 따라가지 않아 경로 추종 성능이 저하</strong>될 수 있기에 적절한 튜닝값을 구하는 것이 중요합니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/8_Look_Ahead_Distance.png" alt="Look Ahead Distance(Ld)" /></p>
+
+<hr />
+
+<h2 id="stanley-알고리즘이란">Stanley 알고리즘이란?</h2>
+<p>Stanley 알고리즘은 운동방정식, 기준이 되는 경로의 지오메트리, <strong>차량의 헤딩 방향을 사용</strong>하여 기존 경로를 추종하고 접근하는 방식의 알고리즘입니다.<br />
+스탠포드 대학교의 Darpa Grad Challenge 팀에서 사용하여 우승까지 했던 알고리즘입니다.</p>
+
+<h3 id="stanley-제어-방식">Stanley 제어 방식</h3>
+<p>차량의 후륜축을 기준으로 하는 Pure Pursuit 알고리즘과는 달리 <strong>Stanley 방식은 전륜축을 기준</strong>으로 합니다.<br />
+또한 Stanley의 경우 차량과 목표지점까지의 오차만 고려하는 Pure Pursuit과는 달리 <strong>차량과 목표지점까지의 오차 + 목표지점과 차량의 헤딩방향의 오차도 함께 고려</strong>합니다.<br />
+이때 차량의 목표지점까지의 오차는 전륜축에서 Reference Path에 가장 가까운 목표점까지의 거리로 정의합니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/9_Stanley.png" alt="Untitled" /></p>
+
+<p><strong>ψ</strong> : 경로의 방향과 차량의 Heading 사이의 각도<br />
+<strong>δ</strong> : 조향각<br />
+<strong>e</strong> : 차량의 목표지점까지의 오차<br />
+<strong>v</strong> : 차량의 속도벡터</p>
+
+<p>Stanley 방식은 헤딩 오차와 횡방향 오차를 고려하여 차량을 제어합니다.</p>
+
+<ol>
+  <li>
+    <p><strong>헤딩 오차 고려</strong>
+ 차량 경로의 방향 및 자동차의 축방향에 맞춰 헤딩 오차를 없애기 위한 조향각 결정</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/10.png" alt="Untitled" />
+ <!-- <img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&-Stanely/10.png" width="150px"> --></p>
+  </li>
+  <li>
+    <p><strong>횡방향 오차 고려</strong>
+ 조향각을 횡방향 오차에 비례하여 제어하는데 이때 차량의 속력에 따라 조향 속도가 너무 크지 않도록 제어합니다. k값은 튜닝 파라미터 입니다.</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/11.png" alt="Untitled" /></p>
+  </li>
+  <li>
+    <p><strong>헤딩 오차 + 횡방향 오차</strong>
+ 두 값을 합쳐 최종적으로 조향각을 제어합니다. 이때 최대, 최소 조향각을 제한합니다.</p>
+
+    <p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/12.png" alt="Untitled" /></p>
+  </li>
+</ol>
+
+<h3 id="속도-상수-h">속도 상수 h</h3>
+<p>위 조향각 식에서 속도가 0에 가까울 때 tan역함수 값이 매우 커질 수 있기 때문에 이것을 해결하기 위해 아래와 같이 속도 상수 h를 추가해줍니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/13.png" alt="Untitled" /></p>
+
+<hr />
+
+<h2 id="pure-pursuit--stanley-알고리즘-비교">Pure Pursuit &amp; Stanley 알고리즘 비교</h2>
+<p>마지막으로 지금까지 살펴본 Pure Pursuit과 Stanley 알고리즘의 차이점을 간단하게 살펴보면 다음과 같습니다.</p>
+
+<p><img src="https://KOREATECH-KROAD.github.io/assets/images/blog/2024-05-19-Pure-Pursuit-&amp;-Stanely/14.png" alt="Pure Pursuit vs Stanley" /></p>
+
+<p>두 제어방식 모두 완벽한 제어방식이 아닌 각각의 장단점이 존재하는 제어방식들입니다. 따라서 주행 상황에 맞는 제어 알고리즘의 도입과 적절한 튜닝값 선정이 중요합니다.</p>
+
+<h3 id="참고자료">참고자료</h3>
+
+<ul>
+  <li>
+    <p><strong>Vehicle Dynamics &amp; Control - 05 Kinematic bicycle model</strong><br />
+  <a href="https://youtu.be/HqNdBiej23I?si=a5vnrRaK_8k-ndQm">https://youtu.be/HqNdBiej23I?si=a5vnrRaK_8k-ndQm</a></p>
+  </li>
+  <li>
+    <p><strong>Pure Pursuit</strong><br />
+  <a href="https://blog.naver.com/rich0812/222592223219">https://blog.naver.com/rich0812/222592223219</a></p>
+  </li>
+  <li>
+    <p><strong>stanley</strong><br />
+  <a href="https://blog.naver.com/rich0812/222598072957">https://blog.naver.com/rich0812/222598072957</a></p>
+  </li>
+</ul>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
