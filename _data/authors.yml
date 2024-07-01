@@ -57,6 +57,19 @@ jaegonlee:
   bio: controller에 활용되는 ISMC와 MPC를 연구하는 이재곤입니다.
   assets: assets/images/id/jaegonlee.png
 
+# 조아진
+ajincho:
+  username: ajincho
+  name: 조아진
+  generation: 5
+  part: planning
+  team: K-BUB
+  email: growbetter03@naver.com
+  github_url_full: https://github.com/ajin-cho
+  github_url: github.com/yuuun03
+  bio: 안녕하세요. 한국기술교육대학교 자율주행차연구회 K-ROAD 5기 일원으로 부족하지만 열심히 배우고 있습니다!
+  assets: assets/images/id/ajincho.jpeg
+
 # 조윤서
 yunseocho:
   username: yunseocho
